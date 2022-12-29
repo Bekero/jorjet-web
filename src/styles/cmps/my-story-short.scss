@@ -1,0 +1,38 @@
+.my-story-short {
+    display: flex;
+    margin-top: 70px;
+    color: #cccccc;
+
+    .img-container {
+        width: 220rem;
+
+        img {
+            // width: 35%;
+            // border: none;
+            // height: 35rem;
+            width: 100%;
+            border: none;
+            height: 35rem;
+        }
+    }
+
+    .story-container {
+        margin-left: 35px;
+        color: #999;
+
+        .my-story-title {
+            display: flex;
+            font-size: 40px;
+            justify-content: center;
+            color: #999;
+
+            span {
+                border-bottom: 1px solid #999;
+            }
+        }
+
+        .about-me {
+            min-width: 280px;
+        }
+    }
+}
