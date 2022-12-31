@@ -1,0 +1,70 @@
+.product-home-page {
+    border-top: 1px solid #999;
+    display: flex;
+    margin: auto;
+    padding: 50px;
+    height: auto;
+    color: #999;
+    justify-content: center;
+
+    .imgs-container {
+        position: relative;
+        /* max-width: 500px; */
+        width: 350px;
+        min-width: 350px;
+        height: 32rem;
+
+        :first-child {
+            right: 8px;
+            bottom: 140px;
+        }
+
+        :last-child {
+            left: 0;
+            bottom: 0;
+        }
+
+        >* {
+            position: absolute;
+            box-shadow: 0px 0px 20px 5px #8f8c8c8f;
+            width: 150px;
+            height: 200px;
+        }
+    }
+
+    .product-info {
+        margin-left: 35px;
+        max-width: 400px;
+
+        .title {
+            display: flex;
+            font-size: 40px;
+            justify-content: center;
+        }
+
+        .under-title {
+            display: flex;
+            font-size: 20px;
+            justify-content: center;
+        }
+
+        hr {
+            height: 2px;
+            width: 100px;
+            border-width: 0;
+            color: #999;
+            background-color: #999;
+        }
+
+        .info {
+            min-width: 280px;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .recipe-home-page {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}

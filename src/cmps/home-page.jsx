@@ -1,5 +1,5 @@
 
-import nutDonut from '../assets/donut-nut.jpg'
+import nutDonut from '../assets/imgs/donut-nut.jpg'
 import Type from "../services/Type";
 
 export function HomePage() {

@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom";
 
-import JorjetsLogo from '../assets/jotjets-logo.png'
-import TiktokSvg from '../assets/tiktok'
-import InstagramSvg from '../assets/instagram'
-import FacebookSvg from '../assets/facebook'
-import WhatsappSvg from '../assets/whatsapp'
+import JorjetsLogo from '../assets/imgs/jotjets-logo.png'
+import TiktokSvg from '../assets/svgs/tiktok'
+import InstagramSvg from '../assets/svgs/instagram'
+import FacebookSvg from '../assets/svgs/facebook'
+import WhatsappSvg from '../assets/svgs/whatsapp'
 
 export function AppHeader() {
 

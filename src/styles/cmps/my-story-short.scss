@@ -1,23 +1,23 @@
 .my-story-short {
     display: flex;
-    margin-top: 70px;
+    margin: auto;
+    padding: 50px;
+    height: auto;
     color: #cccccc;
+    justify-content: center;
 
     .img-container {
-        width: 220rem;
+        background-size: cover;
 
         img {
-            // width: 35%;
-            // border: none;
-            // height: 35rem;
-            width: 100%;
-            border: none;
-            height: 35rem;
+            height: 540px;
+            object-fit: cover;
         }
     }
 
     .story-container {
         margin-left: 35px;
+        max-width: 400px;
         color: #999;
 
         .my-story-title {
@@ -29,10 +29,55 @@
             span {
                 border-bottom: 1px solid #999;
             }
+
+        }
+
+        .read-more {
+            span {
+                display: flex;
+                margin-top: 10px;
+                justify-content: center;
+                font-weight: bold;
+                transition: all ease-in-out 350ms;
+                cursor: pointer;
+
+                &:hover {
+                    color: #000;
+                    background-color: #fff;
+                    border-radius: 50px;
+                }
+            }
         }
 
         .about-me {
             min-width: 280px;
         }
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .my-story-short {
+        display: flex;
+        margin: auto;
+        padding: 50px;
+        width: 870px;
+        height: auto;
+        color: #cccccc;
+        justify-content: center;
+    }
+}
+
+
+@media screen and (max-width: 850px) {
+    .my-story-short {
+        display: flex;
+        margin: auto;
+        padding: 50px;
+        width: 800px;
+        height: auto;
+        color: #cccccc;
+        justify-content: center;
+        flex-direction: column-reverse;
+        align-items: center;
     }
 }
