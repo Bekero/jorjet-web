@@ -1,0 +1,29 @@
+[
+    {
+        "_id": "d1r324ehd12",
+        "src": "../assets/imgs/for-home-page/product-img-home-page-1.jpeg",
+        "title": "cake1",
+        "description": "blabla",
+        "timeToMake": "30 Minutes",
+        "ingrediants": "MuchuHalav",
+        "price": 11
+    },
+    {
+        "_id": "3rw4et5guyjhkiyjtrg5e4",
+        "src": "../assets/imgs/for-home-page/product-img-home-page-2.jpeg",
+        "title": "cake2",
+        "description": "blabla",
+        "timeToMake": "30 Minutes",
+        "ingrediants": "MuchuHalav",
+        "price": 22
+    },
+    {
+        "_id": "qaewdsrfgtjuhki",
+        "src": "../assets/imgs/for-home-page/product-img-home-page-3.jpeg",
+        "title": "cake3",
+        "description": "blabla",
+        "timeToMake": "30 Minutes",
+        "ingrediants": "MuchuHalav",
+        "price": 33
+    }
+]

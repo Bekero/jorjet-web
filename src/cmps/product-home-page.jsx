@@ -1,17 +1,34 @@
 
-import ProductImgHomePage1 from '../assets/imgs/product-img-home-page-1.jpeg';
-import ProductImgHomePage2 from '../assets/imgs/product-img-home-page-2.jpeg';
-import ProductImgHomePage3 from '../assets/imgs/product-img-home-page-3.jpeg';
+import { useState } from 'react';
+import ProductImgHomePage1 from '../assets/imgs/for-home-page/product-img-home-page-1.jpeg';
+import ProductImgHomePage2 from '../assets/imgs/for-home-page/product-img-home-page-2.jpeg';
+import ProductImgHomePage3 from '../assets/imgs/for-home-page/product-img-home-page-3.jpeg';
+import products from '../data/products-for-home-page.json'
 
 export function ProductHomePage() {
+
+
+    const imgClicked = (img) => {
+        console.log('img :', img)
+    }
 
     return (
         <div className="product-home-page">
             <div className="imgs-container">
-                <img src={ProductImgHomePage1} alt="" />
-                <img src={ProductImgHomePage2} alt="" />
-                <img src={ProductImgHomePage3} alt="" />
+
+                {products.map((product, index) => {
+                    index += 1
+                    return (
+                        <div className="product" onClick={() => imgClicked(product)} key={product._id}>
+                            <img src={require(`../assets/imgs/for-home-page/product-img-home-page-${index}.jpeg`)} alt="" />
+                            <button>למוצר</button>
+                        </div>
+                    )
+                })}
+
             </div>
+
+
             <div className="product-info">
                 <p className="title">מה בתפריט</p>
                 <p className="under-title">bla bla bla</p>
@@ -22,3 +39,4 @@ export function ProductHomePage() {
         </div>
     )
 }
+

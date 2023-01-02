@@ -1,0 +1,11 @@
+[
+    {
+        "_id": "d1r324ehd12",
+        "src": "../assets/imgs/products/product1.jpeg",
+        "title": "cake",
+        "description": "blabla",
+        "timeToMake": "30 Minutes",
+        "ingrediants": "MuchuHalav",
+        "price": 99
+    }
+]

@@ -3,7 +3,8 @@ import LironsImage from '../assets/imgs/lironron.png'
 export function MyStoryShort() {
 
     return (
-        <div className="my-story-short main-layout">
+        <div className="my-story-short">
+        {/* <div className="my-story-short main-layout"> */}
             <div
              className="img-container"
             //  style={{ backgroundImage: `url(${LironsImage})`}}

@@ -4,7 +4,7 @@ import Type from "../services/Type";
 
 export function HomePage() {
     return (
-        <div className="home-page-container full">
+        <div className="home-page-container">
             <div
                 className="bgc-img"
                 style={{ backgroundImage: `url(${nutDonut})` }}>
