@@ -8,8 +8,8 @@ import WhatsappSvg from '../assets/svgs/whatsapp'
 export function Contact() {
 
     return (
-        <div className="contact-container">
-            <form id="form" class="topBefore">
+        <div id="contact" className="contact-container">
+            <form id="form" className="topBefore">
 
                 <input id="name" type="text" placeholder="NAME" />
                 <input id="email" type="text" placeholder="E-MAIL" />

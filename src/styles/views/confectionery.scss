@@ -1,0 +1,184 @@
+.confectionery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        margin-top: 20px;
+    }
+
+    .confectionery-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+
+        >* {
+            // padding: 5px;
+            margin: 5px;
+            border-bottom: 1px solid #999;
+            cursor: pointer;
+
+            &:hover {
+                color: #999;
+            }
+        }
+    }
+
+    .gallery {
+        display: grid;
+        grid-gap: 15px;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, auto);
+
+        >* {
+            width: 210px;
+            height: 390px;
+            transition: 0.5s;
+            box-shadow: 2px 2px 5px 2px rgb(0 0 0 / 29%);
+            opacity: 1;
+        }
+
+        .product-info {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            padding: 5px;
+
+            margin-top: -8px;
+            border-bottom: 1px solid #999;
+            border-left: 1px solid #999;
+            border-right: 1px solid #999;
+
+            .name-and-price {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                border-bottom: 1px solid #999;
+
+                >* {
+                    font-weight: bold;
+                    margin: 0;
+                    padding: 0;
+                }
+
+            }
+
+            .btns {
+                display: flex;
+                width: 100%;
+                margin-top: 10px;
+                justify-content: space-around;
+                transition: 0.5s;
+
+                button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    padding: 15px 32px;
+                    width: 75px;
+                    height: 26px;
+
+                    background-color: rgb(125, 120, 120);
+                    cursor: pointer;
+                    border: none;
+                    font-size: 12px;
+                    font-weight: bold;
+                    transition: 0.5s;
+                }
+
+                >* {
+
+                    &:hover {
+                        transition: 0.5s;
+                        opacity: 0.8;
+
+                        button {
+                            transition: 0.5s;
+                            opacity: 1;
+
+                            &:hover {
+                                background-color: rgb(137, 134, 134);
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .confectionery-container {
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(5, auto);
+            grid-gap: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .confectionery-container {
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(5, auto);
+            grid-gap: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .confectionery-container {
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(5, auto);
+            grid-gap: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .confectionery-container {
+
+        .confectionery-links {
+flex-direction: row;
+            .gallery {
+                >* {
+                    width: 170px;
+                    height: 330px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .confectionery-container {
+
+        .confectionery-links {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(5, auto);
+            grid-gap: 15px;
+        }
+    }
+}

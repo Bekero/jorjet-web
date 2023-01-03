@@ -20,6 +20,7 @@ nav {
 .logo img {
     width: 150px;
     // height: 100%;
+    cursor: pointer;
     height: auto;
     // width: 4rem;
 }
@@ -124,7 +125,7 @@ nav {
         opacity: 1;
         height: 100vh;
         width: 100%;
-        flex-direction: column;
+        flex-direction: column-reverse;
         clip-path: circle(50px at 90% -20%);
         -webkit-clip-path: circle(50px at 90% -10%);
         transition: all 1s ease-out;

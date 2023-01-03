@@ -1,7 +1,12 @@
 body {
     margin: 0;
     color: $main-clr;
+
     background-color: $main-bgc;
+}
+
+.pages-container {
+    padding-top: 6rem;
 }
 
 @import '../setup/typography';
@@ -17,6 +22,7 @@ body {
 
 html {
     font-family: spotify-font, open-sans, sans-serif;
+    font-family: main-font;
     line-height: 1.6;
     // color: $main-txt-clr;
 }
@@ -72,66 +78,33 @@ p {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgb(255, 255, 255, 0.3);
-    border: 0px none #ffffff;
+    background: rgb(155, 155, 155);
+    border: 0px none #857a7a;
     border-radius: 8px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(255, 255, 255, 0.5);
+    background: #999999;
 }
 
 ::-webkit-scrollbar-thumb:active {
-    background: rgb(255, 255, 255, 0.65);
+    background: rgba(118, 115, 115, 0.65);
 }
 
 ::-webkit-scrollbar-track {
-    background: #c3888800;
+    background: #cccccc;
     border: 0px dotted #ffffff;
     border-radius: 50px;
 }
 
 ::-webkit-scrollbar-track:hover {
-    background: #654da800;
+    background: #a7a5a979;
 }
 
 ::-webkit-scrollbar-track:active {
-    background: #20644e00;
+    background: #4b847300;
 }
 
 ::-webkit-scrollbar-corner {
     background: transparent;
-}
-
-.button-31 {
-  background-color: rgb(77, 71, 71);
-  border-radius: 4px;
-  border-style: none;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.5;
-  margin: 0;
-  max-width: none;
-  min-height: 44px;
-  min-width: 10px;
-  outline: none;
-  overflow: hidden;
-  padding: 9px 20px 8px;
-  position: relative;
-  text-align: center;
-  text-transform: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: 100%;
-}
-
-.button-31:hover,
-.button-31:focus {
-  opacity: .75;
 }

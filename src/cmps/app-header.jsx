@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import JorjetsLogo from '../assets/imgs/jotjets-logo.png'
 import TiktokSvg from '../assets/svgs/tiktok'
@@ -8,6 +8,11 @@ import WhatsappSvg from '../assets/svgs/whatsapp'
 
 export function AppHeader() {
 
+    const navigate = useNavigate();
+
+    const navigateUser = (wantedPage) => {
+        navigate(`/${wantedPage}`)
+    }
 
     const onActiveHamburger = () => {
         const hamburger = document.querySelector(".hamburger");
@@ -17,7 +22,7 @@ export function AppHeader() {
 
         const navSocialLinks = document.querySelector(".nav-social-links");
         const socialLinks = document.querySelectorAll(".nav-social-links li");
-        
+
         //Animation
         hamburger.classList.toggle("toggle");
 
@@ -37,7 +42,7 @@ export function AppHeader() {
     return (
         <nav>
             <div className="logo">
-                <img src={JorjetsLogo} alt="" />
+                <NavLink to="/"><img src={JorjetsLogo} alt="" /></NavLink>
             </div>
             <div onClick={() => onActiveHamburger()} className="hamburger">
                 <div className="bars1"></div>
@@ -45,11 +50,11 @@ export function AppHeader() {
                 <div className="bars3"></div>
             </div>
             <ul className="nav-links">
-                <li><a href="#">צור קשר</a></li>
-                <li><a href="#">מתכונים</a></li>
-                <li><a href="#">הסיפור שלי</a></li>
-                <li><a href="#">מארזים</a></li>
-                <li><a href="#">קונדיטוריה</a></li>
+                <li><NavLink to='/'>צור קשר</NavLink></li>
+                <li><NavLink to='/recipe'>מתכונים</NavLink></li>
+                <li><NavLink to='/'>הסיפור שלי</NavLink></li>
+                <li><NavLink to='/cases'>מארזים</NavLink></li>
+                <li><NavLink to='/confectionery'>קונדיטוריה</NavLink></li>
             </ul>
             <ul className="nav-social-links">
                 <li><a target="_blank" href="https://www.tiktok.com/@lirongorzat"><TiktokSvg /></a></li>
