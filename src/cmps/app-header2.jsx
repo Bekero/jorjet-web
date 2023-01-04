@@ -6,7 +6,7 @@ import InstagramSvg from '../assets/svgs/instagram'
 import FacebookSvg from '../assets/svgs/facebook'
 import WhatsappSvg from '../assets/svgs/whatsapp'
 
-export function AppHeader() {
+export function AppHeader2() {
 
     const navigate = useNavigate();
 
@@ -46,12 +46,8 @@ export function AppHeader() {
                 <div className="bars3"></div>
             </div>
             <ul className="nav-links">
-                <li><NavLink to='/'>צור קשר</NavLink></li>
                 <li><NavLink to='/recipe'>מתכונים</NavLink></li>
-                <li><NavLink to='/'>הסיפור שלי</NavLink></li>
                 <li><NavLink to='/collection'>קולקציה</NavLink></li>
-                {/* <li><NavLink to='/cases'>מארזים</NavLink></li> */}
-                {/* <li><NavLink to='/confectionery'>קונדיטוריה</NavLink></li> */}
             </ul>
             <ul className="nav-social-links">
                 <li><a target="_blank" href="https://www.tiktok.com/@lirongorzat"><TiktokSvg /></a></li>

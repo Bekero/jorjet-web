@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import products from '../data/products.json'
 
-export function Confectionery() {
+export function Cases() {
 
     const [filterValue, setFilterValue] = useState(null)
 
@@ -14,17 +14,8 @@ export function Confectionery() {
 
     }
 
-    const listOfLinks = [
-        'designed-cakes',
-        'Showcase-cakes',
-        'mousse-cakes',
-        'desserts'
-    ]
-
     return (
         <div className="confectionery-container">
-            <h2>קונדיטוריה</h2>
-
             <ul className="confectionery-links">
                 <li onClick={(ev) => setFilterValue('designed-cakes')} value="designed-cakes" >עוגות מעוצבות</li>
                 <li onClick={(ev) => setFilterValue('showcase-cakes')} value="showcase-cakes" >עוגות ראווה</li>
@@ -32,7 +23,8 @@ export function Confectionery() {
                 <li onClick={(ev) => setFilterValue('desserts')} value="desserts" >קינוחים</li>
             </ul>
 
-            <div className="gallery">
+<h2>Cases</h2>
+            {/* <div className="gallery">
                 {products.map((product, index) => {
                     index += 1
                     return (
@@ -51,7 +43,7 @@ export function Confectionery() {
                         </div>
                     )
                 })}
-            </div>
+            </div> */}
         </div>
     )
 }

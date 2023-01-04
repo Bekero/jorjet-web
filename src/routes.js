@@ -1,19 +1,17 @@
 
 import { HomePage } from "./pages/home-page";
-import { Confectionery } from "./pages/confectionery";
+import { Confectionery } from "./cmps/confectionery";
 import { Patisserie } from "./pages/patisserie";
 import { Recipe } from "./pages/recipe";
-import { Cases } from "./pages/cases";
+import { Cases } from "./cmps/cases";
+import { Collection } from "./pages/collection";
+import { ProductDetails } from "./pages/product-details";
 
 // Routes accesible from the main navigation (in AppHeader)
 const routes = [
   {
     path: "/",
     component: <HomePage />,
-  },
-  {
-    path: "/confectionery",
-    component: <Confectionery />,
   },
   {
     path: "/confectionery",
@@ -31,17 +29,14 @@ const routes = [
     path: "/recipe",
     component: <Recipe />,
   },
+  {
+    path: "/collection/:id",
+    component: <ProductDetails />,
+  },
+  {
+    path: "/collection",
+    component: <Collection />,
+  },
 ];
 
 export default routes;
-
-{/* <Routes>
-  <Route path="/" element={<Dashboard />}>
-    <Route
-      path="messages"
-      element={<DashboardMessages />}
-    />
-    <Route path="tasks" element={<DashboardTasks />} />
-  </Route>
-  <Route path="about" element={<AboutPage />} />
-</Routes> */}

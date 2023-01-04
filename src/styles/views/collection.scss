@@ -1,0 +1,33 @@
+.collection-container {
+
+    .radio-btns {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+
+        ul {
+            padding: 0;
+            display: flex;
+
+            .highlight {
+                color: rgba(25, 25, 215, 0.358);
+            }
+
+            li {
+                display: flex;
+                list-style: none;
+                font-weight: bold;
+                padding: 12px;
+
+                &:first-child {
+                    border-right: 1px solid #999;
+                }
+
+                &:hover {
+                    color: #999;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

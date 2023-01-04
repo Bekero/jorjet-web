@@ -2,6 +2,7 @@ import { AppHeader } from './cmps/app-header';
 import { Route, Routes } from 'react-router-dom';
 import './styles/main.scss';
 import routes from './routes'
+import { AppHeader2 } from './cmps/app-header2';
 
 function App() {
   return (
