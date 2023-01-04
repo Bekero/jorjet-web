@@ -10,9 +10,9 @@ import { productService } from "../services/product.service"
 
 export function HomePage() {
 
-useEffect(() => {
-    productService.query()
-}, [])
+    useEffect(() => {
+        productService.query()
+    }, [])
 
     return (
         <div className="home-page-container">
@@ -22,6 +22,7 @@ useEffect(() => {
             <RecipeProduct />
             <BgcImg3 />
             <Contact />
+
         </div>
     )
 }

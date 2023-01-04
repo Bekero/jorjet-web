@@ -11,6 +11,7 @@ export function ProductDetails() {
     const [product, setProduct] = useState(null)
     const [products, setProducts] = useState([])
     const [productIndex, setProductIndex] = useState(null)
+    const [divExpends, setDivExpends] = useState(null)
 
     useEffect(() => {
         setProducts(productService.getProducts)
@@ -47,12 +48,11 @@ export function ProductDetails() {
                         </ul>
                     </div>
                     <div className="allergy-info">
-                        <p>מידע על אלרגנים
-                        </p>
-                        <div>
+                        <p className="container" onClick={() => setDivExpends(!divExpends)}> <p>{divExpends ? '-' : '+' }</p> <p>מידע על אלרגנים </p> </p>
+                        {divExpends && <div className="expends-allergy">
                             <p className="milk-section"> {product?.isContainsMilk ? 'חלבי' : 'פרווה'}</p>
                             <p className="milk-section"> {product?.isContainsNut ? 'מכיל אגוזים' : 'לא מכיל אגוזים'}</p>
-                        </div>
+                        </div>}
                     </div>
                     <p className="price">{product.price}</p>
 

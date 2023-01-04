@@ -30,8 +30,9 @@
         grid-gap: 15px;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(5, auto);
-
+        
         >* {
+            position: relative;
             width: 210px;
             height: 390px;
             transition: 0.5s;
@@ -50,6 +51,14 @@
             border-bottom: 1px solid #999;
             border-left: 1px solid #999;
             border-right: 1px solid #999;
+
+            .product-name {
+                position: absolute;
+                top: 20px;
+                color: black;
+                right: -8px;
+                transform: rotate(42deg);
+            }
 
             .name-and-price {
                 display: flex;
@@ -151,7 +160,8 @@
     .confectionery-container {
 
         .confectionery-links {
-flex-direction: row;
+            flex-direction: row;
+
             .gallery {
                 >* {
                     width: 170px;
