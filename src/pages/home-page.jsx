@@ -21,7 +21,7 @@ export function HomePage() {
             <BgcImg2 />
             <RecipeProduct />
             <BgcImg3 />
-            <Contact />
+            {/* <Contact /> */}
 
         </div>
     )

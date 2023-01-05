@@ -1,15 +1,17 @@
 
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { Modal } from "./modal";
 import { storageService } from '../services/async-storage.service'
 import { productService } from '../services/product.service'
+import { ProductCard } from "./product-card";
 // import products from '../data/products.json'
 
 export function Confectionery() {
 
+    const navigate = useNavigate();
+
     const [filterValue, setFilterValue] = useState(null)
-    const [modalOpen, setModalOpen] = useState(null)
     const [products, setProducts] = useState([])
 
     useEffect(() => {
@@ -20,8 +22,8 @@ export function Confectionery() {
 
     }
 
-    const handleModal = (product) => {
-        setModalOpen(!modalOpen)
+    const onGoToProduct = (product) => {
+        navigate(`/collection/${product._id}`)
     }
 
     return (
@@ -32,29 +34,18 @@ export function Confectionery() {
                 <li onClick={(ev) => setFilterValue('mousse-cakes')} value="mousse-cakes" >עוגות מוס</li>
                 <li onClick={(ev) => setFilterValue('desserts')} value="desserts" >קינוחים</li>
             </ul>
-
             <div className="gallery">
                 {products.map((product, index) => {
                     index += 1
-                    return (
-                        <div className="product" onClick={() => imgClicked(product)} key={product._id}>
-                            <img src={require(`../assets/imgs/products/product${index}.jpeg`)} alt="" />
-                            <div className="product-info">
-                                <div className="name-and-price">
-                                    <h3 className="product-name">{product.title}</h3>
-                                    <p className="product-price">{product.price}</p>
-                                </div>
-                                <div className="btns">
-                                    <button>הוספה לסל</button>
-                                    {/* <Link to={`/collection/${product._id}`} onClick={() => handleModal(product)}>למוצר{index}</Link> */}
-                                    <button to={`/collection/${product._id}`} onClick={() => handleModal(product)}>למוצר{index}</button>
-                                </div>
-                            </div>
-                        </div>
-                    )
+                    return <ProductCard
+                        key={product._id}
+                        product={product}
+                        index={index}
+                        onGoToProduct={onGoToProduct}
+                        imgClicked={imgClicked}
+                    />
                 })}
             </div>
-            {modalOpen && <Modal />}
         </div>
     )
 }

@@ -18,9 +18,6 @@ export function ProductDetails() {
         getProductById()
     }, [product, products])
 
-    useEffect(() => {
-    }, [])
-
     mediumZoom('.product-img', {
         margin: 120,
         background: '#9b9c98}',
@@ -31,13 +28,16 @@ export function ProductDetails() {
         setProductIndex(products.findIndex(product => product._id === productId) + 1)
     }
 
-    let productContainsMilk = product?.isContainsMilk
     if (!product) return <div>No Product</div>
     return (
         <div className="product-details-container">
             <div className="first-section">
                 <div className="product-info">
                     <h1 className="title">{product.title}</h1>
+                    <div className="product-price">
+                        <p>ש"ח</p>
+                        <p>{product.price}</p>
+                    </div>
                     <p className="short-description">{product.shortDescription}</p>
                     <div className="ingredients-list">
                         : מרכיבים
@@ -47,14 +47,16 @@ export function ProductDetails() {
                             )}
                         </ul>
                     </div>
-                    <div className="allergy-info">
-                        <p className="container" onClick={() => setDivExpends(!divExpends)}> <p>{divExpends ? '-' : '+' }</p> <p>מידע על אלרגנים </p> </p>
-                        {divExpends && <div className="expends-allergy">
+                    <div onClick={() => setDivExpends(!divExpends)} className="allergy-info">
+                        <p className="container">
+                            <p>{divExpends ? '-' : '+'}</p>
+                            <p>מידע על אלרגנים </p>
+                        </p>
+                        <div className={divExpends ? 'expends-allergy expends' : 'expends-allergy'} >
                             <p className="milk-section"> {product?.isContainsMilk ? 'חלבי' : 'פרווה'}</p>
                             <p className="milk-section"> {product?.isContainsNut ? 'מכיל אגוזים' : 'לא מכיל אגוזים'}</p>
-                        </div>}
+                        </div>
                     </div>
-                    <p className="price">{product.price}</p>
 
                 </div>
                 <div className="img-container">

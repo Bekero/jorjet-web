@@ -27,14 +27,6 @@ html {
     // color: $main-txt-clr;
 }
 
-// body {
-//     font-size: rem(18px);
-//     margin: 0;
-//     // max-width: 1024px;
-//     margin: auto;
-//     font-family: spotify-font, open-sans, sans-serif;
-// }
-
 .modal-opened123 {
     position: fixed;
     top: 0;
@@ -43,6 +35,22 @@ html {
     left: 0;
     z-index: 50;
     background-color: rgb(0 0 0 / 12%);
+}
+
+.go-back-btn,
+.forward-btn {
+    margin: 10px;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-flex;
+    height: 32px;
+    justify-content: center;
+    position: relative;
+    width: 32px;
+    cursor: pointer;
 }
 
 h2,

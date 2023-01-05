@@ -14,7 +14,11 @@
     },
     {
         "_id": "qwaersfdtguyjhiklo",
-        "src": "../assets/imgs/products/product2.jpeg",
+        "src": [
+            "../assets/imgs/products/product2.jpeg",
+            "../assets/imgs/products/product5.jpeg",
+            "../assets/imgs/products/product1.jpeg"
+        ],
         "title": "עוגה מעוצבת",
         "catagories": "designed-cakes",
         "shortDescription": "העוגה הזאת היא אחלה, תזמין",
@@ -28,7 +32,12 @@
     },
     {
         "_id": "plkjhgfd",
-        "src": "../assets/imgs/products/product3.jpeg",
+        "src": [
+            "../assets/imgs/products/product3.jpeg",
+            "../assets/imgs/products/product2.jpeg",
+            "../assets/imgs/products/product1.jpeg",
+            "../assets/imgs/products/product6.jpeg"
+        ],
         "title": "עוגהגה גה",
         "catagories": "desserts",
         "shortDescription": "העוגה הזאת היא אחלה, תזמין",
@@ -42,7 +51,11 @@
     },
     {
         "_id": "wedesfrgtyjhuki",
-        "src": "../assets/imgs/products/product4.jpeg",
+        "src": [
+            "../assets/imgs/products/product4.jpeg",
+            "../assets/imgs/products/product2.jpeg",
+            "../assets/imgs/products/product6.jpeg"
+        ],
         "title": "עוגהגה גה",
         "catagories": "mousse-cakes",
         "shortDescription": "העוגה הזאת היא אחלה, תזמין",

@@ -18,10 +18,12 @@
             font-weight: bold;
 
             >* {
+                position: relative;
                 margin: 0;
             }
 
             .allergy-info {
+                cursor: pointer;
                 p.container {
                     border-top: 1px solid #999;
                     display: flex;
@@ -38,15 +40,26 @@
 
                 .expends-allergy {
                     display: flex;
+                    position: absolute;
                     padding: 5px;
                     border-bottom: 1px solid #999;
                     justify-content: flex-end;
                     padding-left: 10px;
+                    top: 0;
+                    transition: 0.2s;
+                    width: 100%;
+                    opacity: 0;
 
                     >* {
                         padding-left: 5px;
                         margin: 0;
                     }
+                }
+
+                .expends-allergy.expends {
+                    opacity: 1;
+                    transition: 0.7s;
+                    position: relative;
                 }
             }
 
@@ -63,12 +76,21 @@
             .short-description {
                 border-top: 1px solid #999;
                 border-bottom: 1px solid #999;
-                padding: 10px;
+                padding: 8px 0px 8px 1px;
                 color: $main-clr;
             }
 
             .description {
                 color: $main-clr;
+            }
+
+            .product-price {
+                display: flex;
+                justify-content: flex-end;
+
+                p:first-child {
+                    margin-right: 6px;
+                }
             }
 
             ul {
@@ -85,9 +107,10 @@
             background-size: cover;
 
             img {
-                height: 500px;
+                height: 610px;
                 width: 100%;
                 object-fit: cover;
+
             }
         }
     }

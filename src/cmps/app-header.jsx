@@ -1,5 +1,5 @@
 import { NavLink, useNavigate } from "react-router-dom";
-
+import { useEffect } from "react";
 import JorjetsLogo from '../assets/imgs/jotjets-logo.png'
 import TiktokSvg from '../assets/svgs/tiktok'
 import InstagramSvg from '../assets/svgs/instagram'
@@ -11,6 +11,7 @@ export function AppHeader() {
     const navigate = useNavigate();
 
     const onActiveHamburger = () => {
+
         const hamburger = document.querySelector(".hamburger");
 
         const navLinks = document.querySelector(".nav-links");
@@ -32,7 +33,6 @@ export function AppHeader() {
         socialLinks.forEach(socialLink => {
             socialLink.classList.toggle("fade");
         });
-
     }
 
     return (
@@ -46,12 +46,10 @@ export function AppHeader() {
                 <div className="bars3"></div>
             </div>
             <ul className="nav-links">
-                <li><NavLink to='/'>צור קשר</NavLink></li>
-                <li><NavLink to='/recipe'>מתכונים</NavLink></li>
-                <li><NavLink to='/'>הסיפור שלי</NavLink></li>
-                <li><NavLink to='/collection'>קולקציה</NavLink></li>
-                {/* <li><NavLink to='/cases'>מארזים</NavLink></li> */}
-                {/* <li><NavLink to='/confectionery'>קונדיטוריה</NavLink></li> */}
+                <li onClick={() => onActiveHamburger()}><NavLink to='/'>צור קשר</NavLink></li>
+                <li onClick={() => onActiveHamburger()} ><NavLink to='/recipe'>מתכונים</NavLink></li>
+                <li onClick={() => onActiveHamburger()} ><NavLink to='/'>הסיפור שלי</NavLink></li>
+                <li onClick={() => onActiveHamburger()} ><NavLink to='/collection'>קולקציה</NavLink></li>
             </ul>
             <ul className="nav-social-links">
                 <li><a target="_blank" href="https://www.tiktok.com/@lirongorzat"><TiktokSvg /></a></li>
