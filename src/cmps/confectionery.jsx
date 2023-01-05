@@ -40,13 +40,14 @@ export function Confectionery() {
                         <div className="product" onClick={() => imgClicked(product)} key={product._id}>
                             <img src={require(`../assets/imgs/products/product${index}.jpeg`)} alt="" />
                             <div className="product-info">
-                                <h3 className="product-name">{product.title}</h3>
                                 <div className="name-and-price">
+                                    <h3 className="product-name">{product.title}</h3>
                                     <p className="product-price">{product.price}</p>
                                 </div>
                                 <div className="btns">
                                     <button>הוספה לסל</button>
-                                    <Link to={`/collection/${product._id}`} onClick={() => handleModal(product)}>למוצר{index}</Link>
+                                    {/* <Link to={`/collection/${product._id}`} onClick={() => handleModal(product)}>למוצר{index}</Link> */}
+                                    <button to={`/collection/${product._id}`} onClick={() => handleModal(product)}>למוצר{index}</button>
                                 </div>
                             </div>
                         </div>
