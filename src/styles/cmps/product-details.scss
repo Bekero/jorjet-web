@@ -5,6 +5,7 @@
 
     .first-section {
         display: flex;
+        width: 90%;
         margin-top: 30px;
         justify-content: center;
 
@@ -24,6 +25,7 @@
 
             .allergy-info {
                 cursor: pointer;
+
                 p.container {
                     border-top: 1px solid #999;
                     display: flex;
@@ -128,6 +130,18 @@
                 background-color: rgba(85, 163, 78, 0.639);
                 border-radius: 20px;
             }
+        }
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+
+    .product-details-container {
+
+
+        .first-section {
+            width: 90%;
         }
     }
 }
