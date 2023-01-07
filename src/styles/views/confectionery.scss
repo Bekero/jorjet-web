@@ -270,13 +270,13 @@
 
         .gallery {
             display: grid;
-            grid-template-columns: repeat(1, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(5, auto);
             grid-gap: 15px;
 
             >* {
-                width: 240px;
-                height: 420px;
+                width: 130px;
+                height: 300px;
             }
         }
     }
