@@ -48,7 +48,9 @@ html {
     display: inline-flex;
     height: 32px;
     justify-content: center;
-    position: relative;
+    position: absolute;
+    left: 0;
+    // position: relative;
     width: 32px;
     cursor: pointer;
 }

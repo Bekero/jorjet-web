@@ -47,9 +47,10 @@ export function AppHeader() {
             </div>
             <ul className="nav-links">
                 <li onClick={() => onActiveHamburger()}><NavLink to='/'>צור קשר</NavLink></li>
+                <li onClick={() => onActiveHamburger()}><NavLink to='/'>סדנאות</NavLink></li>
                 <li onClick={() => onActiveHamburger()} ><NavLink to='/recipe'>מתכונים</NavLink></li>
                 <li onClick={() => onActiveHamburger()} ><NavLink to='/'>הסיפור שלי</NavLink></li>
-                <li onClick={() => onActiveHamburger()} ><NavLink to='/collection'>קולקציה</NavLink></li>
+                <li onClick={() => onActiveHamburger()} ><NavLink to='/confectionery'>קונדיטוריה</NavLink></li>
             </ul>
             <ul className="nav-social-links">
                 <li><a target="_blank" href="https://www.tiktok.com/@lirongorzat"><TiktokSvg /></a></li>
