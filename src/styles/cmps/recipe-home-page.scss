@@ -27,13 +27,14 @@
             box-shadow: 0px 0px 20px 5px #8f8c8c8f;
             width: 150px;
             height: 200px;
+            margin: 10px;
             transition: 0.5s;
             opacity: 1;
             // position: absolute;
 
 
             button {
-                position: absolute;
+                // position: absolute;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -42,7 +43,7 @@
                 width: 75px;
                 height: 26px;
 
-                    transform: translate(50%, -30%);
+                // transform: translate(50%, -30%);
                 // top: 135px;
 
                 background-color: rgb(125, 120, 120);
@@ -106,10 +107,6 @@
 
         >* {
             position: absolute;
-
-            button {
-                position: absolute;
-            }
         }
     }
 }
@@ -119,29 +116,22 @@
 
         >* {
             position: absolute;
-
-            button {
-                position: absolute;
-            }
         }
     }
 }
 
-@media screen and (max-width: 850px) {
+// @media screen and (max-width: 850px) {
 
-    .img-container {
+//     .img-container {
 
-        >* {
-            // position: absolute;
-        }
-    }
+//     }
 
-    .recipe-home-page {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-    }
-}
+//     .recipe-home-page {
+//         display: flex;
+//         flex-direction: column-reverse;
+//         align-items: center;
+//     }
+// }
 
 @media screen and (max-width: 550px) {
 
@@ -152,11 +142,6 @@
 
             >* {
                 position: initial;
-
-                button {
-                    transform: translate(50%, -150%);
-                }
-
             }
 
         }
@@ -173,6 +158,19 @@
     }
 }
 
+@media screen and (min-width: 390px) {
+    .imgs-container {
+
+        >* {
+
+            button {
+                position: absolute;
+                transform: translate(50%, -30%);
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 390px) {
 
     .imgs-container {
@@ -183,11 +181,13 @@
         margin-bottom: 60px;
         flex-direction: column;
         align-items: center;
+        
 
         >* {
             position: unset;
 
             button {
+                position: initial;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -195,7 +195,6 @@
                 width: 75px;
                 height: 26px;
                 transform: translate(50%, -150%);
-                top: 135px;
                 background-color: rgb(125, 120, 120);
                 cursor: pointer;
                 border: none;

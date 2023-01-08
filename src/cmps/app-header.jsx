@@ -5,6 +5,7 @@ import TiktokSvg from '../assets/svgs/tiktok'
 import InstagramSvg from '../assets/svgs/instagram'
 import FacebookSvg from '../assets/svgs/facebook'
 import WhatsappSvg from '../assets/svgs/whatsapp'
+import MagnifyingGlass from "./svg/magnifying-glass";
 
 export function AppHeader() {
 
@@ -35,6 +36,10 @@ export function AppHeader() {
         });
     }
 
+    const onSearch = () => {
+        console.log('Searching...')
+    }
+
     return (
         <nav>
             <div className="logo">
@@ -46,6 +51,7 @@ export function AppHeader() {
                 <div className="bars3"></div>
             </div>
             <ul className="nav-links">
+                <li onClick={() => onSearch()} className="magnifying-glass"><MagnifyingGlass /></li>
                 <li onClick={() => onActiveHamburger()}><NavLink to='/'>צור קשר</NavLink></li>
                 <li onClick={() => onActiveHamburger()}><NavLink to='/'>סדנאות</NavLink></li>
                 <li onClick={() => onActiveHamburger()} ><NavLink to='/recipe'>מתכונים</NavLink></li>

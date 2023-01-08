@@ -30,10 +30,10 @@
             height: 200px;
             transition: 0.5s;
             opacity: 1;
-            // position: absolute;
+            margin: 10px;
 
             button {
-                position: absolute;
+                // position: absolute;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -42,7 +42,7 @@
                 width: 75px;
                 height: 26px;
 
-                transform: translate(50%, -30%);
+                // transform: translate(50%, -30%);
                 // top: 135px;
 
                 background-color: rgb(125, 120, 120);
@@ -106,10 +106,6 @@
 
         >* {
             position: absolute;
-
-            button {
-                position: absolute;
-            }
         }
     }
 }
@@ -119,29 +115,22 @@
 
         >* {
             position: absolute;
-
-            button {
-                position: absolute;
-            }
         }
     }
 }
 
-@media screen and (max-width: 850px) {
+// @media screen and (max-width: 850px) {
 
-    .img-container {
+//     .img-container {
 
-        >* {
-            // position: absolute;
-        }
-    }
+//     }
 
-    .product-home-page {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-    }
-}
+//     .product-home-page {
+//         display: flex;
+//         flex-direction: column-reverse;
+//         align-items: center;
+//     }
+// }
 
 @media screen and (max-width: 550px) {
 
@@ -152,29 +141,6 @@
 
             >* {
                 position: initial;
-
-                button {
-                    transform: translate(50%, -150%);
-                }
-
-                // button {
-                //     display: flex;
-                //     align-items: center;
-                //     justify-content: center;
-                //     padding: 15px 32px;
-                //     width: 75px;
-                //     height: 26px;
-                //     transform: translate(50%, -150%);
-                //     top: 135px;
-                //     background-color: rgb(125, 120, 120);
-                //     cursor: pointer;
-                //     border: none;
-                //     font-size: 12px;
-                //     font-weight: bold;
-                //     opacity: 0;
-                //     transition: 0.5s;
-                // }
-
             }
 
         }
@@ -188,6 +154,19 @@
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
+    }
+}
+
+@media screen and (min-width: 390px) {
+    .imgs-container {
+
+        >* {
+
+            button {
+                position: absolute;
+                transform: translate(50%, -30%);
+            }
+        }
     }
 }
 
@@ -207,13 +186,13 @@
 
             button {
                 display: flex;
+                position: initial;
                 align-items: center;
                 justify-content: center;
                 padding: 15px 32px;
                 width: 75px;
                 height: 26px;
                 transform: translate(50%, -150%);
-                top: 135px;
                 background-color: rgb(125, 120, 120);
                 cursor: pointer;
                 border: none;
