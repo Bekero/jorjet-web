@@ -6,6 +6,7 @@ import { BgcImg3 } from "../cmps/bgc-img-3";
 import { Contact } from "../cmps/contact";
 import { useEffect } from "react";
 import { productService } from "../services/product.service"
+import { CostumerRecommendation } from "../cmps/costumer-recommendation";
 
 
 export function HomePage() {
@@ -21,6 +22,7 @@ export function HomePage() {
             <BgcImg2 />
             <RecipeProduct />
             <BgcImg3 />
+            <CostumerRecommendation />
             {/* <Contact /> */}
         </div>
     )

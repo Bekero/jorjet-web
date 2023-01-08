@@ -19,8 +19,9 @@ export function ProductDetails() {
     }, [product, products])
 
     mediumZoom('.product-img', {
-        margin: 120,
-        background: '#9b9c98}',
+        margin: 100,
+        // background: '#9b9c98',
+        background: '#0000001a',
     })
 
     const getProductById = () => {

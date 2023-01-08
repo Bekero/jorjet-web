@@ -55,7 +55,7 @@ export function AppHeader() {
             <ul className="nav-social-links">
                 <li><a target="_blank" href="https://www.tiktok.com/@lirongorzat"><TiktokSvg /></a></li>
                 <li><a target="_blank" href="https://www.instagram.com/jorjet_sweets/"><InstagramSvg /></a></li>
-                <li><a target="_blank" href="https://www.facebook.com/pages/%D7%94%D7%91%D7%99%D7%AA%20%D7%94%D7%9E%D7%AA%D7%95%D7%A7%20%D7%A9%D7%9C%20%D7%9C%D7%99%D7%A8%D7%95%D7%9F%20Jorjet%20Sweets/110021180765462"><FacebookSvg /></a></li>
+                <li><a target="_blank" href="https://www.facebook.com/lironscake"><FacebookSvg /></a></li>
                 <li><a target="_blank" href="https://wa.me/+972558813232"><WhatsappSvg /></a></li>
             </ul>
         </nav>

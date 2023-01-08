@@ -10,14 +10,14 @@
 @import "basics/base";
 
 // Views
-@import "views/home-page.scss";
-@import "views/confectionery.scss";
-@import "views/collection.scss";
+@import "views/home-page";
+@import "views/confectionery";
+@import "views/collection";
 
 // Components
 @import "cmps/app-footer";
 @import "cmps/app-header";
-@import "cmps/app-header2.scss";
+@import "cmps/app-header2";
 @import "cmps/home-page";
 @import "cmps/my-story-short";
 @import "cmps/bgc-img-2";
@@ -26,4 +26,5 @@
 @import "cmps/bgc-img-3";
 @import "cmps/modal";
 @import "cmps/contact";
-@import "cmps/product-details.scss";
+@import "cmps/product-details";
+@import "cmps/costumer-recommendation";

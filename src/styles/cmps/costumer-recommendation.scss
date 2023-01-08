@@ -1,0 +1,36 @@
+.costumer-recommendation {
+    >* {
+        padding: 10px;
+    }
+
+    .costumer {
+        text-align: end;
+        box-shadow: 0px 0px 10px 5px rgb(143 140 140 / 40%);
+        display: flex;
+        border: 1px solid rgba(125, 118, 118, 0.2117647059);
+        border-radius: 8px;
+        background-color: rgb(153, 153, 153);
+        height: 370px;
+        width: 270px;
+        padding: 10px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        .img-container {
+            border-radius: 8px;
+            width: 100px;
+            height: 100px;
+
+            img {
+                box-shadow: 0px 0px 10px 5px rgb(143 140 140 / 40%);
+                border-radius: 8px;
+            }
+        }
+
+    }
+}
+
+.medium-zoom-image--opened {
+    border-radius: 8px;
+}
