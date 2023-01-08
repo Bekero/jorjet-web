@@ -22,7 +22,6 @@ export function HomePage() {
             <RecipeProduct />
             <BgcImg3 />
             {/* <Contact /> */}
-
         </div>
     )
 }

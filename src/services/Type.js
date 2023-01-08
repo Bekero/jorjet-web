@@ -6,9 +6,9 @@ function Type() {
     <Typewriter
       options={{
         strings: [
-          "קונדיטוריה",
-          "מארזים",
-          "מתכונים"
+          "Cookies",
+          "Cakes",
+          "Moouse Cakes"
         ],
         autoStart: true,
         loop: true,
