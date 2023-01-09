@@ -6,62 +6,145 @@
     .first-section {
         display: flex;
         width: 90%;
-        margin-top: 30px;
+        margin-top: 50px;
         justify-content: center;
 
         .product-info {
             display: flex;
-            height: 440px;
+            height: 600px;
             width: 400px;
+            overflow: scroll;
             margin-right: 30px;
+            max-height: 600px;
             flex-direction: column;
             text-align: end;
             font-weight: bold;
+            padding-right: 10px;
 
             >* {
                 position: relative;
                 margin: 0;
             }
 
-            .allergy-info {
-                cursor: pointer;
+            .ingredients-list {
 
-                p.container {
-                    border-top: 1px solid #999;
-                    display: flex;
-                    border-bottom: 1px solid #999;
-                    padding: 5px;
-                    margin: 0;
+                .addings-parve {
                     cursor: pointer;
-                    justify-content: space-between;
 
-                    >* {
+                    p {
+                        border-top: 1px solid #999;
+                        display: flex;
+                        border-bottom: 1px solid #999;
+                        padding: 5px;
                         margin: 0;
+                        cursor: pointer;
+                        justify-content: space-between;
+                    }
+
+                    .expends-parve {
+                        display: flex;
+                        position: absolute;
+                        padding: 5px;
+                        border-bottom: 1px solid #999;
+                        padding-left: 10px;
+                        top: 0;
+                        transition: 0.7s;
+                        width: 100%;
+                        left: -700px;
+                        flex-direction: column;
+                        align-items: flex-end;
+
+                    }
+
+                    .expends-parve.expends {
+                        left: 0;
+                        transition: 0.7s;
+                        position: relative;
+                        background-color: #afaeae42;
+
+                        // >* {
+                        //     list-style-type: disc;
+                        // }
                     }
                 }
 
-                .expends-allergy {
-                    display: flex;
-                    position: absolute;
-                    padding: 5px;
-                    border-bottom: 1px solid #999;
-                    justify-content: flex-end;
-                    padding-left: 10px;
-                    top: 0;
-                    transition: 0.2s;
-                    width: 100%;
-                    opacity: 0;
+                .addings-milky {
+                    cursor: pointer;
 
-                    >* {
-                        padding-left: 5px;
+                    p {
+                        border-top: 1px solid #999;
+                        display: flex;
+                        border-bottom: 1px solid #999;
+                        padding: 5px;
                         margin: 0;
+                        cursor: pointer;
+                        justify-content: space-between;
+                    }
+
+                    .expends-milky {
+                        display: flex;
+                        position: absolute;
+                        padding: 5px;
+                        border-bottom: 1px solid #999;
+                        padding-left: 10px;
+                        top: 0;
+                        transition: 0.7s;
+                        width: 100%;
+                        left: -700px;
+                        flex-direction: column;
+                        align-items: flex-end;
+                    }
+
+                    .expends-milky.expends {
+                        left: 0;
+                        transition: 0.7s;
+                        position: relative;
+                        background-color: #afaeae42;
                     }
                 }
 
-                .expends-allergy.expends {
-                    opacity: 1;
-                    transition: 0.7s;
-                    position: relative;
+                .allergy-info {
+                    cursor: pointer;
+
+                    section.container {
+                        border-top: 1px solid #999;
+                        display: flex;
+                        border-bottom: 1px solid #999;
+                        padding: 5px;
+                        margin: 0;
+                        cursor: pointer;
+                        justify-content: space-between;
+
+                        >* {
+                            margin: 0;
+                        }
+                    }
+
+                    .expends-allergy {
+                        display: flex;
+                        position: absolute;
+                        padding: 5px;
+                        border-bottom: 1px solid #999;
+                        justify-content: flex-end;
+                        padding-left: 10px;
+                        top: 0;
+                        transition: 0.7s;
+                        width: 100%;
+                        left: -700px;
+                        // opacity: 1;
+
+                        >* {
+                            padding-left: 5px;
+                            margin: 0;
+                        }
+                    }
+
+                    .expends-allergy.expends {
+                        // opacity: 1;
+                        left: 0;
+                        transition: 0.7s;
+                        position: relative;
+                    }
                 }
             }
 
@@ -77,9 +160,11 @@
 
             .short-description {
                 border-top: 1px solid #999;
-                border-bottom: 1px solid #999;
+                // border-bottom: 1px solid #999;
                 padding: 8px 0px 8px 1px;
                 color: $main-clr;
+                margin-bottom: 6px;
+                font-weight: bold;
             }
 
             .description {
@@ -101,6 +186,20 @@
                 list-style: none;
                 padding-right: 25px;
             }
+
+            .last-info {
+
+                margin-top: 10px;
+
+                >* {
+                    font-size: 0.8em;
+                    display: flex;
+                    list-style-type: armenian;
+                    padding: 6px;
+                    border-bottom: 1px solid #999;
+                    justify-content: center;
+                }
+            }
         }
 
         .img-container {
@@ -110,9 +209,10 @@
 
             img {
                 height: 610px;
+                border-radius: 18px;
+                box-shadow: 4px 4px 9px 6px rgb(0 0 0 / 10%);
                 width: 100%;
                 object-fit: cover;
-
             }
         }
     }

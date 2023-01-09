@@ -5,6 +5,14 @@ body {
     background-color: $main-bgc;
 }
 
+
+*, :before, :after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font: inherit
+}
+
 .pages-container {
     padding-top: 6rem;
 }

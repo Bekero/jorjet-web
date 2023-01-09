@@ -1,6 +1,20 @@
-
 $main-bgc: #cccccc;
-$sec-bgc: #edf2f7 ;
-$main-clr: #edf2f7 ;
+$sec-bgc: #edf2f7;
+$main-clr: #edf2f7;
 
 $main-clr: #646464;
+
+
+
+
+
+//Search-Box
+$btn-d: 5em;
+$txt-w: 4*$btn-d;
+$txt-h: .65*$btn-d;
+$txt-c: #ffeacc;
+$mag-d: .5*$txt-h;
+$mag-f: .125;
+$mag-w: $mag-f*$mag-d;
+$mag-c: #000;
+$t: .65s;

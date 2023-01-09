@@ -11,7 +11,9 @@ export function ProductDetails() {
     const [product, setProduct] = useState(null)
     const [products, setProducts] = useState([])
     const [productIndex, setProductIndex] = useState(null)
-    const [divExpends, setDivExpends] = useState(null)
+    const [divAllergyExpends, setDivAllergyExpends] = useState(null)
+    const [divAddingParveExpends, setDivAddingParveExpends] = useState(null)
+    const [divAddingMilkyExpends, setDivAddingMilkyExpends] = useState(null)
 
     useEffect(() => {
         setProducts(productService.getProducts)
@@ -29,6 +31,10 @@ export function ProductDetails() {
         setProductIndex(products.findIndex(product => product._id === productId) + 1)
     }
 
+    // productSizeForPeople
+    // diameter
+    const listOfIngredients = ['ingredientsParve', 'ingredientsMilky']
+
     if (!product) return <div>No Product</div>
     return (
         <div className="product-details-container">
@@ -41,30 +47,39 @@ export function ProductDetails() {
                     </div>
                     <p className="short-description">{product.shortDescription}</p>
                     <div className="ingredients-list">
-                        : מרכיבים
-                        <ul>
-                            {product?.ingredients?.map(ingredient =>
-                                <li key={ingredient}>{ingredient}</li>
-                            )}
-                        </ul>
-                    </div>
-                    <div onClick={() => setDivExpends(!divExpends)} className="allergy-info">
-                        <p className="container">
-                            <p>{divExpends ? '-' : '+'}</p>
-                            <p>מידע על אלרגנים </p>
-                        </p>
-                        <div className={divExpends ? 'expends-allergy expends' : 'expends-allergy'} >
-                            <p className="milk-section"> {product?.isContainsMilk ? 'חלבי' : 'פרווה'}</p>
-                            <p className="milk-section"> {product?.isContainsNut ? 'מכיל אגוזים' : 'לא מכיל אגוזים'}</p>
+                        <div className="addings-parve">
+                            <p onClick={() => setDivAddingParveExpends(!divAddingParveExpends)}> <span>{divAddingParveExpends ? '-' : '+'}</span><span>: תוספות ל{product.title} (פרווה)</span></p>
+                            <ul className={divAddingParveExpends ? 'expends-parve expends' : 'expends-parve'}>
+                                {product?.addingParve?.map((ingredient, index) =>
+                                    // <li key={ingredient}>{index >= 1 ? ',' : ''}{ingredient}</li>
+                                    <li key={ingredient}>{ingredient}&nbsp;·</li>
+                                )}
+                            </ul>
+                        </div>
+                        <div className="addings-milky">
+                            <p onClick={() => setDivAddingMilkyExpends(!divAddingMilkyExpends)} ><span>{divAddingMilkyExpends ? '-' : '+'}</span><span>: תוספות ל{product.title} (חלבי)</span></p>
+                            <ul className={divAddingMilkyExpends ? 'expends-milky expends' : 'expends-milky'} >
+                                {product?.addingMilky?.map((ingredient, index) =>
+                                    // <li key={ingredient}>{index >= 1 ? ',' : ''}{ingredient}</li>
+                                    <li key={ingredient}>{ingredient}&nbsp;·</li>
+                                )}
+                            </ul>
                         </div>
                     </div>
-
+                    <div className="last-info">
+                        <h4>{product.note}</h4>
+                        <h4><span>.מתאים ל-{product.productSizeForPeople} פרוסות </span> <span>&nbsp; קוטר ({product.diameter}) </span></h4>
+                    </div>
                 </div>
+
                 <div className="img-container">
                     <img className="product-img" src={require(`../assets/imgs/products/product${productIndex}.jpeg`)} alt="" />
                 </div>
             </div>
             <div className="other-links">
+                <div className="warning">
+                    <h3>Warning Warning Warning</h3>
+                </div>
                 <div className="whatsapp-contact">
                     <li><a target="_blank" href="https://wa.me/+972558813232"><WhatsappSvg /></a></li>
                     <h3>  הזמנה מהירה דרך הוואטסאפ</h3>

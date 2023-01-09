@@ -9,6 +9,28 @@ nav {
     box-shadow: 0 3px 20px rgb(0 0 0 / 20%);
 }
 
+.magnifying-glass {
+
+    input {
+        position: absolute;
+        width: 280px;
+        bottom: -68px;
+        height: 40px;
+        top: 0px;
+        left: 230px;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: all 0.3s ease-out;
+    }
+
+    input.open {
+        opacity: 1;
+        top: 88px;
+        transition: all .3s ease-out;
+    }
+}
+
 /* Styling Logo*/
 
 .logo {
@@ -118,7 +140,6 @@ nav {
 
     }
 
-
     .nav-links {
         background: #89979abd;
         position: fixed;
@@ -198,6 +219,11 @@ nav {
         margin: 0;
     }
 
+    .nav-social-links li:nth-child(5) {
+        transition: all 0.5s ease 2s;
+        margin: 0;
+    }
+
     .nav-links li:nth-child(1) {
         transition: all 0.5s ease 0.2s;
     }
@@ -220,7 +246,7 @@ nav {
 
     .nav-links li:nth-child(6) {
         transition: all 0.5s ease 0.9s;
-        margin: 0;
+        // margin: 0;
     }
 
     .nav-links li:nth-child(7) {

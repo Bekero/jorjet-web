@@ -5,6 +5,7 @@ import routes from './routes'
 import { Contact } from './cmps/contact';
 import { GoBack } from './cmps/go-back';
 import { useEffect } from 'react';
+import { SearchBar } from './cmps/search-bar';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
   return (
     <div className="app-container">
       <AppHeader />
+      <SearchBar />
       <div className="pages-container">
         {/* From Computer */}
         {params === {} ? '' : < GoBack />}

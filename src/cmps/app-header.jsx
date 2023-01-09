@@ -1,5 +1,5 @@
 import { NavLink, useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import JorjetsLogo from '../assets/imgs/jotjets-logo.png'
 import TiktokSvg from '../assets/svgs/tiktok'
 import InstagramSvg from '../assets/svgs/instagram'
@@ -10,6 +10,8 @@ import MagnifyingGlass from "./svg/magnifying-glass";
 export function AppHeader() {
 
     const navigate = useNavigate();
+
+    const [searchBarOpen, setSearchBarOpen] = useState(null)
 
     const onActiveHamburger = () => {
 
@@ -36,8 +38,9 @@ export function AppHeader() {
         });
     }
 
-    const onSearch = () => {
-        console.log('Searching...')
+    const onSearch = (ev) => {
+        setSearchBarOpen(!searchBarOpen)
+        console.log('searchBarOpen :', searchBarOpen)
     }
 
     return (
@@ -51,7 +54,12 @@ export function AppHeader() {
                 <div className="bars3"></div>
             </div>
             <ul className="nav-links">
-                <li onClick={() => onSearch()} className="magnifying-glass"><MagnifyingGlass /></li>
+                {/* <input id='search-btn' type='checkbox' />
+                    <label for='search-btn'>Show search bar</label>
+                    <input id='search-bar' type='text' placeholder='Search...' /> */}
+                {/* <li onClick={(ev) => onSearch(ev)} className="magnifying-glass"><MagnifyingGlass />
+                    <input className={searchBarOpen ? 'open' : ''} type="text" placeholder="Search.."></input>
+                </li> */}
                 <li onClick={() => onActiveHamburger()}><NavLink to='/'>צור קשר</NavLink></li>
                 <li onClick={() => onActiveHamburger()}><NavLink to='/'>סדנאות</NavLink></li>
                 <li onClick={() => onActiveHamburger()} ><NavLink to='/recipe'>מתכונים</NavLink></li>
@@ -62,7 +70,9 @@ export function AppHeader() {
                 <li><a target="_blank" href="https://www.tiktok.com/@lirongorzat"><TiktokSvg /></a></li>
                 <li><a target="_blank" href="https://www.instagram.com/jorjet_sweets/"><InstagramSvg /></a></li>
                 <li><a target="_blank" href="https://www.facebook.com/lironscake"><FacebookSvg /></a></li>
-                <li><a target="_blank" href="https://wa.me/+972558813232"><WhatsappSvg /></a></li>
+                <li>
+                    <a target="_blank" href="https://wa.me/+972558813232"><WhatsappSvg /></a>
+                </li>
             </ul>
         </nav>
     )
