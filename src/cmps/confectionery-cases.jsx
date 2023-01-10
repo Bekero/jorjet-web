@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import products from '../data/products.json'
+// import products from '../data/products.json'
 
 export function ConfectioneryCases() {
 

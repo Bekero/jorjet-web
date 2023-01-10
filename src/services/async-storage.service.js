@@ -1,4 +1,4 @@
-import product from '../data/products.json'
+import product from '../data/designed-cakes.json'
 export const storageService = {
     query,
     get,

@@ -7,7 +7,6 @@
     padding: 50px;
     color: black;
 
-
     @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
 
     input::-webkit-input-placeholder,
@@ -199,7 +198,6 @@
         color: #e2dedb;
     }
 
-
     .left-contact {
         display: flex;
         flex-direction: column;
@@ -207,6 +205,10 @@
         padding-inline-start: 20px;
         font-weight: bold;
         color: #646464;
+
+        >*:not(:last-child) {
+            margin: 6px;
+        }
 
         .phone {
             cursor: pointer;
@@ -225,6 +227,10 @@
                 width: 150px;
                 height: auto;
             }
+        }
+
+        .nav-social-links {
+            margin: 6px;
         }
 
     }

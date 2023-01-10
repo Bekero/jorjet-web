@@ -12,9 +12,10 @@ export function MainBgc() {
                     <p>Jorjet <span>Patticerie</span></p>
                 </div>
                 <div className="products-writer"
-                    style={{ padding: 50, textAlign: "left" }}>
-                    <Type />
+                // style={{ padding: 50, textAlign: "left" }}
+                >
                     <h2>Served With Love.</h2>
+                    <Type />
                 </div>
             </div>
 

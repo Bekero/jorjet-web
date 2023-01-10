@@ -2,7 +2,9 @@ import {
     storageService
 } from './async-storage.service'
 
-import gProducts from '../data/products.json'
+import designedCakes from '../data/designed-cakes.json'
+import cases from '../data/cases.json'
+// import gProducts from '../data/designed-cakes.json'
 
 export const productService = {
     query,
@@ -27,7 +29,8 @@ async function getById(productId) {
 }
 
 function getProducts() {
-    return gProducts
+
+    return designedCakes
 }
 
 async function remove(productId) {

@@ -2,7 +2,7 @@
     border-top: 1px solid #999;
     display: flex;
     margin: auto;
-    padding: 50px;
+    padding: 25px;
     height: auto;
     color: $main-clr;
     justify-content: center;
@@ -92,6 +92,7 @@
             width: 100px;
             border-width: 0;
             color: $main-clr;
+            margin: auto;
             background-color: #999;
         }
 
@@ -131,6 +132,15 @@
 //         align-items: center;
 //     }
 // }
+
+@media screen and (max-width: 700px) {
+
+    .product-home-page {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
 
 @media screen and (max-width: 550px) {
 
@@ -213,7 +223,7 @@
         flex-direction: column-reverse;
         align-items: center;
         margin-top: 60px;
-        margin-bottom: 50px;
+        margin-bottom: 70px;
 
     }
 }

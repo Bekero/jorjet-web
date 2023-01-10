@@ -12,7 +12,6 @@ function App() {
   const params = useParams()
 
   useEffect(() => {
-    console.log('params :', params)
   }, [])
 
 

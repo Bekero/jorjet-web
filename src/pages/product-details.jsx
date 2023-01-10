@@ -17,7 +17,14 @@ export function ProductDetails() {
 
     useEffect(() => {
         setProducts(productService.getProducts)
-        getProductById()
+        setProduct(products.find(product => product._id === productId))
+        console.log('product :', product)
+        // getProductById()
+    }, [product])
+
+    useEffect(() => {
+        // console.log('product :', product)
+        // console.log('products :', products)
     }, [product, products])
 
     mediumZoom('.product-img', {
@@ -26,10 +33,19 @@ export function ProductDetails() {
         background: '#0000001a',
     })
 
-    const getProductById = () => {
-        setProduct(products.find(product => product._id === productId))
-        setProductIndex(products.findIndex(product => product._id === productId) + 1)
-    }
+    // const getProductById = () => {
+    //     // setProduct(products.find(product => product._id === productId))
+    //     setProduct(products.map(category => category.filter(product => {
+    //         console.log('product._id !== productId :', product._id !== productId)
+    //         return product._id !== productId
+
+    //     })))
+    //     console.log('1111111111111 :', product)
+    //     // setProductIndex(products.findIndex(product => product._id === productId) + 1)
+    //     setProductIndex(products.map(eachProduct => eachProduct.findIndex(product => product._id === productId) + 1))
+    //     // console.log('product :', product)
+    //     // console.log('products :', products)
+    // }
 
     // productSizeForPeople
     // diameter
@@ -73,7 +89,7 @@ export function ProductDetails() {
                 </div>
 
                 <div className="img-container">
-                    <img className="product-img" src={require(`../assets/imgs/products/product${productIndex}.jpeg`)} alt="" />
+                    <img className="product-img" src={require(`../assets/imgs/${product.srcName}`)} alt="" />
                 </div>
             </div>
             <div className="other-links">
