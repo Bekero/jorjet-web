@@ -125,7 +125,7 @@ nav {
 @media screen and (max-width: 850px) {
     nav {
         position: fixed;
-        z-index: 3;
+        z-index: 1010;
     }
 
     .hamburger {
@@ -170,7 +170,7 @@ nav {
         clip-path: circle(1000px at 90% -10%);
         -webkit-clip-path: circle(1000px at 90% -10%);
         pointer-events: all;
-        margin-top: 400px;
+        margin-top: 430px;
     }
 
     .nav-social-links.open {
@@ -180,7 +180,7 @@ nav {
         display: flex;
         right: 0;
         top: 400px;
-        // margin: 0;
+        // margin-top: 30px;
         margin-right: 40px;
     }
 

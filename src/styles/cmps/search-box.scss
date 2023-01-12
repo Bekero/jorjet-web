@@ -65,36 +65,91 @@
 //             cubic-bezier(calc(var(--i)*.42), 0, calc(1 - var(--j)*.42), 1)
 //     }
 // }
+.search-bar-container {
+    position: relative;
 
-[id='search-bar'] {
-    position: fixed;
-    z-index: 999;
-    margin: 4px;
-    top: 100px;
-    border: none;
-    padding: 0 1em;
-    width: 20em;
-    height: 2.25em;
-    right: 0px;
-    border-radius: 3.25em;
-    background: #99999980;
-    color: #fff;
-    font: 1em century gothic, verdana, arial, sans-serif;
-    transition: 0.65s;
+    [id='search-bar'] {
+        position: fixed;
+        z-index: 999;
+        margin: 4px;
+        top: 100px;
+        border: none;
+        padding: 0 1em;
+        text-align: end;
+        width: 20em;
+        height: 2.25em;
+        right: 0px;
+        border-radius: 3.25em;
+        background: #99999980;
+        color: #fff;
+        font: 1em century gothic, verdana, arial, sans-serif;
+        transition: 0.65s;
 
-    &::placeholder {
-        opacity: .5;
-        color: inherit;
-        font-size: .875em;
-        letter-spacing: 1px;
-        text-shadow: 0 0 1px, 0 0 2px
+        &::placeholder {
+            opacity: .5;
+            color: inherit;
+            font-size: .875em;
+            letter-spacing: 1px;
+            text-shadow: 0 0 1px, 0 0 2px
+        }
+
+        &:focus {
+            outline: none;
+            // box-shadow: 0 0 1.5em $txt-c, 0 1.25em 1.5em rgba(#000, .2);
+            background: $txt-c;
+            color: #000;
+        }
     }
 
-    &:focus {
-        outline: none;
-        // box-shadow: 0 0 1.5em $txt-c, 0 1.25em 1.5em rgba(#000, .2);
-        background: $txt-c;
-        color: #000;
+    .search-result {
+        position: fixed;
+        z-index: 999;
+        margin: 4px;
+        top: 41px;
+        border: none;
+        // padding: 0 1em;
+        color: black;
+        width: 20em;
+        height: 25.25em;
+        right: -360px;
+        border-radius: 0.25em;
+        // background: rgb(153 153 153 / 70%);
+        background: rgba(193, 188, 188, 0.7);
+        font: 1em century gothic, verdana, arial, sans-serif;
+        float: left;
+        transition: all 0.55s;
+
+        li {
+            display: flex;
+            border-bottom: 1px solid #999;
+            padding: 15px;
+            align-items: center;
+            justify-content: space-between;
+
+            &:hover {
+                cursor: pointer;
+                background-color: #999;
+            }
+
+            img {
+                width: 70px;
+                height: 70px;
+                object-fit: cover;
+                border-radius: 6px;
+                transition: 0.7s;
+                filter: brightness(0.8);
+            }
+        }
+    }
+
+    .search-result.has-focus {
+        top: 137px;
+        right: 0px;
+        float: left;
+        max-height: 300px;
+        list-style-type: none;
+        overflow: scroll;
+        transition: all 0.55s;
     }
 }
 

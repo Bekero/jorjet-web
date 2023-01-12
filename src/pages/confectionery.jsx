@@ -18,58 +18,73 @@ export function Confectionery() {
 
     // const [filterValue, setFilterValue] = useState(null)
     const [products, setProducts] = useState([])
-    const [wantedValue, setWantedValue] = useState('confectionery')
+    const [originalProducts, setOriginalProducts] = useState([])
+    const [wantedValue, setWantedValue] = useState('cases')
 
     useEffect(() => {
         setProducts(productService.getProducts())
-        console.log('products :', products)
+        setOriginalProducts(productService.getProducts())
     }, [])
 
-    const imgClicked = () => {
+    useEffect(() => {
+        filterProducts()
+    }, [wantedValue])
 
+    const filterProducts = () => {
+        const filteredProducts = originalProducts?.filter(product => product.category.includes(wantedValue))
+        setProducts(filteredProducts)
     }
 
     const onGoToProduct = (product) => {
-        navigate(`/collection/${product._id}`)
+        navigate(`/confectionery/${product._id}`)
     }
+
+    let radioBtns = [
+        {
+            category: 'min-90',
+            categoryHebrew: 'דקה-90'
+        },
+        {
+            category: 'desserts',
+            categoryHebrew: 'קינוחים'
+        },
+        {
+            category: 'cakes',
+            categoryHebrew: 'עוגות'
+        },
+        {
+            category: 'cases',
+            categoryHebrew: 'מארזים'
+        },
+    ]
 
     return (
         <div className="confectionery-container">
             <div className="radio-btns">
                 <ul>
-                    <li className={wantedValue === 'min-90' ? 'highlight' : ''} onClick={() => setWantedValue('min-90')} value="min-90">דקה 90</li>
+                    {radioBtns.map(radio => {
+                        return <li
+                        key={radio.category}
+                        className={wantedValue === `${radio.category}` ? 'highlight' : ''} 
+                        onClick={() => setWantedValue(radio.category)} 
+                        value={radio.category}>{radio.categoryHebrew}</li>
+                    })}
+                    {/* <li className={wantedValue === 'min-90' ? 'highlight' : ''} onClick={() => setWantedValue('min-90')} value="min-90">דקה 90</li>
                     <li className={wantedValue === 'desserts' ? 'highlight' : ''} onClick={() => setWantedValue('desserts')} value="desserts">קינוחים</li>
                     <li className={wantedValue === 'cakes' ? 'highlight' : ''} onClick={() => setWantedValue('cakes')} value="cakes">עוגות</li>
-                    <li className={wantedValue === 'cases' ? 'highlight' : ''} onClick={() => setWantedValue('cases')} value="cases">מארזים</li>
+                    <li className={wantedValue === 'cases' ? 'highlight' : ''} onClick={() => setWantedValue('cases')} value="cases">מארזים</li> */}
                 </ul>
             </div>
 
             <div className="gallery">
                 {products.map((product, index) => {
-                    // return category.map((product, index) => {
                     return <ProductCard
-                        // category={category}
                         key={product._id}
                         product={product}
                         index={index}
                         onGoToProduct={onGoToProduct}
-                        imgClicked={imgClicked}
                     />
-                    // })
                 })}
-
-
-
-                {/* {products.map((product, index) => {
-                    index += 1
-                    return <ProductCard
-                        key={product._id}
-                        product={product}
-                        index={index}
-                        onGoToProduct={onGoToProduct}
-                        imgClicked={imgClicked}
-                    />
-                })} */}
             </div>
         </div>
     )

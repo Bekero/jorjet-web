@@ -18,9 +18,9 @@ function App() {
   return (
     <div className="app-container">
       <AppHeader />
-      <SearchBar />
       <div className="pages-container">
         {/* From Computer */}
+        <SearchBar />
         {params === {} ? '' : < GoBack />}
         <Routes>
           {routes.map(route => <Route key={route.path} exact={true} element={route.component} path={route.path} />)}

@@ -18,38 +18,16 @@ export function ProductDetails() {
     useEffect(() => {
         setProducts(productService.getProducts)
         setProduct(products.find(product => product._id === productId))
-        console.log('product :', product)
-        // getProductById()
     }, [product])
 
     useEffect(() => {
-        // console.log('product :', product)
-        // console.log('products :', products)
     }, [product, products])
 
     mediumZoom('.product-img', {
         margin: 100,
-        // background: '#9b9c98',
         background: '#0000001a',
     })
 
-    // const getProductById = () => {
-    //     // setProduct(products.find(product => product._id === productId))
-    //     setProduct(products.map(category => category.filter(product => {
-    //         console.log('product._id !== productId :', product._id !== productId)
-    //         return product._id !== productId
-
-    //     })))
-    //     console.log('1111111111111 :', product)
-    //     // setProductIndex(products.findIndex(product => product._id === productId) + 1)
-    //     setProductIndex(products.map(eachProduct => eachProduct.findIndex(product => product._id === productId) + 1))
-    //     // console.log('product :', product)
-    //     // console.log('products :', products)
-    // }
-
-    // productSizeForPeople
-    // diameter
-    const listOfIngredients = ['ingredientsParve', 'ingredientsMilky']
 
     if (!product) return <div>No Product</div>
     return (

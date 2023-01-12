@@ -14,12 +14,10 @@
             height: 600px;
             width: 400px;
             overflow: scroll;
-            margin-right: 30px;
             max-height: 600px;
             flex-direction: column;
             text-align: end;
             font-weight: bold;
-            padding-right: 10px;
 
             >* {
                 position: relative;
@@ -208,10 +206,8 @@
             background-size: cover;
 
             img {
-                height: 610px;
                 border-radius: 18px;
                 box-shadow: 4px 4px 9px 6px rgb(0 0 0 / 10%);
-                width: 100%;
                 object-fit: cover;
             }
         }
@@ -234,6 +230,82 @@
     }
 }
 
+@media screen and (min-width: 851px) {
+    .first-section {
+        .product-info {
+            margin-right: 30px;
+            padding-right: 10px;
+        }
+
+        .img-container {
+
+            img {
+                height: 610px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .first-section {
+        display: flex;
+        width: 90%;
+        margin-top: 50px;
+        justify-content: center;
+        flex-direction: column-reverse;
+        align-items: center;
+
+        .img-container {
+
+            img {
+                height: 700px;
+            }
+        }
+
+        .product-info {
+            height: 430px;
+            margin-right: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .first-section {
+
+        .img-container {
+
+            img {
+                height: 610px;
+            }
+        }
+
+        // .product-info {
+        //     height: 430px;
+        //     margin-right: 0;
+        //     padding-right: 0;
+        // }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .first-section {
+
+        .img-container {
+
+            img {
+                height: 440px;
+            }
+        }
+
+        // .product-info {
+        //     height: 430px;
+        //     margin-right: 0;
+        //     padding-right: 0;
+        // }
+    }
+}
 
 @media screen and (max-width: 320px) {
 
@@ -241,7 +313,13 @@
 
 
         .first-section {
-            width: 90%;
+
+            .img-container {
+
+                img {
+                    height: 330px;
+                }
+            }
         }
     }
 }
