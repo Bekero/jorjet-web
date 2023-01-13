@@ -54,12 +54,6 @@ export function AppHeader() {
                 <div className="bars3"></div>
             </div>
             <ul className="nav-links">
-                {/* <input id='search-btn' type='checkbox' />
-                    <label for='search-btn'>Show search bar</label>
-                    <input id='search-bar' type='text' placeholder='Search...' /> */}
-                {/* <li onClick={(ev) => onSearch(ev)} className="magnifying-glass"><MagnifyingGlass />
-                    <input className={searchBarOpen ? 'open' : ''} type="text" placeholder="Search.."></input>
-                </li> */}
                 <li onClick={() => onActiveHamburger()}><NavLink to='/'>צור קשר</NavLink></li>
                 <li onClick={() => onActiveHamburger()}><NavLink to='/'>סדנאות</NavLink></li>
                 <li onClick={() => onActiveHamburger()} ><NavLink to='/recipe'>מתכונים</NavLink></li>

@@ -1,47 +1,47 @@
-.confectionery-container {
+.recipe-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    .radio-btns {
-        display: flex;
-        font-size: 20px;
-        justify-content: center;
-        margin-top: 60px;
+    // .radio-btns {
+    //     display: flex;
+    //     font-size: 20px;
+    //     justify-content: center;
+    //     margin-top: 60px;
 
-        ul {
-            padding: 0;
-            display: flex;
+    //     ul {
+    //         padding: 0;
+    //         display: flex;
 
-            .highlight {
-                color: rgba(25, 25, 215, 0.358);
-            }
+    //         .highlight {
+    //             color: rgba(25, 25, 215, 0.358);
+    //         }
 
-            li {
-                display: flex;
-                list-style: none;
-                font-weight: bold;
-                padding: 12px;
+    //         li {
+    //             display: flex;
+    //             list-style: none;
+    //             font-weight: bold;
+    //             padding: 12px;
 
 
-                // &:first-child {
-                //     border-right: 1px solid #999;
-                // }
+    //             // &:first-child {
+    //             //     border-right: 1px solid #999;
+    //             // }
 
-                &:hover {
-                    color: #999;
-                    cursor: pointer;
-                }
-            }
-        }
-    }
+    //             &:hover {
+    //                 color: #999;
+    //                 cursor: pointer;
+    //             }
+    //         }
+    //     }
+    // }
 
     .gallery {
         display: grid;
         grid-gap: 15px;
-        margin-top: 30px;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(4, auto);
+        margin-top: 60px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, auto);
 
         >* {
             cursor: pointer;
@@ -53,7 +53,7 @@
             opacity: 1;
         }
 
-        .product-info {
+        .recipe-info {
             display: flex;
             justify-content: center;
             flex-direction: column;
@@ -62,11 +62,11 @@
 
             margin-top: -8px;
 
-            .product-name {
-                color: black;
-            }
+            // .recipe-mini-title {
+            //     color: black;
+            // }
 
-            .name-and-price {
+            .title-and-mini-title {
                 display: flex;
                 width: 100%;
                 flex-direction: column;
@@ -74,13 +74,20 @@
                 align-items: flex-end;
                 padding: 6px;
 
+                .recipe-mini-title {}
+
+                p.title {
+                    font-size: .65em;
+                }
+
                 >* {
                     font-weight: bold;
                     margin: 0;
-                    padding: 0;
+                    padding: 4px;
+                    text-align: end;
                 }
 
-                .product-price {
+                .recipe-price {
                     display: flex;
 
                     p:first-child {
@@ -137,7 +144,7 @@
 
         }
 
-        .product {
+        .recipe {
             border-radius: 14px;
 
             &:hover {
@@ -171,8 +178,24 @@
     }
 }
 
+@media screen and (min-width: 551px) {
+    .recipe-container {
+        .gallery {
+
+            .recipe-info {
+
+                .btns {
+                    button {
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 301px) {
-    .confectionery-container {
+    .recipe-container {
 
         .radio-btns {
             ul {
@@ -189,7 +212,7 @@
 }
 
 @media screen and (max-width: 1150px) {
-    .confectionery-container {
+    .recipe-container {
 
         .gallery {
             display: grid;
@@ -201,19 +224,40 @@
 }
 
 @media screen and (max-width: 900px) {
-    .confectionery-container {
+    .recipe-container {
 
         .gallery {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(5, auto);
             grid-gap: 15px;
+
+            >* {
+                // width: 250px;
+                // height: 370px;
+            }
+
+            // .recipe-info {
+
+            //     .btns {
+            //         button {
+            //             margin-top: 10px;
+            //         }
+            //     }
+            // }
+
+            .recipe {
+
+                img {
+                    // height: 260px;
+                }
+            }
         }
     }
 }
 
 @media screen and (max-width: 550px) {
-    .confectionery-container {
+    .recipe-container {
 
         // flex-direction: row;
 
@@ -223,12 +267,21 @@
                 width: 200px;
                 height: 420px;
             }
+
+            .recipe-info {
+
+                .btns {
+                    button {
+                        margin-top: 0px;
+                    }
+                }
+            }
         }
     }
 }
 
 @media screen and (max-width: 460px) {
-    .confectionery-container {
+    .recipe-container {
 
         // .radio-btns {
         //     ul {
@@ -238,7 +291,7 @@
         //     }
         // }
 
-        // .confectionery-links {
+        // .recipe-links {
         //     display: flex;
         //     flex-direction: column-reverse;
         //     align-items: center;
@@ -255,9 +308,10 @@
 
             >* {
                 width: 160px;
-                height: 310px;
+                // height: 310px;
+                height: 340px;
 
-                .product {
+                .recipe {
                     img {
                         height: 200px;
                     }
@@ -268,7 +322,7 @@
 }
 
 @media screen and (max-width: 400px) {
-    .confectionery-container {
+    .recipe-container {
 
         .radio-btns {
             ul {
@@ -282,7 +336,7 @@
             }
         }
 
-        .confectionery-links {
+        .recipe-links {
             display: flex;
             flex-direction: column-reverse;
             align-items: center;
@@ -299,9 +353,9 @@
 
             >* {
                 width: 130px;
-                height: 280px;
+                height: 320px;
 
-                .product {
+                .recipe {
                     img {
                         height: 170px;
                     }
@@ -312,7 +366,7 @@
 }
 
 @media screen and (max-width: 300px) {
-    .confectionery-container {
+    .recipe-container {
 
         .radio-btns {
             ul {
@@ -335,9 +389,9 @@
 
             >* {
                 width: 210px;
-                height: 370px;
+                height: 380px;
 
-                .product {
+                .recipe {
                     img {
                         height: 260px;
                     }

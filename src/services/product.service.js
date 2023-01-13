@@ -2,9 +2,8 @@ import {
     storageService
 } from './async-storage.service'
 
-import designedCakes from '../data/designed-cakes.json'
-import cases from '../data/cases.json'
-// import gProducts from '../data/designed-cakes.json'
+import allProducts from '../data/designed-cakes.json'
+import allRecipes from '../data/recipes.json'
 
 export const productService = {
     query,
@@ -12,6 +11,7 @@ export const productService = {
     remove,
     save,
     getProducts,
+    getRecipes,
 }
 
 const BASE_URL = `product/`
@@ -29,8 +29,11 @@ async function getById(productId) {
 }
 
 function getProducts() {
+    return allProducts
+}
 
-    return designedCakes
+function getRecipes() {
+    return allRecipes
 }
 
 async function remove(productId) {

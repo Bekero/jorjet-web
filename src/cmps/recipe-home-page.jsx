@@ -1,7 +1,4 @@
 
-// import RecipeImgHomePage1 from '../assets/imgs/for-home-page/recipe-img-home-page-1.jpeg';
-// import RecipeImgHomePage2 from '../assets/imgs/for-home-page/recipe-img-home-page-2.jpeg';
-// import RecipeImgHomePage3 from '../assets/imgs/for-home-page/recipe-img-home-page-3.jpeg';
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import recipes from '../data/recipes-for-home-page.json'
@@ -38,12 +35,6 @@ export function RecipeHomePage() {
                 <p className="info">Lorem 60 ipsum dolor sit amet consectetur adipisicing elit. Cupiditate officiis porro fuga rem? Quibusdam adipisci temporibus, dolorum accusamus laboriosam earum nobis mollitia numquam? Omnis, quaerat. Ab praesentium consectetur aliquam totam placeat modi suscipit impedit consequatur explicabo, voluptatum minus officiis facere aut error sequi a nam, eligendi reprehenderit. Nulla, quis dolorum numquam, aliquam praesentium eaque et repudiandae dolor facere molestiae exercitationem.</p>
                 <button onClick={() => navigate('/recipe')}  className="view-more">View More</button>
             </div>
-            {/* {modalOpened && <div class="modal">
-                    <div class="modal-wrap">
-                        <img src="https://assets.codepen.io/1462889/sl3.jpg" alt="" />
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-                    </div>
-                </div> } */}
         </div>
     )
 }

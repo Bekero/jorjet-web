@@ -1,13 +1,10 @@
-import { useEffect } from "react"
 
-
-export function ProductCard({ index, product, onGoToProduct, category }) {
+export function ProductCard({ index, product, onGoToProduct }) {
 
     return (
         <div onClick={() => onGoToProduct(product)} className="card">
             <div className="product">
                 <img src={require(`../assets/imgs/${product.srcName}`)} alt="" />
-                {/* <img src={require(`../assets/imgs/products/product${index}.jpeg`)} alt="" /> */}
                 <div className="product-info">
                     <div className="name-and-price">
                         <h3 className="product-name">{product.title}</h3>

@@ -4,11 +4,7 @@ export function MyStoryShort() {
 
     return (
         <div className="my-story-short">
-        {/* <div className="my-story-short main-layout"> */}
-            <div
-             className="img-container"
-            //  style={{ backgroundImage: `url(${LironsImage})`}}
-              >
+            <div className="img-container" >
                 <img src={LironsImage} alt="" />
             </div>
             <div className="story-container">

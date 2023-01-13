@@ -50,7 +50,7 @@ export function SearchBar() {
     })
 
     const onGoToProduct = (product) => {
-        navigate(`collection/${product._id}`)
+        navigate(`confectionery/${product._id}`)
         setSearchDetails([])
         document.getElementById('search-bar').value = ''
         setTerm([])

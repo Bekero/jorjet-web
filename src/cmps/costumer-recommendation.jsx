@@ -34,15 +34,15 @@ export function CostumerRecommendation() {
 
     return (
         <div className="costumer-recommendation">
-            {/*<Carousel responsive={responsive}>
-                 <div className="costumer">
+            <Carousel responsive={responsive}>
+                <div className="costumer">
                     <p className="recommendation">לורם איפסום בלה בלה בלה אני אוהב חציל בפיתה עם חומוס בצד וקצת חמוצים</p>
-                    <div className="img-container">
+                    {/* <div className="img-container">
                         <img className="product-img" src={require(`../assets/imgs/products/product1.jpeg`)} alt="" />
-                    </div>
+                    </div> */}
                     <h2 className="costumer-name">שולה זקן</h2>
                 </div>
-                <div className="costumer">
+                {/* <div className="costumer">
                     <p className="recommendation">לורם איפסום בלה בלה בלה אני אוהב חציל בפיתה עם חומוס בצד וקצת חמוצים</p>
                     <div className="img-container">
                         <img className="product-img" src={require(`../assets/imgs/products/product2.jpeg`)} alt="" />
@@ -62,8 +62,8 @@ export function CostumerRecommendation() {
                         <img className="product-img" src={require(`../assets/imgs/products/product4.jpeg`)} alt="" />
                     </div>
                     <h2 className="costumer-name">אור בקר</h2>
-                </div> 
-            </Carousel>;*/}
+                </div> */}
+            </Carousel>;
         </div>
     )
 }

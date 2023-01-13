@@ -29,8 +29,6 @@ export function ProductHomePage() {
                 })}
 
             </div>
-
-
             <div className="home-page-product-info">
                 <p className="title">מה בתפריט</p>
                 <p className="under-title">bla bla bla</p>
