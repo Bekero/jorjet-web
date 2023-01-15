@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useNavigate, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import { productService } from "../services/product.service"
 import WhatsappSvg from '../assets/svgs/whatsapp'
 import mediumZoom from "medium-zoom"
@@ -12,8 +12,6 @@ export function RecipeDetails() {
     const [recipe, setRecipe] = useState(null)
     const [recipes, setRecipes] = useState([])
     const [modalOpen, setModalOpen] = useState(null)
-    // const [divAddingParveExpends, setDivAddingParveExpends] = useState(null)
-    // const [divAddingMilkyExpends, setDivAddingMilkyExpends] = useState(null)
 
     useEffect(() => {
         setRecipes(productService.getRecipes)
@@ -24,6 +22,12 @@ export function RecipeDetails() {
     }, [recipe, recipes])
 
     useEffect(() => {
+        const body = document.querySelector("body");
+        if (modalOpen) {
+            body.style.overflow = "hidden";
+        } else {
+            body.style.overflow = "auto";
+        }
     }, [modalOpen])
 
     mediumZoom('.recipe-img', {
@@ -31,28 +35,26 @@ export function RecipeDetails() {
         background: '#0000001a',
     })
 
-    mediumZoom('.button-expend', {
+    mediumZoom('.ingredients-container', {
         margin: 30,
         background: '#0000001a',
     })
-
 
     if (!recipe) return <div>No Recipe</div>
     return (
         <div className="recipe-details-container">
             <div className="first-section">
                 <div className="recipe-info">
-                    <button onClick={() => setModalOpen(!modalOpen)} className="button-expend">Here</button>
+                    <div className="button-expand"><button onClick={() => setModalOpen(!modalOpen)} className="view-more">מסך מלא</button></div>
+
                     <h1 className="mini-title">{recipe.miniTitle}</h1>
                     <p className="title">{recipe.title}</p>
                     <p className="time-to-make">זמן הכנה: {recipe.timeToMake}</p>
-
                     <div className="ingredients-container">
                         <h2 className="main-title">🛒למצרכים🛒</h2>
                         {recipe.mainIngredients.map((section, index) => {
-                            return <ul key={index}>
+                            return <ul className="ingredients-first-ul" key={index}>
                                 <h3 className="ingredient-title">{section.ingredientsTitle}</h3>
-                                <hr></hr>
                                 {section.ingredients.map(ingredient => {
                                     return <li key={ingredient} className="ingredient">{ingredient}</li>
                                 })}
@@ -60,12 +62,25 @@ export function RecipeDetails() {
                         })}
                     </div>
 
+                    <div className="instructions ">
+                        {recipe.mainInstructions.map(instruction => {
+                            return (
+                                <div className="instruction-container" key={instruction.instructionsTitle}>
+                                    <h2 className="category-title">{instruction.instructionsTitle}</h2>
+                                    <ul>{instruction.instructionsArray.map(line => {
+                                        return <li key={line} >{line}</li>
+                                    })}</ul>
+                                </div>
+                            )
+                        })}
+
+                    </div>
+
                 </div>
                 <div className="img-container">
                     <img className="recipe-img" src={require(`../assets/imgs/${recipe.srcName}`)} alt="" />
                 </div>
             </div>
-            {modalOpen && <Modal />}
             <div className="other-links">
                 <div className="warning">
                     <h3>Warning Warning Warning</h3>
@@ -77,6 +92,12 @@ export function RecipeDetails() {
                 </div>
 
             </div>
+            {modalOpen &&
+                <Modal
+                    recipe={recipe}
+                    modalOpen={modalOpen}
+                    setModalOpen={setModalOpen}
+                />}
         </div>
     )
 }

@@ -20,24 +20,103 @@
             font-weight: bold;
 
             >* {
-                position: relative;
-                margin: 0;
+                // position: relative;
+                // margin: 0;
+            }
+
+            div.button-expand {
+                display: flex;
+                justify-content: flex-end;
+
+                button.view-more {
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 3px 7px;
+                    border-radius: 6px;
+                    border: none;
+
+                    background: #6E6D70;
+                    box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.5), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.12);
+                    color: #DFDEDF;
+                    user-select: none;
+                    -webkit-user-select: none;
+                    touch-action: manipulation;
+
+                    &:hover {
+                        background: #8a888d;
+                        cursor: pointer;
+                    }
+
+                    button.view-more:focus {
+                        box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+                        outline: 0;
+                    }
+                }
+
+            }
+
+            .main-title {
+                display: flex;
+                font-size: 1.5em;
+                justify-content: center;
             }
 
             .mini-title {
+                display: flex;
                 font-size: 35px;
+                justify-content: center;
                 color: $main-clr;
             }
 
-            .title
-            .time-to-make {
+            .title .time-to-make {
                 font-size: .7em;
             }
 
             .ingredients-container {
 
-                .ingredient-title {
-                    margin-top: 8px;
+
+                .ingredients-first-ul {
+                    list-style-type: none;
+                    padding: 7px;
+
+                    .ingredient-title {
+                        border-bottom: 1px solid #999;
+                        padding: 12px;
+                        margin: 0;
+                        font-size: 1.35em;
+                    }
+
+                    li.ingredient {
+                        padding: 2px;
+                    }
+                }
+
+                // :last-child {
+                //     margin-bottom: 20px;
+                // }
+            }
+
+            .instructions {
+                border-top: 1px solid #999;
+                margin-top: 10px;
+
+                .instruction-container {
+
+                    .category-title {
+                        font-size: 1.35em;
+                        border-bottom: 1px solid #999;
+                        padding: 12px;
+                        margin: 0;
+                    }
+
+                    ul {
+                        list-style-type: none;
+                        padding: 14px;
+
+                        li {}
+                    }
                 }
             }
 

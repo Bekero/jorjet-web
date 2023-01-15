@@ -6,7 +6,7 @@
         "title": "מתכון לפליקמורה ביתית ואווווו כמה שזה טעים ",
         "description": "Lorem 60 ipsum dolor sit amet consectetur adipisicing elit. Cupiditate officiis porro fuga rem? Quibusdam adipisci temporibus, dolorum accusamus laboriosam earum nobis mollitia numquam? Omnis, quaerat. Ab praesentium consectetur aliquam totam placeat modi suscipit impedit consequatur explicabo",
         "shortDescription": "עוגה מעוצבת לכל אירוע בעיצוב אישי, מותאמת לרצון הלקוח",
-        "timeToMake": "90  דק ",
+        "timeToMake": "90 דק ",
         "catagories": "recipe",
         "levelToMake": "ממש קל להכנה",
         "mainIngredients": [{
@@ -36,16 +36,16 @@
             "instructionsTitle": "🧩הוראות הכנה🧩",
             "instructionsString": " נפעיל תנור על 170 מעלות על מצב סטטי בתנור.במיקסר עם וו גיטרה נשים חמאה,סוכרים ומלח ונערבל כדקה עד שנקבל תערובת אוורירית.נוסיף ביצה וחלב ונערבב לאיחוד,בבת אחת נוסיף את כל היבשים והמטבעות שוקולד.נעבד עד איחוד ונתחיל לשקול כדורים של 50 - 60 גרם לכדור.נסדר על תבנית ונכניס לאפייה של 10 - 15 דקות(אני אפיתי במשך 12 דקות)בנתיים נכין את הקצפת - בקערת מיקסר עם בלון הקצפה נשים את כל המצרכים ונקציף עד למרקם של קצפת חזקה ויציבה. נקרר את העוגיות קירור מלא ורק אז נזלף קצפת על העוגיות ונסגור אותן לקוקילידה(אני השתמשתי בצנטר M1).נעביר את העוגיות למקרר לכ - 3 שעות לפחות להתייצבות.",
             "instructionsArray": [
-                " נפעיל תנור על 170 מעלות על מצב סטטי בתנור.",
-                " במיקסר עם וו גיטרה נשים חמאה, סוכרים ומלח ונערבל כדקה עד שנקבל תערובת אוורירית.",
-                " נוסיף ביצה וחלב ונערבב לאיחוד,",
-                " בבת אחת נוסיף את כל היבשים והמטבעות שוקולד.",
-                " נעבד עד איחוד ונתחיל לשקול כדורים של 50-60 גרם לכדור.",
+                "נפעיל תנור על 170 מעלות על מצב סטטי בתנור ",
+                " במיקסר עם וו גיטרה נשים חמאה, סוכרים ומלח ונערבל כדקה עד שנקבל תערובת אוורירית",
+                " נוסיף ביצה וחלב ונערבב לאיחוד ",
+                " בבת אחת נוסיף את כל היבשים והמטבעות שוקולד",
+                " נעבד עד איחוד ונתחיל לשקול כדורים של 50-60 גרם לכדור",
                 " נסדר על תבנית ונכניס לאפייה של 10-15 דקות",
                 "(אני אפיתי במשך 12 דקות)",
-                " בנתיים נכין את הקצפת- בקערת מיקסר עם בלון הקצפה נשים את כל המצרכים ונקציף עד למרקם של קצפת חזקה ויציבה.",
-                " נקרר את העוגיות קירור מלא ורק אז נזלף קצפת על העוגיות ונסגור אותן לקוקילידה ( אני השתמשתי בצנטר M1).",
-                " נעביר את העוגיות למקרר לכ- 3 שעות לפחות להתייצבות."
+                " בנתיים נכין את הקצפת- בקערת מיקסר עם בלון הקצפה נשים את כל המצרכים ונקציף עד למרקם של קצפת חזקה ויציבה",
+                " נקרר את העוגיות קירור מלא ורק אז נזלף קצפת על העוגיות ונסגור אותן לקוקילידה ( אני השתמשתי בצנטר M1)",
+                " נעביר את העוגיות למקרר לכ- 3 שעות לפחות להתייצבות"
             ]
         }],
         "isRecipe": true
@@ -58,7 +58,7 @@
         "title": "מתכון לקוקילידה ביתית ואווווו כמה שזה טעים 🍪🍦",
         "description": "Lorem 60 ipsum dolor sit amet consectetur adipisicing elit. Cupiditate officiis porro fuga rem? Quibusdam adipisci temporibus, dolorum accusamus laboriosam earum nobis mollitia numquam? Omnis, quaerat. Ab praesentium consectetur aliquam totam placeat modi suscipit impedit consequatur explicabo",
         "shortDescription": "עוגה מעוצבת לכל אירוע בעיצוב אישי, מותאמת לרצון הלקוח",
-        "timeToMake": "90 Minutes",
+        "timeToMake": "30 דק ",
         "catagories": "recipe",
         "levelToMake": "ממש קל להכנה",
         "mainIngredients": [{
@@ -88,16 +88,16 @@
             "instructionsTitle": "🧩הוראות הכנה🧩",
             "instructionsString": " נפעיל תנור על 170 מעלות על מצב סטטי בתנור.במיקסר עם וו גיטרה נשים חמאה,סוכרים ומלח ונערבל כדקה עד שנקבל תערובת אוורירית.נוסיף ביצה וחלב ונערבב לאיחוד,בבת אחת נוסיף את כל היבשים והמטבעות שוקולד.נעבד עד איחוד ונתחיל לשקול כדורים של 50 - 60 גרם לכדור.נסדר על תבנית ונכניס לאפייה של 10 - 15 דקות(אני אפיתי במשך 12 דקות)בנתיים נכין את הקצפת - בקערת מיקסר עם בלון הקצפה נשים את כל המצרכים ונקציף עד למרקם של קצפת חזקה ויציבה. נקרר את העוגיות קירור מלא ורק אז נזלף קצפת על העוגיות ונסגור אותן לקוקילידה(אני השתמשתי בצנטר M1).נעביר את העוגיות למקרר לכ - 3 שעות לפחות להתייצבות.",
             "instructionsArray": [
-                " נפעיל תנור על 170 מעלות על מצב סטטי בתנור.",
-                " במיקסר עם וו גיטרה נשים חמאה, סוכרים ומלח ונערבל כדקה עד שנקבל תערובת אוורירית.",
-                " נוסיף ביצה וחלב ונערבב לאיחוד,",
-                " בבת אחת נוסיף את כל היבשים והמטבעות שוקולד.",
-                " נעבד עד איחוד ונתחיל לשקול כדורים של 50-60 גרם לכדור.",
+                "נפעיל תנור על 170 מעלות על מצב סטטי בתנור ",
+                " במיקסר עם וו גיטרה נשים חמאה, סוכרים ומלח ונערבל כדקה עד שנקבל תערובת אוורירית",
+                " נוסיף ביצה וחלב ונערבב לאיחוד ",
+                " בבת אחת נוסיף את כל היבשים והמטבעות שוקולד",
+                " נעבד עד איחוד ונתחיל לשקול כדורים של 50-60 גרם לכדור",
                 " נסדר על תבנית ונכניס לאפייה של 10-15 דקות",
                 "(אני אפיתי במשך 12 דקות)",
-                " בנתיים נכין את הקצפת- בקערת מיקסר עם בלון הקצפה נשים את כל המצרכים ונקציף עד למרקם של קצפת חזקה ויציבה.",
-                " נקרר את העוגיות קירור מלא ורק אז נזלף קצפת על העוגיות ונסגור אותן לקוקילידה ( אני השתמשתי בצנטר M1).",
-                " נעביר את העוגיות למקרר לכ- 3 שעות לפחות להתייצבות."
+                " בנתיים נכין את הקצפת- בקערת מיקסר עם בלון הקצפה נשים את כל המצרכים ונקציף עד למרקם של קצפת חזקה ויציבה",
+                " נקרר את העוגיות קירור מלא ורק אז נזלף קצפת על העוגיות ונסגור אותן לקוקילידה ( אני השתמשתי בצנטר M1)",
+                " נעביר את העוגיות למקרר לכ- 3 שעות לפחות להתייצבות"
             ]
         }],
         "isRecipe": true
@@ -110,7 +110,7 @@
         "title": "מתכון שוקוקיקה ביתית ואווווו כמה שזה טעים 🍪🍦",
         "description": "Lorem 60 ipsum dolor sit amet consectetur adipisicing elit. Cupiditate officiis porro fuga rem? Quibusdam adipisci temporibus, dolorum accusamus laboriosam earum nobis mollitia numquam? Omnis, quaerat. Ab praesentium consectetur aliquam totam placeat modi suscipit impedit consequatur explicabo",
         "shortDescription": "עוגה מעוצבת לכל אירוע בעיצוב אישי, מותאמת לרצון הלקוח",
-        "timeToMake": "90 Minutes",
+        "timeToMake": "60 דק ",
         "catagories": "recipe",
         "levelToMake": "ממש קל להכנה",
         "mainIngredients": [{
@@ -140,16 +140,16 @@
             "instructionsTitle": "🧩הוראות הכנה🧩",
             "instructionsString": " נפעיל תנור על 170 מעלות על מצב סטטי בתנור.במיקסר עם וו גיטרה נשים חמאה,סוכרים ומלח ונערבל כדקה עד שנקבל תערובת אוורירית.נוסיף ביצה וחלב ונערבב לאיחוד,בבת אחת נוסיף את כל היבשים והמטבעות שוקולד.נעבד עד איחוד ונתחיל לשקול כדורים של 50 - 60 גרם לכדור.נסדר על תבנית ונכניס לאפייה של 10 - 15 דקות(אני אפיתי במשך 12 דקות)בנתיים נכין את הקצפת - בקערת מיקסר עם בלון הקצפה נשים את כל המצרכים ונקציף עד למרקם של קצפת חזקה ויציבה. נקרר את העוגיות קירור מלא ורק אז נזלף קצפת על העוגיות ונסגור אותן לקוקילידה(אני השתמשתי בצנטר M1).נעביר את העוגיות למקרר לכ - 3 שעות לפחות להתייצבות.",
             "instructionsArray": [
-                " נפעיל תנור על 170 מעלות על מצב סטטי בתנור.",
-                " במיקסר עם וו גיטרה נשים חמאה, סוכרים ומלח ונערבל כדקה עד שנקבל תערובת אוורירית.",
-                " נוסיף ביצה וחלב ונערבב לאיחוד,",
-                " בבת אחת נוסיף את כל היבשים והמטבעות שוקולד.",
-                " נעבד עד איחוד ונתחיל לשקול כדורים של 50-60 גרם לכדור.",
+                "נפעיל תנור על 170 מעלות על מצב סטטי בתנור ",
+                " במיקסר עם וו גיטרה נשים חמאה, סוכרים ומלח ונערבל כדקה עד שנקבל תערובת אוורירית",
+                " נוסיף ביצה וחלב ונערבב לאיחוד ",
+                " בבת אחת נוסיף את כל היבשים והמטבעות שוקולד",
+                " נעבד עד איחוד ונתחיל לשקול כדורים של 50-60 גרם לכדור",
                 " נסדר על תבנית ונכניס לאפייה של 10-15 דקות",
                 "(אני אפיתי במשך 12 דקות)",
-                " בנתיים נכין את הקצפת- בקערת מיקסר עם בלון הקצפה נשים את כל המצרכים ונקציף עד למרקם של קצפת חזקה ויציבה.",
-                " נקרר את העוגיות קירור מלא ורק אז נזלף קצפת על העוגיות ונסגור אותן לקוקילידה ( אני השתמשתי בצנטר M1).",
-                " נעביר את העוגיות למקרר לכ- 3 שעות לפחות להתייצבות."
+                " בנתיים נכין את הקצפת- בקערת מיקסר עם בלון הקצפה נשים את כל המצרכים ונקציף עד למרקם של קצפת חזקה ויציבה",
+                " נקרר את העוגיות קירור מלא ורק אז נזלף קצפת על העוגיות ונסגור אותן לקוקילידה ( אני השתמשתי בצנטר M1)",
+                " נעביר את העוגיות למקרר לכ- 3 שעות לפחות להתייצבות"
             ]
         }],
         "isRecipe": true
