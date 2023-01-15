@@ -4,7 +4,9 @@ export function Modal({ recipe, setModalOpen, modalOpen }) {
     if (!recipe) return <div>No Recipe</div>
     return (
         <div id="myModal" className={modalOpen ? 'modal open' : 'modal'} >
-            <button className="close" onClick={() => setModalOpen(false)}>X</button>
+            <div className="button-container">
+                <button className="close" onClick={() => setModalOpen(false)}>סגור</button>
+            </div>
             <div className="modal-content">
                 <h1 className="mini-title-recipe">{recipe.miniTitle}</h1>
                 <p className="title-recipe">{recipe.title}</p>
@@ -24,13 +26,13 @@ export function Modal({ recipe, setModalOpen, modalOpen }) {
                 <div className="instructions ">
                     {recipe.mainInstructions.map(instruction => {
                         return (
-                        <div className="xxx" key={instruction.instructionsTitle}>
-                            <h2 className="category-title">{instruction.instructionsTitle}</h2>
-                            {/* <p>{instruction.instructionsString}</p> */}
-                            <ul>{instruction.instructionsArray.map(line => {
-                                return <li key={line} >{line}</li>
-                            })}</ul>
-                        </div>
+                            <div className="xxx" key={instruction.instructionsTitle}>
+                                <h2 className="category-title">{instruction.instructionsTitle}</h2>
+                                {/* <p>{instruction.instructionsString}</p> */}
+                                <ul>{instruction.instructionsArray.map(line => {
+                                    return <li key={line} >{line}</li>
+                                })}</ul>
+                            </div>
                         )
                     })}
                 </div>

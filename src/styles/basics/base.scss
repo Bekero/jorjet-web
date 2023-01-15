@@ -5,7 +5,6 @@ body {
     background-color: $main-bgc;
 }
 
-
 *,
 :before,
 :after {
@@ -81,6 +80,11 @@ svg {
 
 img {
     width: 100%;
+}
+
+ul {
+    text-align: start;
+    direction: rtl;
 }
 
 p {
