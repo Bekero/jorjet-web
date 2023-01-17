@@ -9,7 +9,6 @@ import MagnifyingGlass from "./svg/magnifying-glass";
 
 export function AppHeader() {
 
-    const navigate = useNavigate();
 
     const [searchBarOpen, setSearchBarOpen] = useState(null)
 
@@ -54,20 +53,18 @@ export function AppHeader() {
                 <div className="bars3"></div>
             </div>
             <ul className="nav-links">
-                <li onClick={() => onActiveHamburger()}><NavLink to='/'>צור קשר</NavLink></li>
-                <li onClick={() => onActiveHamburger()}><NavLink to='/'>סדנאות</NavLink></li>
-                <li onClick={() => onActiveHamburger()} ><NavLink to='/recipe'>מתכונים</NavLink></li>
-                <li onClick={() => onActiveHamburger()} ><NavLink to='/'>הסיפור שלי</NavLink></li>
-                <li onClick={() => onActiveHamburger()} ><NavLink to='/confectionery'>קונדיטוריה</NavLink></li>
+                <li onClick={() => onActiveHamburger()}><NavLink>צור קשר</NavLink></li>
+                <li onClick={() => onActiveHamburger()}><NavLink to='/workshop'>סדנאות</NavLink></li>
+                <li onClick={() => onActiveHamburger()}><NavLink to='/recipe'>מתכונים</NavLink></li>
+                <li onClick={() => onActiveHamburger()}><NavLink to='/'>הסיפור שלי</NavLink></li>
+                <li onClick={() => onActiveHamburger()}><NavLink to='/confectionery'>קונדיטוריה</NavLink></li>
             </ul>
             <ul className="nav-social-links">
                 <li><a target="_blank" href="https://www.tiktok.com/@lirongorzat"><TiktokSvg /></a></li>
                 <li><a target="_blank" href="https://www.instagram.com/jorjet_sweets/"><InstagramSvg /></a></li>
                 <li><a target="_blank" href="https://www.facebook.com/lironscake"><FacebookSvg /></a></li>
-                <li>
-                    <a target="_blank" href="https://wa.me/+972558813232"><WhatsappSvg /></a>
-                </li>
+                <li><a target="_blank" href="https://wa.me/+972558813232"><WhatsappSvg /></a></li>
             </ul>
-        </nav>
+        </nav >
     )
 }

@@ -8,7 +8,7 @@ function Type() {
         strings: [
           "Cookies",
           "Cakes",
-          "Moouse Cakes"
+          "Mousse Cakes"
         ],
         autoStart: true,
         loop: true,

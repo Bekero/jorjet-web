@@ -47,13 +47,13 @@ export function RecipeDetails() {
                 <div className="recipe-info">
                     <div className="button-expand"><button onClick={() => setModalOpen(!modalOpen)} className="view-more">מסך מלא</button></div>
 
-                    <h1 className="mini-title">{recipe.miniTitle}</h1>
-                    <p className="title">{recipe.title}</p>
+                    <h1 className="title">{recipe.title}</h1>
+                    <p className="recipe-short-description">{recipe.shortDescription}</p>
                     <p className="time-to-make">זמן הכנה: {recipe.timeToMake}</p>
                     <div className="ingredients-container">
                         <h2 className="main-title">🛒למצרכים🛒</h2>
                         {recipe.mainIngredients.map((section, index) => {
-                            return <ul className="ingredients-first-ul" key={index}>
+                            return <ul className="ingredients-ul" key={index}>
                                 <h3 className="ingredient-title">{section.ingredientsTitle}</h3>
                                 {section.ingredients.map(ingredient => {
                                     return <li key={ingredient} className="ingredient">{ingredient}</li>

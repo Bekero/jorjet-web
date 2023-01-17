@@ -1,9 +1,12 @@
 
 import LironsImage from '../assets/imgs/lironron.png'
+import LironsJLogo from '../assets/imgs/j-logo.png'
+
 export function MyStoryShort() {
 
     return (
         <div className="my-story-short">
+            <img className="j-logo" src={LironsJLogo} alt="" />
             <div className="img-container" >
                 <img src={LironsImage} alt="" />
             </div>

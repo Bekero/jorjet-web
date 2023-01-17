@@ -307,12 +307,19 @@
 }
 
 @media screen and (max-width: 450px) {
-    .first-section {
+    .product-details-container {
 
-        .img-container {
+        .first-section {
 
-            img {
-                height: 440px;
+            .product-info {
+                width: 360px;
+            }
+
+            .img-container {
+
+                img {
+                    height: 440px;
+                }
             }
         }
     }

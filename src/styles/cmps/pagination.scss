@@ -1,0 +1,36 @@
+.pagination-container {
+
+    ul {
+        display: flex;
+        list-style-type: none;
+
+        >* {
+            background-color: rgba(108, 102, 102, 0.37);
+            border-radius: 7px;
+            padding: 10px;
+            margin: 6px;
+
+            &:hover {
+                cursor: pointer;
+                background-color: rgba(108, 102, 102, 0.136);
+                ;
+            }
+
+
+
+            &:active {
+                background: linear-gradient(to bottom, rgb(107, 106, 108) 8px, transparent 0);
+            }
+        }
+
+        ::selection {
+            background-color: rgba(255, 255, 255, 0);
+        }
+
+        .active {
+            color: white;
+            background-color: rgba(79, 79, 79, 0.764);
+        }
+    }
+
+}

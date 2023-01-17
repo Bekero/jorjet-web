@@ -12,4 +12,3 @@ export function BgcImg2() {
         </div>
     )
 }
-

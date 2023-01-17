@@ -8,8 +8,8 @@ export function Modal({ recipe, setModalOpen, modalOpen }) {
                 <button className="close" onClick={() => setModalOpen(false)}>סגור</button>
             </div>
             <div className="modal-content">
-                <h1 className="mini-title-recipe">{recipe.miniTitle}</h1>
-                <p className="title-recipe">{recipe.title}</p>
+                <h1 className="title-recipe">{recipe.title}</h1>
+                <p className="recipe-modal-short-description">{recipe.shortDescription}</p>
                 <p className="time-to-make">זמן הכנה: {recipe.timeToMake}</p>
                 <div className="ingredients-container">
                     <h2 className="main-title"><span>🛒למצרכים🛒</span></h2>
@@ -26,7 +26,7 @@ export function Modal({ recipe, setModalOpen, modalOpen }) {
                 <div className="instructions ">
                     {recipe.mainInstructions.map(instruction => {
                         return (
-                            <div className="xxx" key={instruction.instructionsTitle}>
+                            <div className="instructions-list-container" key={instruction.instructionsTitle}>
                                 <h2 className="category-title">{instruction.instructionsTitle}</h2>
                                 {/* <p>{instruction.instructionsString}</p> */}
                                 <ul>{instruction.instructionsArray.map(line => {

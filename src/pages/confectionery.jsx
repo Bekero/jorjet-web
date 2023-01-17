@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { productService } from '../services/product.service'
 import { ProductCard } from "../cmps/product-card";
+import { Pagination } from "../cmps/pagination";
 
 export function Confectionery() {
 
@@ -10,7 +11,20 @@ export function Confectionery() {
 
     const [products, setProducts] = useState([])
     const [originalProducts, setOriginalProducts] = useState([])
-    const [wantedValue, setWantedValue] = useState([])
+    const [wantedValue, setWantedValue] = useState(null)
+
+    //?Pagination ***
+    const [currentPage, setCurrentPage] = useState(1);
+    // User is currently on this page
+    const [productsPerPage] = useState(8);
+    // No of Products to be displayed on each page   
+    const indexOfLastProduct = currentPage * productsPerPage;
+    const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+    // Products to be displayed on the current page
+    // const currentProducts = originalProducts.slice(indexOfFirstProduct,
+    const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
+    // const nPages = Math.ceil(originalProducts.length / productsPerPage)
+    const nPages = Math.ceil(products.length / productsPerPage)
 
     useEffect(() => {
         setProducts(productService.getProducts())
@@ -24,6 +38,7 @@ export function Confectionery() {
             setProducts(productService.getProducts())
             return
         }
+        setCurrentPage(1)
         filterProducts()
     }, [wantedValue])
 
@@ -32,8 +47,10 @@ export function Confectionery() {
             setProducts(originalProducts)
             return
         }
-        // const filteredProducts = originalProducts?.filter(product => product.category.includes(wantedValue))
-        setProducts(originalProducts?.filter(product => product.category.includes(wantedValue)))
+        const filteredProducts = originalProducts?.filter(product => {
+            return product.category === wantedValue
+        })
+        setProducts(filteredProducts)
     }
 
     const onGoToProduct = (product) => {
@@ -72,13 +89,14 @@ export function Confectionery() {
                             key={radio.category}
                             className={wantedValue === `${radio.category}` ? 'highlight' : ''}
                             onClick={() => setWantedValue(radio.category)}
-                            value={radio.category}>{radio.categoryHebrew}</li>
+                            value={radio.category}>
+                            {radio.categoryHebrew}</li>
                     })}
                 </ul>
             </div>
 
             <div className="gallery">
-                {products.map((product, index) => {
+                {currentProducts.map((product, index) => {
                     return <ProductCard
                         key={product._id}
                         product={product}
@@ -87,6 +105,11 @@ export function Confectionery() {
                     />
                 })}
             </div>
+            <Pagination
+                nPages={nPages}
+                currentPage={currentPage}
+                setCurrentPage={setCurrentPage}
+            />
         </div>
     )
 }

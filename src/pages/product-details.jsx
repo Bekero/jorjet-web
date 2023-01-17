@@ -10,8 +10,6 @@ export function ProductDetails() {
     const productId = params.id
     const [product, setProduct] = useState(null)
     const [products, setProducts] = useState([])
-    const [productIndex, setProductIndex] = useState(null)
-    const [divAllergyExpends, setDivAllergyExpends] = useState(null)
     const [divAddingParveExpends, setDivAddingParveExpends] = useState(null)
     const [divAddingMilkyExpends, setDivAddingMilkyExpends] = useState(null)
 

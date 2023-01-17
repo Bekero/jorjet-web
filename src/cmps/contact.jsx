@@ -4,11 +4,12 @@ import TiktokSvg from '../assets/svgs/tiktok'
 import InstagramSvg from '../assets/svgs/instagram'
 import FacebookSvg from '../assets/svgs/facebook'
 import WhatsappSvg from '../assets/svgs/whatsapp'
-
+import LironsJLogo from '../assets/imgs/j-logo.png'
 export function Contact() {
 
     return (
         <div id="contact" className="contact-container">
+            <img className="j-logo" src={LironsJLogo} alt="" />
             <form id="form" className="topBefore">
 
                 <input id="name" type="text" placeholder="NAME" />

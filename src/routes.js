@@ -4,6 +4,7 @@ import { Confectionery } from "./pages/confectionery";
 import { Recipe } from "./pages/recipe";
 import { ProductDetails } from "./pages/product-details";
 import { RecipeDetails } from "./pages/recipe-details";
+import { WorkShop } from "./pages/workshop";
 
 const routes = [
   {
@@ -25,6 +26,10 @@ const routes = [
   {
     path: "/confectionery/:id",
     component: <ProductDetails />,
+  },
+  {
+    path: "/workshop",
+    component: <WorkShop />,
   },
 ];
 

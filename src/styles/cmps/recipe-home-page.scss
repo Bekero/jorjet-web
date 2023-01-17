@@ -1,10 +1,18 @@
 .recipe-home-page {
     display: flex;
+    position: relative;
     margin: auto;
     padding: 25px;
     height: auto;
     color: $main-clr;
     justify-content: center;
+
+    .j-logo {
+        position: absolute;
+        top: 0;
+        width: 120px;
+        height: 50px;
+    }
 
     .imgs-container {
         position: relative;
@@ -73,7 +81,8 @@
     }
 
     .home-page-recipe-info {
-        margin-left: 35px;
+        // margin-left: 35px;
+        margin-top: 20px;
         max-width: 400px;
 
         .title {
@@ -118,8 +127,8 @@
             touch-action: manipulation;
 
             &:hover {
-            background: #8a888d;
-            cursor: pointer;
+                background: #8a888d;
+                cursor: pointer;
             }
 
             button.view-more:focus {
@@ -171,7 +180,7 @@
         }
     }
 
-    .recipe-info {
+    .recipe-home-page-info {
         max-width: 250px;
     }
 
@@ -230,9 +239,9 @@
         }
     }
 
-    .recipe-info {
-        max-width: 250px;
-    }
+    // .recipe-info {
+    //     max-width: 250px;
+    // }
 
     .recipe-home-page {
         display: flex;
