@@ -51,7 +51,7 @@ export function RecipeDetails() {
                     <p className="recipe-short-description">{recipe.shortDescription}</p>
                     <p className="time-to-make">זמן הכנה: {recipe.timeToMake}</p>
                     <div className="ingredients-container">
-                        <h2 className="main-title">🛒למצרכים🛒</h2>
+                        {/* <h2 className="main-title">🛒למצרכים🛒</h2> */}
                         {recipe.mainIngredients.map((section, index) => {
                             return <ul className="ingredients-ul" key={index}>
                                 <h3 className="ingredient-title">{section.ingredientsTitle}</h3>

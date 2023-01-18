@@ -1,8 +1,8 @@
 [{
         "_id": "edsfrgtuyjhkilop",
-        "src": "../assets/imgs/recipes/blondie-salted-caramel-biscuit-cake-and-pretzels.JPG",
-        "srcName": "recipes/blondie-salted-caramel-biscuit-cake-and-pretzels.JPG",
-        "title": " 🥨מתכון לעוגת ביסקוויטים בלונדי קרמל מלוח ובייגלה!!!🥨",
+        "src": "../assets/imgs/recipes/blondie-and-pretzel-biscuit-cake.JPG",
+        "srcName": "recipes/blondie-and-pretzel-biscuit-cake.JPG",
+        "title": " עוגת ביסקוויטים בלונדי ובייגלה!!!🥨",
         "description": "Lorem 60 ipsum dolor sit amet consectetur adipisicing elit. Cupiditate officiis porro fuga rem? Quibusdam adipisci temporibus, dolorum accusamus laboriosam earum nobis mollitia numquam? Omnis, quaerat. Ab praesentium consectetur aliquam totam placeat modi suscipit impedit consequatur explicabo",
         "shortDescription": "🥨מתכון לעוגת ביסקוויטים בלונדי קרמל מלוח ובייגלה!!!🥨",
         "timeToMake": "90 דק ",
@@ -91,51 +91,42 @@
     },
     {
         "_id": "wedsrfdtgfuyjhkilok",
-        "src": "../assets/imgs/recipes/bis-cookies-next-to-the-coffee.JPG",
-        "srcName": "recipes/bis-cookies-next-to-the-coffee.JPG",
-        "title": " 🍪🍦 מתכון לשוקוקיקה",
+        "src": "../assets/imgs/recipes/bis-cookies-chocolate.JPG",
+        "srcName": "recipes/bis-chocolate-cookies.JPG",
+        "title": " עוגיות שוקולד ביס ☕️🍪 ",
         "description": "Lorem 60 ipsum dolor sit amet consectetur adipisicing elit. Cupiditate officiis porro fuga rem? Quibusdam adipisci temporibus, dolorum accusamus laboriosam earum nobis mollitia numquam? Omnis, quaerat. Ab praesentium consectetur aliquam totam placeat modi suscipit impedit consequatur explicabo",
-        "shortDescription": "מתכון לפליקמורה ביתית ואווווו כמה שזה טעים ",
+        "shortDescription": " ",
         "timeToMake": "60 דק ",
         "catagories": "recipe",
         "levelToMake": "ממש קל להכנה",
         "mainIngredients": [{
-                "ingredientsTitle": "לעוגיות🍪",
-                "ingredients": ["100 גרם חמאה רכה",
-                    "80 גרם סוכר לבן",
-                    "70 גרם סוכר חום דמררה",
-                    "2 חלמונים",
-                    "180 גרם קמח לבן",
-                    "1 / 2 כפית סודה לשתייה",
-                    "1 / 2 כפית אבקת אפיה",
-                    "50 גרם קקאו",
-                    "6 כפות חלב",
-                    " מטבעות שוקולד חלב ולבן"
-                ]
-            },
-            {
-                "ingredientsTitle": "לקצפת🍰",
-                "ingredients": [
-                    "500 מל שמנת מתוקה",
-                    "4 כפות אבקת סוכר",
-                    "4 כפות פודינג וניל"
-                ]
-            }
-        ],
+            "ingredientsTitle": "",
+            "ingredients": [
+                "200 גרם שוקולד מריר",
+                "70 גרם חמאה",
+                "100 גרם קמח חיטה לבן",
+                "חצי כפית סודה לשתייה",
+                "10 גרם קקאו",
+                "קורט מלח",
+                "130 גרם סוכר חום דביק",
+                "2 ביצים m",
+                "מטבעות שוקולד לבן"
+            ]
+        }],
         "mainInstructions": [{
-            "instructionsTitle": "🧩הוראות הכנה🧩",
+            "instructionsTitle": "🥄הוראות הכנה 🥄",
             "instructionsString": " נפעיל תנור על 170 מעלות על מצב סטטי בתנור.במיקסר עם וו גיטרה נשים חמאה,סוכרים ומלח ונערבל כדקה עד שנקבל תערובת אוורירית.נוסיף ביצה וחלב ונערבב לאיחוד,בבת אחת נוסיף את כל היבשים והמטבעות שוקולד.נעבד עד איחוד ונתחיל לשקול כדורים של 50 - 60 גרם לכדור.נסדר על תבנית ונכניס לאפייה של 10 - 15 דקות(אני אפיתי במשך 12 דקות)בנתיים נכין את הקצפת - בקערת מיקסר עם בלון הקצפה נשים את כל המצרכים ונקציף עד למרקם של קצפת חזקה ויציבה. נקרר את העוגיות קירור מלא ורק אז נזלף קצפת על העוגיות ונסגור אותן לקוקילידה(אני השתמשתי בצנטר M1).נעביר את העוגיות למקרר לכ - 3 שעות לפחות להתייצבות.",
             "instructionsArray": [
-                "נפעיל תנור על 170 מעלות על מצב סטטי בתנור ",
-                " במיקסר עם וו גיטרה נשים חמאה, סוכרים ומלח ונערבל כדקה עד שנקבל תערובת אוורירית",
-                " נוסיף ביצה וחלב ונערבב לאיחוד ",
-                " בבת אחת נוסיף את כל היבשים והמטבעות שוקולד",
-                " נעבד עד איחוד ונתחיל לשקול כדורים של 50-60 גרם לכדור",
-                " נסדר על תבנית ונכניס לאפייה של 10-15 דקות",
-                "(אני אפיתי במשך 12 דקות)",
-                " בנתיים נכין את הקצפת- בקערת מיקסר עם בלון הקצפה נשים את כל המצרכים ונקציף עד למרקם של קצפת חזקה ויציבה",
-                " נקרר את העוגיות קירור מלא ורק אז נזלף קצפת על העוגיות ונסגור אותן לקוקילידה ( אני השתמשתי בצנטר M1)",
-                " נעביר את העוגיות למקרר לכ- 3 שעות לפחות להתייצבות"
+                "נחמם את התנור ל -  180 טורבו",
+                "נמיס בקערה שוקולד מריר וחמאה עד איחוד",
+                "בקערה נפרדת חומרים יבשים: קמח , קקאו , סודה לשתייה",
+                "בקערת מיקסר עם בלון הקצפה נקציף ביצים , סוכר חום ומלח כ5 דק לקבלת תערובת תפוחה",
+                "נוסיף לקערת המיקסר את השוקולד המומס ונערבב לאיחוד",
+                "נוסיף את החומרים היבשים , מטבעות שוקולד  ונקפל לתערובת אחידה",
+                "נעביר לקירור ללילה במקרר - 4 שעות",
+                "נשקול 10 גרם לכדור ונסדר במגש עם נייר אפיה עם מרווחים",
+                "נכניס לתנור שחומם מראש למשך 7 דק בלבד",
+                "נכין קפה או שוקו ונפרק את המגש🤪😋🍪☕️"
             ]
         }],
         "isRecipe": true
@@ -144,49 +135,36 @@
         "_id": "ewdsrfgtuyjiklok",
         "src": "../assets/imgs/recipes/brownies-cake.JPG",
         "srcName": "recipes/brownies-cake.JPG",
-        "title": " 🍪🍦 מתכון לשוקוקיקה",
+        "title": " 🍪🍦 עוגת בראוניז מושחתת ",
         "description": "Lorem 60 ipsum dolor sit amet consectetur adipisicing elit. Cupiditate officiis porro fuga rem? Quibusdam adipisci temporibus, dolorum accusamus laboriosam earum nobis mollitia numquam? Omnis, quaerat. Ab praesentium consectetur aliquam totam placeat modi suscipit impedit consequatur explicabo",
-        "shortDescription": "מתכון לפליקמורה ביתית ואווווו כמה שזה טעים ",
+        "shortDescription": "",
         "timeToMake": "60 דק ",
         "catagories": "recipe",
         "levelToMake": "ממש קל להכנה",
         "mainIngredients": [{
-                "ingredientsTitle": "לעוגיות🍪",
-                "ingredients": ["100 גרם חמאה רכה",
-                    "80 גרם סוכר לבן",
-                    "70 גרם סוכר חום דמררה",
-                    "2 חלמונים",
-                    "180 גרם קמח לבן",
-                    "1 / 2 כפית סודה לשתייה",
-                    "1 / 2 כפית אבקת אפיה",
-                    "50 גרם קקאו",
-                    "6 כפות חלב",
-                    " מטבעות שוקולד חלב ולבן"
-                ]
-            },
-            {
-                "ingredientsTitle": "לקצפת🍰",
-                "ingredients": [
-                    "500 מל שמנת מתוקה",
-                    "4 כפות אבקת סוכר",
-                    "4 כפות פודינג וניל"
-                ]
-            }
-        ],
+            "ingredientsTitle": "",
+            "ingredients": [
+                "200 גרם שוקולד מריר",
+                "200 גרם חמאה",
+                "1 כוס סוכר",
+                "4 ביצים גודל L",
+                "1 כוס קמח",
+                "3 כפות קקאו",
+                "קורט מלח"
+            ]
+        }],
         "mainInstructions": [{
-            "instructionsTitle": "🧩הוראות הכנה🧩",
+            "instructionsTitle": "🥄אופן הכנה🥄",
             "instructionsString": " נפעיל תנור על 170 מעלות על מצב סטטי בתנור.במיקסר עם וו גיטרה נשים חמאה,סוכרים ומלח ונערבל כדקה עד שנקבל תערובת אוורירית.נוסיף ביצה וחלב ונערבב לאיחוד,בבת אחת נוסיף את כל היבשים והמטבעות שוקולד.נעבד עד איחוד ונתחיל לשקול כדורים של 50 - 60 גרם לכדור.נסדר על תבנית ונכניס לאפייה של 10 - 15 דקות(אני אפיתי במשך 12 דקות)בנתיים נכין את הקצפת - בקערת מיקסר עם בלון הקצפה נשים את כל המצרכים ונקציף עד למרקם של קצפת חזקה ויציבה. נקרר את העוגיות קירור מלא ורק אז נזלף קצפת על העוגיות ונסגור אותן לקוקילידה(אני השתמשתי בצנטר M1).נעביר את העוגיות למקרר לכ - 3 שעות לפחות להתייצבות.",
             "instructionsArray": [
-                "נפעיל תנור על 170 מעלות על מצב סטטי בתנור ",
-                " במיקסר עם וו גיטרה נשים חמאה, סוכרים ומלח ונערבל כדקה עד שנקבל תערובת אוורירית",
-                " נוסיף ביצה וחלב ונערבב לאיחוד ",
-                " בבת אחת נוסיף את כל היבשים והמטבעות שוקולד",
-                " נעבד עד איחוד ונתחיל לשקול כדורים של 50-60 גרם לכדור",
-                " נסדר על תבנית ונכניס לאפייה של 10-15 דקות",
-                "(אני אפיתי במשך 12 דקות)",
-                " בנתיים נכין את הקצפת- בקערת מיקסר עם בלון הקצפה נשים את כל המצרכים ונקציף עד למרקם של קצפת חזקה ויציבה",
-                " נקרר את העוגיות קירור מלא ורק אז נזלף קצפת על העוגיות ונסגור אותן לקוקילידה ( אני השתמשתי בצנטר M1)",
-                " נעביר את העוגיות למקרר לכ- 3 שעות לפחות להתייצבות"
+                "מדליקים תנור על 170 מעלות, סטטי (לא טורבו!)",
+                "מחממים במיקרו את החמאה והשוקולד המריר בפולסים של 30 שניות",
+                "כשהתערובת אחידה מעבירים לקערה גדולה, מוסיפים את הסוכר והביצים בהדרגה",
+                "לאחר מכן מוסיפים את הקמח, הקקאו והמלח ומערבבים לאיחוד.",
+                "מעבירים לתבנית חצי מכמות הבלילה ומטביעים שוקולדים שאוהבים, אני השתמשתי בקינדרים, הרשיז, שוקולד לבן, אוראו, הפי היפו ומטבעות שוקולד. ",
+                "לוקחים את יתר הבלילה ומכסים את השוקולדים, אפשר לקשט שוב בשוקולדים מעל. ",
+                "♨️מכניסים לתנור שחומם מראש ל25-30 דק׳ ♨️",
+                "❗️הבראוניז צריך להיות קצת רטוב מבפנים - אז זהירות לא לייבש אותו!"
             ]
         }],
         "isRecipe": true
@@ -195,100 +173,106 @@
         "_id": "edrfsgtuyjhiklop",
         "src": "../assets/imgs/recipes/crumb-cheese-roll.JPG",
         "srcName": "recipes/crumb-cheese-roll.JPG",
-        "title": " 🍪🍦 מתכון לשוקוקיקה",
+        "title": " רולדת גבינה פירורים מושלמת🧀",
         "description": "Lorem 60 ipsum dolor sit amet consectetur adipisicing elit. Cupiditate officiis porro fuga rem? Quibusdam adipisci temporibus, dolorum accusamus laboriosam earum nobis mollitia numquam? Omnis, quaerat. Ab praesentium consectetur aliquam totam placeat modi suscipit impedit consequatur explicabo",
-        "shortDescription": "מתכון לפליקמורה ביתית ואווווו כמה שזה טעים ",
+        "shortDescription": "",
         "timeToMake": "60 דק ",
         "catagories": "recipe",
         "levelToMake": "ממש קל להכנה",
         "mainIngredients": [{
                 "ingredientsTitle": "לעוגיות🍪",
-                "ingredients": ["100 גרם חמאה רכה",
-                    "80 גרם סוכר לבן",
-                    "70 גרם סוכר חום דמררה",
-                    "2 חלמונים",
-                    "180 גרם קמח לבן",
-                    "1 / 2 כפית סודה לשתייה",
-                    "1 / 2 כפית אבקת אפיה",
-                    "50 גרם קקאו",
-                    "6 כפות חלב",
-                    " מטבעות שוקולד חלב ולבן"
+                "ingredients": [
+                    "70 גרם אבקת שקדים",
+                    "70 גרם אבקת סוכר",
+                    "40 גרם קמח",
+                    "200 גרם ביצים",
+                    "150 גרם חלבון",
+                    "40 גרם סוכר"
                 ]
             },
             {
-                "ingredientsTitle": "לקצפת🍰",
+                "ingredientsTitle": "🛒למלית גבינה🛒",
                 "ingredients": [
-                    "500 מל שמנת מתוקה",
-                    "4 כפות אבקת סוכר",
-                    "4 כפות פודינג וניל"
+                    "1 מכל גבינת שמנת 25%",
+                    "300 מ`ל שמנת מתוקה להקצפה",
+                    "50 גרם סוכר לבן",
+                    "כפית תמצית וניל",
+                    "גרידת לימון"
+                ]
+            },
+            {
+                "ingredientsTitle": "לקישוט",
+                "ingredients": [
+                    "עוגיות חמאה / פתיבר גרוס"
                 ]
             }
         ],
         "mainInstructions": [{
-            "instructionsTitle": "🧩הוראות הכנה🧩",
-            "instructionsString": " נפעיל תנור על 170 מעלות על מצב סטטי בתנור.במיקסר עם וו גיטרה נשים חמאה,סוכרים ומלח ונערבל כדקה עד שנקבל תערובת אוורירית.נוסיף ביצה וחלב ונערבב לאיחוד,בבת אחת נוסיף את כל היבשים והמטבעות שוקולד.נעבד עד איחוד ונתחיל לשקול כדורים של 50 - 60 גרם לכדור.נסדר על תבנית ונכניס לאפייה של 10 - 15 דקות(אני אפיתי במשך 12 דקות)בנתיים נכין את הקצפת - בקערת מיקסר עם בלון הקצפה נשים את כל המצרכים ונקציף עד למרקם של קצפת חזקה ויציבה. נקרר את העוגיות קירור מלא ורק אז נזלף קצפת על העוגיות ונסגור אותן לקוקילידה(אני השתמשתי בצנטר M1).נעביר את העוגיות למקרר לכ - 3 שעות לפחות להתייצבות.",
-            "instructionsArray": [
-                "נפעיל תנור על 170 מעלות על מצב סטטי בתנור ",
-                " במיקסר עם וו גיטרה נשים חמאה, סוכרים ומלח ונערבל כדקה עד שנקבל תערובת אוורירית",
-                " נוסיף ביצה וחלב ונערבב לאיחוד ",
-                " בבת אחת נוסיף את כל היבשים והמטבעות שוקולד",
-                " נעבד עד איחוד ונתחיל לשקול כדורים של 50-60 גרם לכדור",
-                " נסדר על תבנית ונכניס לאפייה של 10-15 דקות",
-                "(אני אפיתי במשך 12 דקות)",
-                " בנתיים נכין את הקצפת- בקערת מיקסר עם בלון הקצפה נשים את כל המצרכים ונקציף עד למרקם של קצפת חזקה ויציבה",
-                " נקרר את העוגיות קירור מלא ורק אז נזלף קצפת על העוגיות ונסגור אותן לקוקילידה ( אני השתמשתי בצנטר M1)",
-                " נעביר את העוגיות למקרר לכ- 3 שעות לפחות להתייצבות"
-            ]
-        }],
+                "instructionsTitle": "הכנת הרולדה",
+                "instructionsArray": [
+                    "נפעיל את התנור על 200 מעלות סטטי",
+                    "בקערת מיקסר עם בלון הקצפה נקציף את החלבון למשך דקה ,כאשר נהיה מעט קצף נוסיף את הסוכר ונמשיך את ההקצפה למשך 3 דקות עד שהקצפת יציבה . נעביר את הקצפת שנוצרה לנו לקערה נקייה",
+                    "באותה קערת מיקסר עם בלון הקצפה (לא צריך לשטוף בין לבין) נקציף עד לסמיכות ",
+                    "את כל היבשים : קמח , אבקת שקדים ואבקת סוכר עם הביצים",
+                    "נוסיף את קציפת החלבון בשתי פעימות לקערת המיקסר ונקפל אותה עד לאיחוד.",
+                    "נעביר את המסה לתבנית עם נייר אפייה ונשטח לאורך כל התבנית ",
+                    "נכניס לתנור שחומם מראש למשך 6-7 דקות",
+                    "נצנן "
+                ]
+            },
+            {
+                "instructionsTitle": "הכנת מלית הגבינה",
+                "instructionsArray": [
+                    "בקערת מיקסר עם בלון הקצפה נשים את כל המצרכים ונקציף עד לקרם יציב"
+                ]
+            },
+            {
+                "instructionsTitle": "🧩הרכבת העוגה",
+                "instructionsArray": [
+                    "לאחר שהעוגת ספוג התקררה נמרח את הקרם גבינה על כל שטח העוגה (אפשר לשמור קצת מהקרם בצד לקישוט), נפורר בנדיבות עוגיות חמאה / פתיבר גרוסות.",
+                    "נגלגל את הרולדה באופן הדוק",
+                    "בשקית זילוף נשים צנטר ואת המלית גבינה שהשארנו, נזלף מעל העוגה ונפורר עוגיות חמאה מעל",
+                    "נכניס לקירור עד להגשה 🍰ובתיאבון!",
+                    "(עד שבוע במקרר)"
+                ]
+            }
+        ],
         "isRecipe": true
     },
     {
         "_id": "qaewdsrfgtuyjhiklokp",
-        "src": "../assets/imgs/recipes/cutouts-and-balls-of-white-chocolate-oreo-and-harshis.JPG",
-        "srcName": "recipes/cutouts-and-balls-of-white-chocolate-oreo-and-harshis.JPG",
-        "title": " 🍪🍦 מתכון לשוקוקיקה",
+        "src": "../assets/imgs/recipes/cutouts-of-white-chocolate-and-harshis.JPG",
+        "srcName": "recipes/cutouts-of-white-chocolate-and-harshis.JPG",
+        "title": " 🤍🖤חיתוכיות שוקולד לבן והרשיז🖤🤍",
         "description": "Lorem 60 ipsum dolor sit amet consectetur adipisicing elit. Cupiditate officiis porro fuga rem? Quibusdam adipisci temporibus, dolorum accusamus laboriosam earum nobis mollitia numquam? Omnis, quaerat. Ab praesentium consectetur aliquam totam placeat modi suscipit impedit consequatur explicabo",
         "shortDescription": "מתכון לפליקמורה ביתית ואווווו כמה שזה טעים ",
-        "timeToMake": "60 דק ",
+        "timeToMake": "15 דקות הכנה!!!",
         "catagories": "recipe",
         "levelToMake": "ממש קל להכנה",
         "mainIngredients": [{
-                "ingredientsTitle": "לעוגיות🍪",
-                "ingredients": ["100 גרם חמאה רכה",
-                    "80 גרם סוכר לבן",
-                    "70 גרם סוכר חום דמררה",
-                    "2 חלמונים",
-                    "180 גרם קמח לבן",
-                    "1 / 2 כפית סודה לשתייה",
-                    "1 / 2 כפית אבקת אפיה",
-                    "50 גרם קקאו",
-                    "6 כפות חלב",
-                    " מטבעות שוקולד חלב ולבן"
-                ]
-            },
-            {
-                "ingredientsTitle": "לקצפת🍰",
-                "ingredients": [
-                    "500 מל שמנת מתוקה",
-                    "4 כפות אבקת סוכר",
-                    "4 כפות פודינג וניל"
-                ]
-            }
-        ],
+            "ingredientsTitle": "מרכיבים 🛒",
+            "ingredients": [
+                "2 חבילות פתיבר לבן (500 גרם) ",
+                "150 גרם חמאה",
+                "200 גרם שוקולד לבן",
+                "כוס וחצי חלב",
+                "2 שקיות אוראו (8 יחידות אוראו)",
+                "4 חבילות שוקולד הרשיז (200 גרם)",
+                "1 חבילת מיני אוראו (לא חובה)"
+            ]
+        }],
         "mainInstructions": [{
-            "instructionsTitle": "🧩הוראות הכנה🧩",
-            "instructionsString": " נפעיל תנור על 170 מעלות על מצב סטטי בתנור.במיקסר עם וו גיטרה נשים חמאה,סוכרים ומלח ונערבל כדקה עד שנקבל תערובת אוורירית.נוסיף ביצה וחלב ונערבב לאיחוד,בבת אחת נוסיף את כל היבשים והמטבעות שוקולד.נעבד עד איחוד ונתחיל לשקול כדורים של 50 - 60 גרם לכדור.נסדר על תבנית ונכניס לאפייה של 10 - 15 דקות(אני אפיתי במשך 12 דקות)בנתיים נכין את הקצפת - בקערת מיקסר עם בלון הקצפה נשים את כל המצרכים ונקציף עד למרקם של קצפת חזקה ויציבה. נקרר את העוגיות קירור מלא ורק אז נזלף קצפת על העוגיות ונסגור אותן לקוקילידה(אני השתמשתי בצנטר M1).נעביר את העוגיות למקרר לכ - 3 שעות לפחות להתייצבות.",
+            "instructionsTitle": "אופן הכנה 🧑🏻‍🍳",
             "instructionsArray": [
-                "נפעיל תנור על 170 מעלות על מצב סטטי בתנור ",
-                " במיקסר עם וו גיטרה נשים חמאה, סוכרים ומלח ונערבל כדקה עד שנקבל תערובת אוורירית",
-                " נוסיף ביצה וחלב ונערבב לאיחוד ",
-                " בבת אחת נוסיף את כל היבשים והמטבעות שוקולד",
-                " נעבד עד איחוד ונתחיל לשקול כדורים של 50-60 גרם לכדור",
-                " נסדר על תבנית ונכניס לאפייה של 10-15 דקות",
-                "(אני אפיתי במשך 12 דקות)",
-                " בנתיים נכין את הקצפת- בקערת מיקסר עם בלון הקצפה נשים את כל המצרכים ונקציף עד למרקם של קצפת חזקה ויציבה",
-                " נקרר את העוגיות קירור מלא ורק אז נזלף קצפת על העוגיות ונסגור אותן לקוקילידה ( אני השתמשתי בצנטר M1)",
-                " נעביר את העוגיות למקרר לכ- 3 שעות לפחות להתייצבות"
+                "נמיס בסיר חמאה, שוקולד לבן וחלב עד שהכל נמס. ",
+                "במעבד מזון נטחן פתיבר וחתיכות גסות של אוראו. ",
+                "נעביר את הפתיבר, האוראו והנוזלים מהסיר - לקערה גדולה ונערבב הכל לאיחוד",
+                "נשטח ברינג מלבני/ תבנית אינגלישקייק, מחצית מהתערובת שנוצרה לנו - ונעביר לקירור",
+                "עם יתרת הכמות (החצי הנותר) נגלגל כדורים שווים, בתוך כל כדור נשים מיני אוראו ונכניס לקירור",
+                "בנתיים נמיס את ארבעת חפיסות ההרשיז יחד עם 4 כפות שמן",
+                "נוציא מקירור את הרינג/אינגליש קייק ונשפוך מעל את ההרשיז המומס (להשאיר מעט לכדורי שוקולד!) ונכניס להקפאה",
+                "את כדורי השוקולד נצפה בהרשיז המומס ונכניס להקפאה",
+                "הצעת הגשה: לאחר הקפאה של העוגה, יש לחתוך לקוביות גדולות, ואת כדורי השוקולד לחתוך לחצאים! "
             ]
         }],
         "isRecipe": true
@@ -297,83 +281,95 @@
         "_id": "wasderfgtjhuk",
         "src": "../assets/imgs/recipes/karambo-cake.JPG",
         "srcName": "recipes/karambo-cake.JPG",
-        "title": " 🍪🍦 מתכון לשוקוקיקה",
+        "title": " עוגת קרמבו כשרה לפסח🍰",
+        "note": "*מומלץ כבר עכשיו להשליש את המתכון ! כי אפילו לא הספקתי לצלם נורמלי והעוגה נעלמה!",
         "description": "Lorem 60 ipsum dolor sit amet consectetur adipisicing elit. Cupiditate officiis porro fuga rem? Quibusdam adipisci temporibus, dolorum accusamus laboriosam earum nobis mollitia numquam? Omnis, quaerat. Ab praesentium consectetur aliquam totam placeat modi suscipit impedit consequatur explicabo",
-        "shortDescription": "מתכון לפליקמורה ביתית ואווווו כמה שזה טעים ",
+        "shortDescription": "",
         "timeToMake": "60 דק ",
         "catagories": "recipe",
         "levelToMake": "ממש קל להכנה",
         "mainIngredients": [{
-                "ingredientsTitle": "לעוגיות🍪",
-                "ingredients": ["100 גרם חמאה רכה",
-                    "80 גרם סוכר לבן",
-                    "70 גרם סוכר חום דמררה",
-                    "2 חלמונים",
-                    "180 גרם קמח לבן",
-                    "1 / 2 כפית סודה לשתייה",
-                    "1 / 2 כפית אבקת אפיה",
-                    "50 גרם קקאו",
-                    "6 כפות חלב",
-                    " מטבעות שוקולד חלב ולבן"
+            "ingredientsTitle": "6 ביצים",
+            "ingredients": [
+                "6 ביצים",
+                "6 כפות סוכר",
+                "שקית סוכר וניל",
+                "אינסטנט פודינג שוקולד",
+                "אינסטנט פודינג וניל",
+                "2 שמנת מתוקה (500 מל)",
+                "כוס חלב",
+                "300 גרם שוקולד חלב/ 3 חפיסות"
+            ]
+        }],
+        "mainInstructions": [{
+                "instructionsTitle": "🍴אופן הכנה🍴",
+                "instructionsArray": [
+                    "נפעיל את התנור על 175 מעלות סטטי( לא טורבו)",
+                    "נפריד חלמונים וחלבונים",
+                    "נקציף חלבונים כדקה ונוסיף את הסוכר בהדרגה",
+                    "ונמשיך להקציף עד שמתקבל קצף לבן ותפוח",
+                    "נוסיף לקצפת שמתקבלת את החלמונים ,סוכר וניל, ואינסטנט פודינג שוקולד לערבוב קצר עד שהכל מתאחד",
+                    "נעביר את התערובת לתבנית אפייה ונאפה כ20-25 ",
+                    "",
+                    "כאשר העוגה מוכנה נצנן אותה ובנתיים נכין את הקצפת:"
                 ]
             },
             {
-                "ingredientsTitle": "לקצפת🍰",
-                "ingredients": [
-                    "500 מל שמנת מתוקה",
-                    "4 כפות אבקת סוכר",
-                    "4 כפות פודינג וניל"
+                "instructionsTitle": "לקצפת",
+                "instructionsArray": [
+                    "במיקסר מקציפים שמנת מתוקה כוס חלב וחבילת אינסטנט פודינג וניל , נשטח על העוגה ( כשהיא קרה) ",
+                    "ונכין את הגנאש-"
+                ]
+            },
+            {
+                "instructionsTitle": "לגנאש",
+                "instructionsArray": [
+                    "בקערה 300 גרם שוקולד חלב ושמנת מתוקה להכניס למיקרו לפולסים של 30 שניות",
+                    "אני אוהבת שהגנאש דליל ומרטיב את כל העוגה אז לא לפחד מזה!",
+                    "לשפוך את הגנאש על העוגה ולהכניס למקרר להתייצבות לחצי שעה לפחות",
+                    "וזהוווו העוגה מוכנה 🤩 העוגה האהובה עליי ולא רק בפסח! זה מתכון שהייתי מכינה מגיל קטן ולעולם לא אחליף🤩"
                 ]
             }
         ],
-        "mainInstructions": [{
-            "instructionsTitle": "🧩הוראות הכנה🧩",
-            "instructionsString": " נפעיל תנור על 170 מעלות על מצב סטטי בתנור.במיקסר עם וו גיטרה נשים חמאה,סוכרים ומלח ונערבל כדקה עד שנקבל תערובת אוורירית.נוסיף ביצה וחלב ונערבב לאיחוד,בבת אחת נוסיף את כל היבשים והמטבעות שוקולד.נעבד עד איחוד ונתחיל לשקול כדורים של 50 - 60 גרם לכדור.נסדר על תבנית ונכניס לאפייה של 10 - 15 דקות(אני אפיתי במשך 12 דקות)בנתיים נכין את הקצפת - בקערת מיקסר עם בלון הקצפה נשים את כל המצרכים ונקציף עד למרקם של קצפת חזקה ויציבה. נקרר את העוגיות קירור מלא ורק אז נזלף קצפת על העוגיות ונסגור אותן לקוקילידה(אני השתמשתי בצנטר M1).נעביר את העוגיות למקרר לכ - 3 שעות לפחות להתייצבות.",
-            "instructionsArray": [
-                "נפעיל תנור על 170 מעלות על מצב סטטי בתנור ",
-                " במיקסר עם וו גיטרה נשים חמאה, סוכרים ומלח ונערבל כדקה עד שנקבל תערובת אוורירית",
-                " נוסיף ביצה וחלב ונערבב לאיחוד ",
-                " בבת אחת נוסיף את כל היבשים והמטבעות שוקולד",
-                " נעבד עד איחוד ונתחיל לשקול כדורים של 50-60 גרם לכדור",
-                " נסדר על תבנית ונכניס לאפייה של 10-15 דקות",
-                "(אני אפיתי במשך 12 דקות)",
-                " בנתיים נכין את הקצפת- בקערת מיקסר עם בלון הקצפה נשים את כל המצרכים ונקציף עד למרקם של קצפת חזקה ויציבה",
-                " נקרר את העוגיות קירור מלא ורק אז נזלף קצפת על העוגיות ונסגור אותן לקוקילידה ( אני השתמשתי בצנטר M1)",
-                " נעביר את העוגיות למקרר לכ- 3 שעות לפחות להתייצבות"
-            ]
-        }],
         "isRecipe": true
     },
     {
         "_id": "eqawdsrfgtuyjhiklo",
         "src": "../assets/imgs/recipes/nutella-and-oreo-mousse-cake.JPG",
         "srcName": "recipes/nutella-and-oreo-mousse-cake.JPG",
-        "title": " 🍪🍦 מתכון לשוקוקיקה",
+        "title": " עוגת מוס נוטלה ואוראו",
         "description": "Lorem 60 ipsum dolor sit amet consectetur adipisicing elit. Cupiditate officiis porro fuga rem? Quibusdam adipisci temporibus, dolorum accusamus laboriosam earum nobis mollitia numquam? Omnis, quaerat. Ab praesentium consectetur aliquam totam placeat modi suscipit impedit consequatur explicabo",
-        "shortDescription": "מתכון לפליקמורה ביתית ואווווו כמה שזה טעים ",
+        "shortDescription": "",
         "timeToMake": "60 דק ",
         "catagories": "recipe",
         "levelToMake": "ממש קל להכנה",
         "mainIngredients": [{
-                "ingredientsTitle": "לעוגיות🍪",
-                "ingredients": ["100 גרם חמאה רכה",
-                    "80 גרם סוכר לבן",
-                    "70 גרם סוכר חום דמררה",
-                    "2 חלמונים",
-                    "180 גרם קמח לבן",
-                    "1 / 2 כפית סודה לשתייה",
-                    "1 / 2 כפית אבקת אפיה",
-                    "50 גרם קקאו",
-                    "6 כפות חלב",
-                    " מטבעות שוקולד חלב ולבן"
+                "ingredientsTitle": " מצרכים",
+                "ingredients": [
+                    "2 חבילות אוראו (200 גרם)",
+                    " 2 שמנות להקצפה (500 מל')",
+                    "גבינת מסקרפונה (250 ג')",
+                    "חמאה (50 גרם)",
+                    "חצי כוס נוטלה"
                 ]
             },
             {
-                "ingredientsTitle": "לקצפת🍰",
+                "ingredientsTitle": " לתחתית",
                 "ingredients": [
-                    "500 מל שמנת מתוקה",
-                    "4 כפות אבקת סוכר",
-                    "4 כפות פודינג וניל"
+                    "לטחון 2 חבילות אוראו ולהשאיר בצד חצי כוס עם עוגיות מרוסקות",
+                    "להמיס את החמאה, להוסיף אותה לשאר עוגיות האוראו ולערבב",
+                    "נעביר את בלילת העוגיות עם החמאה לרינג קוטר 18/20 ונהדק לתחתית"
+                ]
+            },
+            {
+                "ingredientsTitle": " למוס נוטלה",
+                "ingredients": [
+                    "נקציף את גבינת המסקרפונה יחד עם הנוטלה עד איחוד",
+                    "נאחד יחד עם הקצפת שנוצרה - עד איחוד",
+                    "נעביר את המוס לרינג מעל התחתית אוראו, ניישר ונעביר למקפיא ל3 שעות",
+                    "לאחר 3 שעות במקפיא",
+                    "נקח את העוגיות אוראו שהשארנו בצד, נפזר מעל העוגה, נשטח ונקשט להגשה.",
+                    "את העוגה מאחסנים במקרר"
                 ]
             }
         ],
@@ -399,60 +395,66 @@
         "_id": "weaqsdrfgtuyjhiklo;p",
         "src": "../assets/imgs/recipes/nutella-cake.JPG",
         "srcName": "recipes/nutella-cake.JPG",
-        "title": " 🍪🍦 מתכון לשוקוקיקה",
+        "title": " עוגת שוקולד נוטלה ביתית   !",
         "description": "Lorem 60 ipsum dolor sit amet consectetur adipisicing elit. Cupiditate officiis porro fuga rem? Quibusdam adipisci temporibus, dolorum accusamus laboriosam earum nobis mollitia numquam? Omnis, quaerat. Ab praesentium consectetur aliquam totam placeat modi suscipit impedit consequatur explicabo",
-        "shortDescription": "מתכון לפליקמורה ביתית ואווווו כמה שזה טעים ",
+        "shortDescription": "",
         "timeToMake": "60 דק ",
         "catagories": "recipe",
         "levelToMake": "ממש קל להכנה",
         "mainIngredients": [{
-                "ingredientsTitle": "לעוגיות🍪",
-                "ingredients": ["100 גרם חמאה רכה",
-                    "80 גרם סוכר לבן",
-                    "70 גרם סוכר חום דמררה",
-                    "2 חלמונים",
-                    "180 גרם קמח לבן",
-                    "1 / 2 כפית סודה לשתייה",
-                    "1 / 2 כפית אבקת אפיה",
-                    "50 גרם קקאו",
-                    "6 כפות חלב",
-                    " מטבעות שוקולד חלב ולבן"
+                "ingredientsTitle": " מצרכים לעוגה:",
+                "ingredients": [
+                    "4 ביצים",
+                    "כוס סוכר",
+                    "כוס וחצי קמח לבן",
+                    "כוס שוקולית",
+                    "כוס שמן",
+                    "1 אבקת אפיה",
+                    "1 שמנת מתוקה 250 מ`ל",
+                    "2 כפות נוטלה"
                 ]
             },
             {
-                "ingredientsTitle": "לקצפת🍰",
+                "ingredientsTitle": " לגנאש:",
                 "ingredients": [
-                    "500 מל שמנת מתוקה",
-                    "4 כפות אבקת סוכר",
-                    "4 כפות פודינג וניל"
+                    " 300 גרם שוקולד חלב",
+                    "2 כפות נוטלה",
+                    "1 שמנת מתוקה 250 מל"
                 ]
             }
         ],
         "mainInstructions": [{
-            "instructionsTitle": "🧩הוראות הכנה🧩",
-            "instructionsString": " נפעיל תנור על 170 מעלות על מצב סטטי בתנור.במיקסר עם וו גיטרה נשים חמאה,סוכרים ומלח ונערבל כדקה עד שנקבל תערובת אוורירית.נוסיף ביצה וחלב ונערבב לאיחוד,בבת אחת נוסיף את כל היבשים והמטבעות שוקולד.נעבד עד איחוד ונתחיל לשקול כדורים של 50 - 60 גרם לכדור.נסדר על תבנית ונכניס לאפייה של 10 - 15 דקות(אני אפיתי במשך 12 דקות)בנתיים נכין את הקצפת - בקערת מיקסר עם בלון הקצפה נשים את כל המצרכים ונקציף עד למרקם של קצפת חזקה ויציבה. נקרר את העוגיות קירור מלא ורק אז נזלף קצפת על העוגיות ונסגור אותן לקוקילידה(אני השתמשתי בצנטר M1).נעביר את העוגיות למקרר לכ - 3 שעות לפחות להתייצבות.",
-            "instructionsArray": [
-                "נפעיל תנור על 170 מעלות על מצב סטטי בתנור ",
-                " במיקסר עם וו גיטרה נשים חמאה, סוכרים ומלח ונערבל כדקה עד שנקבל תערובת אוורירית",
-                " נוסיף ביצה וחלב ונערבב לאיחוד ",
-                " בבת אחת נוסיף את כל היבשים והמטבעות שוקולד",
-                " נעבד עד איחוד ונתחיל לשקול כדורים של 50-60 גרם לכדור",
-                " נסדר על תבנית ונכניס לאפייה של 10-15 דקות",
-                "(אני אפיתי במשך 12 דקות)",
-                " בנתיים נכין את הקצפת- בקערת מיקסר עם בלון הקצפה נשים את כל המצרכים ונקציף עד למרקם של קצפת חזקה ויציבה",
-                " נקרר את העוגיות קירור מלא ורק אז נזלף קצפת על העוגיות ונסגור אותן לקוקילידה ( אני השתמשתי בצנטר M1)",
-                " נעביר את העוגיות למקרר לכ- 3 שעות לפחות להתייצבות"
-            ]
-        }],
+                "instructionsTitle": "🧩הוראות הכנה🧩",
+                "instructionsArray": [
+                    "נפעיל תנור על 160 מעלות סטטי",
+                    "בקערת מיקסר עם בלון הקצפה- נקציף ביצים במשך 2 דקות",
+                    "כאשר מתחיל להיות קצף נוסיף את הסוכר בהדרגה, עד לקבלת תערובת תפוחה",
+                    "נוסיף שמן בזרם דק כאשר המיקסר עדיין פועל על מהירות נמוכה, נוסיף שמנת ונוטלה - ולערבב עד איחוד.",
+                    "קערה נפרדת נערבב את היבשים: קמח, שוקולית ואבקת אפיה",
+                    "נוסיף בבת אחת לקערת המיקסר ונערבב מעט עד לתערובת אחידה",
+                    "נעביר לתבנית משומנת ונכניס לתנור שחיממנו מראש, לכ-45 דקות",
+                    "(לבדוק עם קיסם ולהיות בבקרה משתנה בין תנור לתנור) "
+                ]
+            },
+            {
+                "instructionsTitle": "לגנאש",
+                "instructionsArray": [
+                    "נחמם במיקרו בפולסים של 30 שניות שוקולד חלב",
+                    "נוטלה ושמנת מתוקה עד לגנאש מבריק. נשאיר בצד לקירור",
+                    "כאשר העוגה יוצאת מהתנור מומלץ לחתוך מראש ולשפוך את הגנאש ככה שייכנס בין כל החורים ויגרום לעוגה להיות רטובה ושוקולדית",
+                    "רצוי לאכול כשחם מהתנור!"
+                ]
+            }
+        ],
         "isRecipe": true
     },
     {
         "_id": "aedwsrfgtuyjhiklo",
-        "src": "../assets/imgs/recipes/pancakes.JPG",
-        "srcName": "recipes/pancakes.JPG",
-        "title": " 🍪🍦 מתכון לשוקוקיקה",
+        "src": "../assets/imgs/recipes/nutella-and-kinder-crepe.JPG",
+        "srcName": "recipes/nutella-and-kinder-crepe.JPG",
+        "title": "קרפ נוטלה וקינדר",
         "description": "Lorem 60 ipsum dolor sit amet consectetur adipisicing elit. Cupiditate officiis porro fuga rem? Quibusdam adipisci temporibus, dolorum accusamus laboriosam earum nobis mollitia numquam? Omnis, quaerat. Ab praesentium consectetur aliquam totam placeat modi suscipit impedit consequatur explicabo",
-        "shortDescription": "מתכון לפליקמורה ביתית ואווווו כמה שזה טעים ",
+        "shortDescription": "",
         "timeToMake": "60 דק ",
         "catagories": "recipe",
         "levelToMake": "ממש קל להכנה",
@@ -501,9 +503,9 @@
         "_id": "edsrftguyjhiklok;p",
         "src": "../assets/imgs/recipes/pistachio-crunch-snack.JPG",
         "srcName": "recipes/pistachio-crunch-snack.JPG",
-        "title": " 🍪🍦 מתכון לשוקוקיקה",
+        "title": "חטיף קראנץ פיסטוק",
         "description": "Lorem 60 ipsum dolor sit amet consectetur adipisicing elit. Cupiditate officiis porro fuga rem? Quibusdam adipisci temporibus, dolorum accusamus laboriosam earum nobis mollitia numquam? Omnis, quaerat. Ab praesentium consectetur aliquam totam placeat modi suscipit impedit consequatur explicabo",
-        "shortDescription": "מתכון לפליקמורה ביתית ואווווו כמה שזה טעים ",
+        "shortDescription": "",
         "timeToMake": "60 דק ",
         "catagories": "recipe",
         "levelToMake": "ממש קל להכנה",
@@ -552,7 +554,7 @@
         "_id": "dewsyjhiklooooooowsadefrg",
         "src": "../assets/imgs/recipes/pistachio-ice-cream.JPG",
         "srcName": "recipes/pistachio-ice-cream.JPG",
-        "title": " 🍪🍦 מתכון לשוקוקיקה",
+        "title": "גלידניות פיסטוק",
         "description": "Lorem 60 ipsum dolor sit amet consectetur adipisicing elit. Cupiditate officiis porro fuga rem? Quibusdam adipisci temporibus, dolorum accusamus laboriosam earum nobis mollitia numquam? Omnis, quaerat. Ab praesentium consectetur aliquam totam placeat modi suscipit impedit consequatur explicabo",
         "shortDescription": "מתכון לפליקמורה ביתית ואווווו כמה שזה טעים ",
         "timeToMake": "60 דק ",

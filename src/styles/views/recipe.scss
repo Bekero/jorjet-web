@@ -18,136 +18,137 @@
         >* {
             cursor: pointer;
             position: relative;
-            width: 250px;
-            height: 420px;
+            width: 260px;
+            height: 440px;
             transition: 0.5s;
             box-shadow: 5px 5px 9px 0px rgb(0 0 0 / 10%);
             opacity: 1;
-        }
+    }
 
-        .recipe-info {
+    .recipe-info {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+
+        margin-top: -8px;
+
+        // .recipe-mini-title {
+        //     color: black;
+        // }
+
+        .title-and-mini-title {
             display: flex;
-            justify-content: center;
+            width: 100%;
             flex-direction: column;
-            align-items: center;
-            padding: 5px;
+            justify-content: space-around;
+            align-items: flex-end;
+            padding: 6px;
 
-            margin-top: -8px;
+            .recipe-mini-title {}
 
-            // .recipe-mini-title {
-            //     color: black;
-            // }
-
-            .title-and-mini-title {
-                display: flex;
-                width: 100%;
-                flex-direction: column;
-                justify-content: space-around;
-                align-items: flex-end;
-                padding: 6px;
-
-                .recipe-mini-title {}
-
-                p.title {
-                    font-size: .65em;
-                }
-
-                >* {
-                    font-weight: bold;
-                    margin: 0;
-                    padding: 4px;
-                    text-align: end;
-                }
-
-                .recipe-price {
-                    display: flex;
-
-                    p:first-child {
-                        margin-right: 6px;
-                    }
-                }
-
-
+            p.title {
+                // font-size: .65em;
+                color: black;
             }
 
-            .btns {
+            >* {
+                font-weight: bold;
+                margin: 0;
+                padding: 4px;
+                text-align: end;
+            }
+
+            .recipe-price {
                 display: flex;
-                width: 100%;
-                padding-bottom: 10px;
-                justify-content: space-around;
-                transition: 0.5s;
 
-                button {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-
-                    padding: 15px 32px;
-                    width: 75px;
-                    height: 26px;
-                    border-radius: 18px;
-
-                    background-color: rgb(125, 120, 120);
-                    cursor: pointer;
-                    border: none;
-                    font-size: 12px;
-                    font-weight: bold;
-                    transition: 0.5s;
+                p:first-child {
+                    margin-right: 6px;
                 }
+            }
 
-                >* {
 
-                    &:hover {
+        }
+
+        .btns {
+            display: flex;
+            width: 100%;
+            padding-bottom: 10px;
+            justify-content: space-around;
+            transition: 0.5s;
+
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                padding: 15px 32px;
+                width: 75px;
+                height: 26px;
+                border-radius: 18px;
+
+                background-color: rgb(125, 120, 120);
+                cursor: pointer;
+                border: none;
+                font-size: 12px;
+                font-weight: bold;
+                transition: 0.5s;
+            }
+
+            >* {
+
+                &:hover {
+                    transition: 0.5s;
+                    opacity: 0.8;
+
+                    button {
                         transition: 0.5s;
-                        opacity: 0.8;
+                        opacity: 1;
 
-                        button {
-                            transition: 0.5s;
-                            opacity: 1;
-
-                            &:hover {
-                                background-color: rgb(137, 134, 134);
-                            }
+                        &:hover {
+                            background-color: rgb(137, 134, 134);
                         }
                     }
                 }
             }
-
-
         }
 
-        .recipe {
-            border-radius: 14px;
 
-            &:hover {
+    }
 
-                img {
-                    transition: 0.7s;
-                    filter: brightness(0.85);
-                }
+    .recipe {
+        border-radius: 14px;
 
-                .btns {
-
-                    button {
-
-                        width: 45%;
-                    }
-                }
-
-            }
+        &:hover {
 
             img {
-                float: left;
-                width: 100%;
-                height: 300px;
-                object-fit: cover;
-                border-radius: 14px;
                 transition: 0.7s;
-                filter: brightness(0.6);
+                filter: brightness(0.85);
+            }
+
+            .btns {
+
+                button {
+
+                    width: 45%;
+                }
             }
 
         }
+
+        img {
+            float: left;
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 14px;
+            transition: 0.7s;
+            filter: brightness(0.6);
+        }
+
     }
+}
 }
 
 @media screen and (min-width: 551px) {
