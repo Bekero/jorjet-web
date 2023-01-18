@@ -40,6 +40,16 @@ export function RecipeDetails() {
         background: '#0000001a',
     })
 
+    const [image, setImage] = useState("");
+
+    (function (imageName) {
+        if(!recipe?.srcName) return
+        import(
+            `../assets/imgs/${imageName}`
+        ).then((image) => setImage(image.default)).catch(e => console.log('e :', e));
+    })(recipe?.srcName);
+
+
     if (!recipe) return <div>No Recipe</div>
     return (
         <div className="recipe-details-container">
@@ -78,7 +88,8 @@ export function RecipeDetails() {
 
                 </div>
                 <div className="img-container">
-                    <img className="recipe-img" src={require(`../assets/imgs/${recipe.srcName}`)} alt="" />
+                    {/* <img className="recipe-img" src={`../assets/imgs/${recipe.srcName}`} alt="" /> */}
+                    {image && <img alt="" className="recipe-img" src={image} />}
                 </div>
             </div>
             <div className="other-links">

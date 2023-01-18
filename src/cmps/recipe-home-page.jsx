@@ -11,7 +11,6 @@ export function RecipeHomePage() {
     const navigate = useNavigate();
 
     const imgClicked = (img) => {
-        console.log('img :', img)
         setModalOpened(true)
     }
 
@@ -23,7 +22,8 @@ export function RecipeHomePage() {
                     index += 1
                     return (
                         <div onClick={() => imgClicked(recipe)} key={recipe._id}>
-                            <img src={require(`../assets/imgs/for-home-page/recipe-img-home-page-${index}.jpeg`)} alt="" />
+                            {/* <img src={require(`../assets/imgs/for-home-page/recipe-img-home-page-${index}.jpeg`)} alt="" /> */}
+                            <img src={`../assets/imgs/for-home-page/recipe-img-home-page-${index}.jpeg`} alt="" />
                             <button>למתכון</button>
                         </div>
                     )
@@ -34,7 +34,7 @@ export function RecipeHomePage() {
                 <p className="under-title">bla bla bla</p>
                 <hr></hr>
                 <p className="info">Lorem 60 ipsum dolor sit amet consectetur adipisicing elit. Cupiditate officiis porro fuga rem? Quibusdam adipisci temporibus, dolorum accusamus laboriosam earum nobis mollitia numquam? Omnis, quaerat. Ab praesentium consectetur aliquam totam placeat modi suscipit impedit consequatur explicabo, voluptatum minus officiis facere aut error sequi a nam, eligendi reprehenderit. Nulla, quis dolorum numquam, aliquam praesentium eaque et repudiandae dolor facere molestiae exercitationem.</p>
-                <button onClick={() => navigate('/recipe')}  className="view-more">View More</button>
+                <button onClick={() => navigate('/recipe')} className="view-more">View More</button>
             </div>
         </div>
     )

@@ -22,7 +22,8 @@ export function ProductHomePage() {
                     index += 1
                     return (
                         <div className="product" onClick={() => onGoToProduct(product)} key={product._id}>
-                            <img src={require(`../assets/imgs/${product.srcName}`)} alt="" />
+                            {/* <img src={require(`../assets/imgs/${product.srcName}`)} alt="" /> */}
+                            <img src={`../assets/imgs/${product.srcName}`} alt="" />
                             <button>למוצר</button>
                         </div>
                     )

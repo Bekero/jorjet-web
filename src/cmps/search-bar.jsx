@@ -85,7 +85,8 @@ export function SearchBar() {
             {searchDetails && <ul className={searchDetails.length > 0 ? 'search-result has-focus' : 'search-result'}>
                 {searchDetails?.map(product => {
                     return <li onClick={() => onGoToProduct(product)} key={product._id}>
-                        <img src={require(`../assets/imgs/${product.srcName}`)} alt="" />
+                        {/* <img src={require(`../assets/imgs/${product.srcName}`)} alt="" /> */}
+                        <img src={`../assets/imgs/${product.srcName}`} alt="" />
                         <span>{product.title}</span>
                     </li>
                 })}

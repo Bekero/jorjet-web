@@ -43,7 +43,7 @@ export function Recipe() {
         <div className="recipe-container">
             <h1>המתכונים שלי</h1>
             <div className="gallery">
-                {currentRecipes.map((recipe, index) => {
+                {currentRecipes?.map((recipe, index) => {
                     return <RecipeCard
                         key={recipe._id}
                         recipe={recipe}

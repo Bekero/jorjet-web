@@ -1,11 +1,11 @@
-import { NavLink, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
+import { useState } from "react";
+
 import JorjetsLogo from '../assets/imgs/jotjets-logo.png'
 import TiktokSvg from '../assets/svgs/tiktok'
 import InstagramSvg from '../assets/svgs/instagram'
 import FacebookSvg from '../assets/svgs/facebook'
 import WhatsappSvg from '../assets/svgs/whatsapp'
-import MagnifyingGlass from "./svg/magnifying-glass";
 
 export function AppHeader() {
 

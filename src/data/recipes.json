@@ -1,4 +1,5 @@
-[{
+[
+    {
         "_id": "edsfrgtuyjhkilop",
         "src": "../assets/imgs/recipes/blondie-and-pretzel-biscuit-cake.JPG",
         "srcName": "recipes/blondie-and-pretzel-biscuit-cake.JPG",
@@ -91,9 +92,9 @@
     },
     {
         "_id": "wedsrfdtgfuyjhkilok",
-        "src": "../assets/imgs/recipes/bis-cookies-chocolate.JPG",
+        "src": "../assets/imgs/recipes/bis-chocolate-cookies.JPG",
         "srcName": "recipes/bis-chocolate-cookies.JPG",
-        "title": " עוגיות שוקולד ביס ☕️🍪 ",
+        "title": "עוגיות שוקולד ביס ☕️🍪",
         "description": "Lorem 60 ipsum dolor sit amet consectetur adipisicing elit. Cupiditate officiis porro fuga rem? Quibusdam adipisci temporibus, dolorum accusamus laboriosam earum nobis mollitia numquam? Omnis, quaerat. Ab praesentium consectetur aliquam totam placeat modi suscipit impedit consequatur explicabo",
         "shortDescription": " ",
         "timeToMake": "60 דק ",
