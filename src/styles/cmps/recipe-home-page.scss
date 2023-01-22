@@ -20,6 +20,10 @@
         min-width: 350px;
         height: 32rem;
         margin-bottom: 60px;
+        
+        img {
+            height: 100%;
+        }
 
         :first-child {
             right: 8px;

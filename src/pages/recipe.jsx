@@ -1,49 +1,50 @@
 
 import { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { Pagination } from '../cmps/pagination'
 import { RecipeCard } from '../cmps/recipe-card'
-import { productService } from '../services/product.service'
+import { loadRecipes } from '../store/actions/recipe.action'
 
 export function Recipe() {
 
-    const [recipes, setRecipes] = useState([])
+    // const [recipes, setRecipes] = useState([])
+    const { recipes } = useSelector(state => state.recipeModule)
+
     const [originalRecipes, setOriginalRecipes] = useState([])
 
     const navigate = useNavigate();
-
+    const dispatch = useDispatch()
 
     //?Pagination ***
     const [currentPage, setCurrentPage] = useState(1);
-    // User is currently on this page
+    const [currentRecipes, setCurrentRecipes] = useState([]);
+    const [numPages, setNumPages] = useState(null);
     const [recipesPerPage] = useState(8);
-    // No of Recipes to be displayed on each page   
     const indexOfLastRecipe = currentPage * recipesPerPage;
     const indexOfFirstRecipe = indexOfLastRecipe - recipesPerPage;
-    // Recipes to be displayed on the current page
-    // const currentRecipes = originalRecipes.slice(indexOfFirstRecipe,
-    const currentRecipes = recipes.slice(indexOfFirstRecipe, indexOfLastRecipe);
-    // const nPages = Math.ceil(originalRecipes.length / recipesPerPage)
-    const nPages = Math.ceil(recipes.length / recipesPerPage)
-
-
 
     useEffect(() => {
-        setRecipes(productService.getRecipes())
-        setOriginalRecipes(productService.getRecipes())
+        dispatch(loadRecipes())
     }, [])
 
-    useEffect(() => { }, [recipes])
+    useEffect(() => {
+        if (!recipes?.length) return
+        setOriginalRecipes(recipes)
+        setCurrentRecipes(recipes?.slice(indexOfFirstRecipe, indexOfLastRecipe))
+        setNumPages(Math.ceil(recipes?.length / recipesPerPage))
+    }, [recipes])
 
     const onGoToRecipe = (recipe) => {
         navigate(`/recipe/${recipe._id}`)
     }
 
+    if (!currentRecipes?.length) return <div>Loading...</div>
     return (
         <div className="recipe-container">
             <h1>המתכונים שלי</h1>
             <div className="gallery">
-                {currentRecipes?.map((recipe, index) => {
+                {currentRecipes.map((recipe, index) => {
                     return <RecipeCard
                         key={recipe._id}
                         recipe={recipe}
@@ -53,7 +54,7 @@ export function Recipe() {
                 })}
             </div>
             <Pagination
-                nPages={nPages}
+                numPages={numPages}
                 currentPage={currentPage}
                 setCurrentPage={setCurrentPage}
             />

@@ -1,56 +1,61 @@
 
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { productService } from '../services/product.service'
 import { ProductCard } from "../cmps/product-card";
 import { Pagination } from "../cmps/pagination";
+import { useDispatch, useSelector } from "react-redux";
+import { loadProducts } from '../store/actions/product.action'
 
 export function Confectionery() {
 
     const navigate = useNavigate();
+    const dispatch = useDispatch()
+    const { products } = useSelector(state => state.productModule)
 
-    const [products, setProducts] = useState([])
+    // const [products, setProducts] = useState([])
     const [originalProducts, setOriginalProducts] = useState([])
     const [wantedValue, setWantedValue] = useState(null)
 
     //?Pagination ***
     const [currentPage, setCurrentPage] = useState(1);
-    // User is currently on this page
+    const [currentProducts, setCurrentProducts] = useState([]);
+    const [numPages, setNumPages] = useState(null);
     const [productsPerPage] = useState(8);
-    // No of Products to be displayed on each page   
     const indexOfLastProduct = currentPage * productsPerPage;
     const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-    // Products to be displayed on the current page
-    // const currentProducts = originalProducts.slice(indexOfFirstProduct,
-    const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
-    // const nPages = Math.ceil(originalProducts.length / productsPerPage)
-    const nPages = Math.ceil(products.length / productsPerPage)
 
     useEffect(() => {
-        setProducts(productService.getProducts())
-        setOriginalProducts(productService.getProducts())
+        dispatch(loadProducts())
     }, [])
 
-    useEffect(() => { }, [products])
+    useEffect(() => {
+        if (!products?.length) return
+        // setOriginalProducts(products)
+        setCurrentProducts(products?.slice(indexOfFirstProduct, indexOfLastProduct))
+        setNumPages(Math.ceil(products?.length / productsPerPage))
+    }, [products])
 
     useEffect(() => {
-        if (!products.length) {
-            setProducts(productService.getProducts())
-            return
-        }
-        setCurrentPage(1)
+        console.log('products :', products)
+        // if (!products?.length) {
+        //     dispatch(loadProducts())
+        //     return
+        // }
+        // if (!currentPage === 1) { setCurrentPage(1) }
         filterProducts()
     }, [wantedValue])
 
     const filterProducts = () => {
-        if (wantedValue === 'all') {
-            setProducts(originalProducts)
-            return
-        }
-        const filteredProducts = originalProducts?.filter(product => {
+        // if (wantedValue === 'all') {
+        // dispatch(loadProducts())
+        // setOriginalProducts(products)
+        // return
+        // }
+        const filteredProducts = products?.filter(product => {
             return product.category === wantedValue
         })
-        setProducts(filteredProducts)
+        setCurrentProducts(filteredProducts?.slice(indexOfFirstProduct, indexOfLastProduct))
+        // setOriginalProducts(filteredProducts)
     }
 
     const onGoToProduct = (product) => {
@@ -80,6 +85,7 @@ export function Confectionery() {
         },
     ]
 
+    if (!products?.length) return <div>Nada</div>
     return (
         <div className="confectionery-container">
             <div className="radio-btns">
@@ -96,7 +102,7 @@ export function Confectionery() {
             </div>
 
             <div className="gallery">
-                {currentProducts.map((product, index) => {
+                {currentProducts?.map((product, index) => {
                     return <ProductCard
                         key={product._id}
                         product={product}
@@ -106,7 +112,7 @@ export function Confectionery() {
                 })}
             </div>
             <Pagination
-                nPages={nPages}
+                numPages={numPages}
                 currentPage={currentPage}
                 setCurrentPage={setCurrentPage}
             />

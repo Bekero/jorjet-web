@@ -8,7 +8,7 @@ export function ProductCard({ index, product, onGoToProduct }) {
         if (!product?.srcName) return
         import(
             `../assets/imgs/${imageName}`
-        ).then((image) => setImage(image.default)).catch(e => console.log('e :', e));;
+        ).then((image) => setImage(image.default)).catch(e => console.log('e :', e));
     })(product?.srcName);
 
     return (

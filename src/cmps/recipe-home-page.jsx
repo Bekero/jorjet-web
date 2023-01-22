@@ -3,31 +3,57 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import recipes from '../data/recipes-for-home-page.json'
 import LironsJLogo from '../assets/imgs/j-logo.png'
+import recipeImg1 from '../assets/imgs/for-home-page/recipe-img-home-page-1.JPG'
+import recipeImg2 from '../assets/imgs/for-home-page/recipe-img-home-page-2.JPG'
+import recipeImg3 from '../assets/imgs/for-home-page/recipe-img-home-page-3.JPG'
 
 export function RecipeHomePage() {
 
-    const [modalOpened, setModalOpened] = useState(null)
 
     const navigate = useNavigate();
 
-    const imgClicked = (img) => {
-        setModalOpened(true)
+
+    const onGoToProduct = (productId) => {
+        console.log('productId :', productId)
+        navigate(`/recipe/${productId}`)
     }
+
+    const recipesFileName = [
+        {
+            imgImportName: recipeImg1,
+            _id: 'wedsrfdtgfuyjhkilok'
+
+        },
+        {
+            imgImportName: recipeImg2,
+            _id: 'edsrftguyjhiklok'
+
+        },
+        {
+            imgImportName: recipeImg3,
+            _id: 'ewdsrfgtuyjiklok'
+
+        }
+    ]
+
 
     return (
         <div className="recipe-home-page">
             <img className="j-logo" src={LironsJLogo} alt="" />
             <div className="imgs-container">
-                {recipes.map((recipe, index) => {
+                {recipesFileName.map((recipe, index) => {
                     index += 1
                     return (
-                        <div onClick={() => imgClicked(recipe)} key={recipe._id}>
-                            {/* <img src={require(`../assets/imgs/for-home-page/recipe-img-home-page-${index}.jpeg`)} alt="" /> */}
-                            <img src={`../assets/imgs/for-home-page/recipe-img-home-page-${index}.jpeg`} alt="" />
+                        <div onClick={() => onGoToProduct(recipe._id)} key={recipe._id}>
+                            {/* <img src={`../assets/imgs/for-home-page/recipe-img-home-page-${index}.JPG`} alt="" /> */}
+                            <img src={recipe.imgImportName} alt="" />
                             <button>למתכון</button>
                         </div>
                     )
                 })}
+                {/* <img alt="" className="recipe-img" src={recipeImg1} />
+                <img alt="" className="recipe-img" src={recipeImg2} />
+                <img alt="" className="recipe-img" src={recipeImg3} /> */}
             </div>
             <div className="home-page-recipe-info">
                 <p className="title">מתכונים</p>

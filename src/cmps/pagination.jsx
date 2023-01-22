@@ -1,16 +1,17 @@
 
 
-export function Pagination({ nPages, currentPage, setCurrentPage }) {
+export function Pagination({ numPages, currentPage, setCurrentPage }) {
 
-    const pageNumbers = [...Array(nPages + 1).keys()].slice(1)
+    const pageNumbers = [...Array(numPages + 1).keys()].slice(1)
     const nextPage = () => {
-        if (currentPage !== nPages)
+        if (currentPage !== numPages)
             setCurrentPage(currentPage + 1)
     }
     const prevPage = () => {
         if (currentPage !== 1)
             setCurrentPage(currentPage - 1)
     }
+
     return (
         <div className="pagination-container">
             <ul className="page-item">

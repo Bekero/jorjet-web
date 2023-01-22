@@ -1,11 +1,12 @@
 
 export function Modal({ recipe, setModalOpen, modalOpen }) {
 
+    console.log('recipe :', recipe)
     if (!recipe) return <div>No Recipe</div>
     return (
         <div id="myModal" className={modalOpen ? 'modal open' : 'modal'} >
             <div className="button-container">
-                <button className="close" onClick={() => setModalOpen(false)}>סגור</button>
+                {/* <button className="close" onClick={() => setModalOpen(false)}>סגור</button> */}
             </div>
             <div className="modal-content">
                 <h1 className="title-recipe">{recipe.title}</h1>

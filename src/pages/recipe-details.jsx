@@ -4,31 +4,35 @@ import { productService } from "../services/product.service"
 import WhatsappSvg from '../assets/svgs/whatsapp'
 import mediumZoom from "medium-zoom"
 import { Modal } from "../cmps/modal"
+import { loadRecipes } from '../store/actions/recipe.action'
+import { useDispatch, useSelector } from "react-redux"
+
 
 export function RecipeDetails() {
+
+    const { recipes } = useSelector(state => state.recipeModule)
+    const dispatch = useDispatch()
 
     const params = useParams()
     const recipeId = params.id
     const [recipe, setRecipe] = useState(null)
-    const [recipes, setRecipes] = useState([])
-    const [modalOpen, setModalOpen] = useState(null)
+    // const [recipes, setRecipes] = useState([])
+    const [modalOpen, setModalOpen] = useState(false)
 
     useEffect(() => {
-        setRecipes(productService.getRecipes)
-        setRecipe(recipes.find(recipe => recipe._id === recipeId))
-    }, [recipe])
+        // setRecipes(productService.getRecipes)
+        dispatch(loadRecipes())
+        setRecipe(recipes?.find(recipe => recipe._id === recipeId))
+    }, [])
 
-    useEffect(() => {
-    }, [recipe, recipes])
-
-    useEffect(() => {
-        const body = document.querySelector("body");
-        if (modalOpen) {
-            body.style.overflow = "hidden";
-        } else {
-            body.style.overflow = "auto";
-        }
-    }, [modalOpen])
+    // useEffect(() => {
+    // const body = document.querySelector("body");
+    // if (modalOpen) {
+    //     body.style.overflow = "hidden";
+    // } else {
+    //     body.style.overflow = "auto";
+    // }
+    // }, [modalOpen])
 
     mediumZoom('.recipe-img', {
         margin: 100,
@@ -40,22 +44,27 @@ export function RecipeDetails() {
         background: '#0000001a',
     })
 
+    const handleModal = (diff) => {
+        // setModalOpen(diff)
+    }
+
     const [image, setImage] = useState("");
 
     (function (imageName) {
-        if(!recipe?.srcName) return
+        if (!recipe?.srcName) return
         import(
             `../assets/imgs/${imageName}`
         ).then((image) => setImage(image.default)).catch(e => console.log('e :', e));
     })(recipe?.srcName);
-
 
     if (!recipe) return <div>No Recipe</div>
     return (
         <div className="recipe-details-container">
             <div className="first-section">
                 <div className="recipe-info">
-                    <div className="button-expand"><button onClick={() => setModalOpen(!modalOpen)} className="view-more">מסך מלא</button></div>
+                    <div className="button-expand">
+                        <button onClick={() => handleModal(true)} className="view-more">מסך מלא</button>
+                    </div>
 
                     <h1 className="title">{recipe.title}</h1>
                     <p className="recipe-short-description">{recipe.shortDescription}</p>
@@ -103,12 +112,7 @@ export function RecipeDetails() {
                 </div>
 
             </div>
-            {modalOpen &&
-                <Modal
-                    recipe={recipe}
-                    modalOpen={modalOpen}
-                    setModalOpen={setModalOpen}
-                />}
+
         </div>
     )
 }
