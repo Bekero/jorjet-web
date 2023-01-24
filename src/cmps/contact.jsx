@@ -6,17 +6,20 @@ import FacebookSvg from '../assets/svgs/facebook'
 import WhatsappSvg from '../assets/svgs/whatsapp'
 import LironsJLogo from '../assets/imgs/j-logo.png'
 export function Contact() {
-
     return (
         <div id="contact" className="contact-container">
             <img className="j-logo" src={LironsJLogo} alt="" />
-            <form id="form" className="topBefore">
+                <form  
+                id="form"  
+                className="topBefore" 
+                action="https://formsubmit.co/orbeker7@gmail.com" 
+                method="POST"
+                >
 
-                <input id="name" type="text" placeholder="NAME" />
-                <input id="email" type="text" placeholder="E-MAIL" />
-                <textarea id="message" type="text" placeholder="MESSAGE"></textarea>
+                <input id="name" type="nake" placeholder="NAME"  required/>
+                <input id="email" type="email" placeholder="E-MAIL"  required/>
+                <textarea id="message" type="massage" placeholder="MESSAGE"></textarea>
                 <input id="submit" type="submit" value="GO!" />
-
             </form>
             <div className="left-contact">
 

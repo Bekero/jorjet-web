@@ -5,7 +5,6 @@ import {
     httpService
 } from '../services/http.service'
 
-// import allProducts from '../data/designed-cakes.json'
 // import allRecipes from '../data/recipes.json'
 
 export const recipeService = {
@@ -13,14 +12,13 @@ export const recipeService = {
     getById,
     remove,
     save,
-    // getProducts,
     // getRecipes,
 }
 
 const BASE_URL = `recipe/`
 
 async function query(filterBy = {}) {
-    // const products = await storageService.get(BASE_URL, {
+    // const recipes = await storageService.get(BASE_URL, {
     //     params: filterBy
     // })
     console.log('Enter Query')
@@ -36,10 +34,6 @@ async function getById(productId) {
     const product = await httpService.get(BASE_URL + productId)
     return product
 }
-
-// function getProducts() {
-//     return allProducts
-// }
 
 // function getRecipes() {
 //     return allRecipes

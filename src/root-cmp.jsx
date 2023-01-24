@@ -4,22 +4,28 @@ import './styles/main.scss';
 import routes from './routes'
 import { Contact } from './cmps/contact';
 import { GoBack } from './cmps/go-back';
-import { useEffect } from 'react';
 import { SearchBar } from './cmps/search-bar';
+import { motion, useScroll, useSpring } from "framer-motion";
 
 function App() {
 
   const params = useParams()
 
-  useEffect(() => {
-  }, [])
-
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
 
   return (
     <div className="app-container">
       <AppHeader />
+      <motion.div
+        className="progress-bar"
+        style={{ scaleX }}
+      />
       <div className="pages-container">
-        {/* From Computer */}
         <SearchBar />
         {params === {} ? '' : < GoBack />}
         <Routes>

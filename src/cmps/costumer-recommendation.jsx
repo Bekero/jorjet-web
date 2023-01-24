@@ -2,6 +2,8 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import mediumZoom from "medium-zoom"
+import review1 from '../assets/imgs/reviews-imgs/review1.jpeg'
+import { useState } from "react";
 
 export function CostumerRecommendation() {
 
@@ -15,11 +17,11 @@ export function CostumerRecommendation() {
     const responsive = {
         superLargeDesktop: {
             // the naming can be any, depends on you.
-            breakpoint: { max: 4000, min: 3000 },
-            items: 5
+            breakpoint: { max: 1400, min: 1300 },
+            items: 4
         },
         desktop: {
-            breakpoint: { max: 3000, min: 1024 },
+            breakpoint: { max: 1300, min: 1024 },
             items: 3
         },
         tablet: {
@@ -32,16 +34,50 @@ export function CostumerRecommendation() {
         }
     };
 
+    let reviews = [
+        {
+            recommendation: 'אלופה מספק אחת, אין על העוגות שלך הן עשויות בקפידה ומוריי גלם איכותיים. מי שמכיר אותך יודע שאינך מסתפקת בחומריי    גלם פשוטים ומי שלא מכיר אותך זה הזמן להזמין מלירון מבטיחה שלא תתאכזבו .',
+            name: 'אור '
+        },
+        {
+            recommendation: 'אלופה מספק אחת, אין על העוגות שלך הן עשויות בקפידה ומוריי גלם איכותיים. מי שמכיר אותך יודע שאינך מסתפקת בחומריי    גלם פשוטים ומי שלא מכיר אותך זה הזמן להזמין מלירון מבטיחה שלא תתאכזבו .',
+            name: 'אור '
+        },
+        {
+            recommendation: 'אלופה מספק אחת, אין על העוגות שלך הן עשויות בקפידה ומוריי גלם איכותיים. מי שמכיר אותך יודע שאינך מסתפקת בחומריי    גלם פשוטים ומי שלא מכיר אותך זה הזמן להזמין מלירון מבטיחה שלא תתאכזבו .',
+            name: 'אור '
+        },
+        {
+            recommendation: 'אלופה מספק אחת, אין על העוגות שלך הן עשויות בקפידה ומוריי גלם איכותיים. מי שמכיר אותך יודע שאינך מסתפקת בחומריי    גלם פשוטים ומי שלא מכיר אותך זה הזמן להזמין מלירון מבטיחה שלא תתאכזבו .',
+            name: 'אור '
+        },
+        {
+            recommendation: 'אלופה מספק אחת, אין על העוגות שלך הן עשויות בקפידה ומוריי גלם איכותיים. מי שמכיר אותך יודע שאינך מסתפקת בחומריי    גלם פשוטים ומי שלא מכיר אותך זה הזמן להזמין מלירון מבטיחה שלא תתאכזבו .',
+            name: 'אור '
+        },
+        {
+            recommendation: 'אלופה מספק אחת, אין על העוגות שלך הן עשויות בקפידה ומוריי גלם איכותיים. מי שמכיר אותך יודע שאינך מסתפקת בחומריי גלם פשוטים ומי שלא מכיר אותך זה הזמן להזמין מLiron Gorzat מבטיחה שלא תתאכזבו',
+            name: 'XXX2'
+        },
+        {
+            recommendation: 'review1',
+            name: 'XXX3'
+        },
+        {
+            recommendation: 'review1',
+            name: 'XXX4'
+        },
+    ]
+
     return (
         <div className="costumer-recommendation">
             <Carousel responsive={responsive}>
-                <div className="costumer">
-                    <p className="recommendation">לורם איפסום בלה בלה בלה אני אוהב חציל בפיתה עם חומוס בצד וקצת חמוצים</p>
-                    {/* <div className="img-container">
-                        <img className="product-img" src={require(`../assets/imgs/products/product1.jpeg`)} alt="" />
-                    </div> */}
-                    <h2 className="costumer-name">שולה זקן</h2>
-                </div>
+                {reviews.map((review, index) => {
+                    return <div className="costumer">
+                        <p>{review.recommendation}</p>
+                        <h2 className="costumer-name">{review.name}</h2>
+                    </div>
+                })}
                 {/* <div className="costumer">
                     <p className="recommendation">לורם איפסום בלה בלה בלה אני אוהב חציל בפיתה עם חומוס בצד וקצת חמוצים</p>
                     <div className="img-container">
@@ -63,7 +99,7 @@ export function CostumerRecommendation() {
                     </div>
                     <h2 className="costumer-name">אור בקר</h2>
                 </div> */}
-            </Carousel>;
+            </Carousel>
         </div>
     )
 }

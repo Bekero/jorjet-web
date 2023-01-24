@@ -14,7 +14,6 @@ export const productService = {
     remove,
     save,
     getProducts,
-    getRecipes,
 }
 
 const BASE_URL = `product/`
@@ -26,7 +25,6 @@ async function query(filterBy = {}) {
     const products = await httpService.get(BASE_URL, {
         params: filterBy
     })
-    console.log('products :', products)
     return products
 }
 
@@ -40,9 +38,6 @@ function getProducts() {
     return allProducts
 }
 
-function getRecipes() {
-    return allRecipes
-}
 
 async function remove(productId) {
     const product = await storageService.delete(BASE_URL + productId)

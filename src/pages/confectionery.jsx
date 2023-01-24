@@ -35,15 +35,15 @@ export function Confectionery() {
         setNumPages(Math.ceil(products?.length / productsPerPage))
     }, [products])
 
-    useEffect(() => {
-        console.log('products :', products)
+    // useEffect(() => {
+        // console.log('products :', products)
         // if (!products?.length) {
         //     dispatch(loadProducts())
         //     return
         // }
         // if (!currentPage === 1) { setCurrentPage(1) }
-        filterProducts()
-    }, [wantedValue])
+        // filterProducts()
+    // }, [wantedValue])
 
     const filterProducts = () => {
         // if (wantedValue === 'all') {
@@ -85,7 +85,7 @@ export function Confectionery() {
         },
     ]
 
-    if (!products?.length) return <div>Nada</div>
+    if (!currentProducts?.length) return <div>Nada</div>
     return (
         <div className="confectionery-container">
             <div className="radio-btns">
