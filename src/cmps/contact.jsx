@@ -5,21 +5,48 @@ import InstagramSvg from '../assets/svgs/instagram'
 import FacebookSvg from '../assets/svgs/facebook'
 import WhatsappSvg from '../assets/svgs/whatsapp'
 import LironsJLogo from '../assets/imgs/j-logo.png'
-export function Contact() {
+import emailjs from 'emailjs-com';
+import { useRef } from 'react';
+
+export function Contact({ scrollUpRef }) {
+
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+
+        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_USER_ID')
+        // emailjs.sendForm(emailJsServiceId, emailJsTemplateId, form.current, emailJsUserId)
+            .then((result) => {
+                console.log(result.text);
+                resetForm()
+            }, (error) => {
+                console.log(error.text);
+            });
+    };
+
+    const resetForm = () => {
+        const element = document.getElementById('xxxx');
+        element.scrollIntoView()
+        window.location.reload(false);
+        //Pop up Massage
+    }
+
     return (
         <div id="contact" className="contact-container">
             <img className="j-logo" src={LironsJLogo} alt="" />
-                <form  
-                id="form"  
-                className="topBefore" 
-                action="https://formsubmit.co/orbeker7@gmail.com" 
-                method="POST"
-                >
-
-                <input id="name" type="nake" placeholder="NAME"  required/>
-                <input id="email" type="email" placeholder="E-MAIL"  required/>
-                <textarea id="message" type="massage" placeholder="MESSAGE"></textarea>
+            {/* <form ref={form} onSubmit={sendEmail} id="form" className="topBefore">
+                <input id="name" type="user_name" placeholder="NAME" required />
+                <input id="email" type="email" name="user_email" placeholder="E-MAIL" required />
+                <textarea id="message" type="massage" name="massage" placeholder="MESSAGE"></textarea>
                 <input id="submit" type="submit" value="GO!" />
+            </form> */}
+            <form id="form" className="topBefore" ref={form} onSubmit={sendEmail}>
+                <input id="name" type="text" name="user_name" placeholder="NAME" required />
+                <input id="email" type="email" name="user_email" placeholder="E-MAIL" required />
+                <textarea id="message" name="message" placeholder="MESSAGE" />
+                <input id="submit" type="submit" value="Send" />
             </form>
             <div className="left-contact">
 

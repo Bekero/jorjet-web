@@ -12,7 +12,6 @@ export function Confectionery() {
     const dispatch = useDispatch()
     const { products } = useSelector(state => state.productModule)
 
-    // const [products, setProducts] = useState([])
     const [originalProducts, setOriginalProducts] = useState([])
     const [wantedValue, setWantedValue] = useState(null)
 
@@ -30,32 +29,35 @@ export function Confectionery() {
 
     useEffect(() => {
         if (!products?.length) return
-        // setOriginalProducts(products)
-        setCurrentProducts(products?.slice(indexOfFirstProduct, indexOfLastProduct))
-        setNumPages(Math.ceil(products?.length / productsPerPage))
+        setCurrentProducts(originalProducts?.slice(indexOfFirstProduct, indexOfLastProduct))
+        setNumPages(Math.ceil(originalProducts?.length / productsPerPage))
     }, [products])
 
-    // useEffect(() => {
-        // console.log('products :', products)
-        // if (!products?.length) {
-        //     dispatch(loadProducts())
-        //     return
-        // }
-        // if (!currentPage === 1) { setCurrentPage(1) }
-        // filterProducts()
-    // }, [wantedValue])
+    useEffect(() => {
+        setNumPages(Math.ceil(originalProducts?.length / productsPerPage))
+    }, [originalProducts])
+
+    useEffect(() => {
+        if (!wantedValue) setWantedValue('all')
+        if (!products?.length) {
+            dispatch(loadProducts())
+            return
+        }
+        if (!currentPage === 1) { setCurrentPage(1) }
+        filterProducts()
+    }, [wantedValue, currentPage])
 
     const filterProducts = () => {
-        // if (wantedValue === 'all') {
-        // dispatch(loadProducts())
-        // setOriginalProducts(products)
-        // return
-        // }
+        if (wantedValue === 'all') {
+            dispatch(loadProducts())
+            setOriginalProducts(products)
+            return
+        }
         const filteredProducts = products?.filter(product => {
             return product.category === wantedValue
         })
+        setOriginalProducts(filteredProducts)
         setCurrentProducts(filteredProducts?.slice(indexOfFirstProduct, indexOfLastProduct))
-        // setOriginalProducts(filteredProducts)
     }
 
     const onGoToProduct = (product) => {
@@ -85,7 +87,7 @@ export function Confectionery() {
         },
     ]
 
-    if (!currentProducts?.length) return <div>Nada</div>
+    if (!products?.length) return <div>Nada</div>
     return (
         <div className="confectionery-container">
             <div className="radio-btns">
@@ -100,7 +102,6 @@ export function Confectionery() {
                     })}
                 </ul>
             </div>
-
             <div className="gallery">
                 {currentProducts?.map((product, index) => {
                     return <ProductCard

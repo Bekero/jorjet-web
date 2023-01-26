@@ -1,8 +1,9 @@
-
+import { useEffect } from "react"
 
 export function Pagination({ numPages, currentPage, setCurrentPage }) {
 
     const pageNumbers = [...Array(numPages + 1).keys()].slice(1)
+
     const nextPage = () => {
         if (currentPage !== numPages)
             setCurrentPage(currentPage + 1)
@@ -18,7 +19,7 @@ export function Pagination({ numPages, currentPage, setCurrentPage }) {
                 <li onClick={prevPage}>
                     הקודם
                 </li>
-                {pageNumbers.map(pageNum => {
+                {pageNumbers?.map(pageNum => {
                     return <li key={pageNum}
                         onClick={() => setCurrentPage(pageNum)}
                         className={`page-item ${currentPage === pageNum ? 'active' : ''} `} >

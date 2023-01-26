@@ -22,8 +22,14 @@ export function RecipeDetails() {
     useEffect(() => {
         // setRecipes(productService.getRecipes)
         dispatch(loadRecipes())
+        console.log('recipeId :', recipeId)
+        console.log('recipes :', recipes)
         setRecipe(recipes?.find(recipe => recipe._id === recipeId))
     }, [])
+
+//     useEffect(() => {
+// console.log('recipe :', recipe)
+//     }, [recipe])
 
     // useEffect(() => {
     // const body = document.querySelector("body");
@@ -44,26 +50,27 @@ export function RecipeDetails() {
         background: '#0000001a',
     })
 
-    const handleModal = (diff) => {
-        // setModalOpen(diff)
-    }
+    // const [image, setImage] = useState("");
 
-    const [image, setImage] = useState("");
-
-    (function (imageName) {
-        if (!recipe?.srcName) return
-        import(
-            `../assets/imgs/${imageName}`
-        ).then((image) => setImage(image.default)).catch(e => console.log('e :', e));
-    })(recipe?.srcName);
+    // (function (imageName) {
+    //     if (!recipe?.srcName) return
+    //     import(
+    //         `../assets/imgs/${imageName}`
+    //     ).then((image) => setImage(image.default)).catch(e => console.log('e :', e));
+    // })(recipe?.srcName);
 
     if (!recipe) return <div>No Recipe</div>
     return (
         <div className="recipe-details-container">
+            {modalOpen && <Modal
+                recipe={recipe}
+                modalOpen={modalOpen}
+                setModalOpen={setModalOpen}
+            />}
             <div className="first-section">
                 <div className="recipe-info">
                     <div className="button-expand">
-                        <button onClick={() => handleModal(true)} className="view-more">מסך מלא</button>
+                        <button onClick={() => setModalOpen(true)} className="view-more">מסך מלא</button>
                     </div>
 
                     <h1 className="title">{recipe.title}</h1>
@@ -97,8 +104,7 @@ export function RecipeDetails() {
 
                 </div>
                 <div className="img-container">
-                    {/* <img className="recipe-img" src={`../assets/imgs/${recipe.srcName}`} alt="" /> */}
-                    {image && <img alt="" className="recipe-img" src={image} />}
+                    <img className="recipe-img" src={`../assets/imgs/${recipe.srcName}`} alt="" />
                 </div>
             </div>
             <div className="other-links">

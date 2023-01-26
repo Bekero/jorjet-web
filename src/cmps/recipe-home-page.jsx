@@ -9,12 +9,9 @@ import recipeImg3 from '../assets/imgs/for-home-page/recipe-img-home-page-3.JPG'
 
 export function RecipeHomePage() {
 
-
     const navigate = useNavigate();
 
-
     const onGoToProduct = (productId) => {
-        console.log('productId :', productId)
         navigate(`/recipe/${productId}`)
     }
 
@@ -26,7 +23,7 @@ export function RecipeHomePage() {
         },
         {
             imgImportName: recipeImg2,
-            _id: 'edsrftguyjhiklok'
+            _id: 'edsrftguyjhiklok;p'
 
         },
         {

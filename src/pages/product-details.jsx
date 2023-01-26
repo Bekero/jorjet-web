@@ -26,15 +26,6 @@ export function ProductDetails() {
         background: '#0000001a',
     })
 
-    const [image, setImage] = useState("");
-
-    (function (imageName) {
-        if (!product?.srcName) return
-        import(
-            `../assets/imgs/${imageName}`
-        ).then((image) => setImage(image.default)).catch(e => console.log('e :', e));;
-    })(product?.srcName);
-
     if (!product) return <div>No Product</div>
     return (
         <div className="product-details-container">
@@ -74,8 +65,7 @@ export function ProductDetails() {
 
                 <div className="img-container">
                     {/* <img className="product-img" src={require(`../assets/imgs/${product.srcName}`)} alt="" /> */}
-                    {/* <img className="product-img" src={`../assets/imgs/${product.srcName}`} alt="" /> */}
-                    {image && <img alt="" className="recipe-img" src={image} />}
+                    <img className="product-img" src={`../assets/imgs/${product.srcName}`} alt="" />
                 </div>
             </div>
             <div className="other-links">

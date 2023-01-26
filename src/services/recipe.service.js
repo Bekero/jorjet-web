@@ -21,11 +21,9 @@ async function query(filterBy = {}) {
     // const recipes = await storageService.get(BASE_URL, {
     //     params: filterBy
     // })
-    console.log('Enter Query')
     const recipes = await httpService.get(BASE_URL, {
         params: filterBy
     })
-    console.log('recipes :', recipes)
     return recipes
 }
 

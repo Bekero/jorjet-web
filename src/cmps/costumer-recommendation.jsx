@@ -73,7 +73,7 @@ export function CostumerRecommendation() {
         <div className="costumer-recommendation">
             <Carousel responsive={responsive}>
                 {reviews.map((review, index) => {
-                    return <div className="costumer">
+                    return <div key={review + index} className="costumer">
                         <p>{review.recommendation}</p>
                         <h2 className="costumer-name">{review.name}</h2>
                     </div>

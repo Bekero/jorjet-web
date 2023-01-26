@@ -39,7 +39,6 @@ export function AppHeader() {
 
     const onSearch = (ev) => {
         setSearchBarOpen(!searchBarOpen)
-        console.log('searchBarOpen :', searchBarOpen)
     }
 
     return (

@@ -22,7 +22,7 @@ export function HomePage() {
     }, [recipes])
 
     return (
-        <div className="home-page-container">
+        <div id="xxxx" className="home-page-container">
             <MainBgc />
             <MyStoryShort />
             <BgcImg2 />
