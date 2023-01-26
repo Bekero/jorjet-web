@@ -15,9 +15,12 @@ export function Contact({ scrollUpRef }) {
     const sendEmail = (e) => {
         e.preventDefault();
 
+        const emailJsServiceId = 'service_x5juzbo'
+        const emailJsTemplateId = 'template_70fypu8'
+        const emailJsUserId = 'YPP9LroCL5v68Hgv1'
 
-        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_USER_ID')
-        // emailjs.sendForm(emailJsServiceId, emailJsTemplateId, form.current, emailJsUserId)
+        // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_USER_ID')
+        emailjs.sendForm(emailJsServiceId, emailJsTemplateId, form.current, emailJsUserId)
             .then((result) => {
                 console.log(result.text);
                 resetForm()
