@@ -1,22 +1,18 @@
 import { useState } from "react"
+import { motion } from 'framer-motion'
 
 export function RecipeCard({ index, recipe, onGoToRecipe }) {
 
-    // const [image, setImage] = useState("");
-
-    // (function (imageName) {
-    //     import(
-    //         `../assets/imgs/${imageName}`
-    //     ).then((image) => setImage(image.default)).catch(e => console.log('e :', e));;
-    // })(recipe.srcName);
-
-
     if (!recipe) return <div>No Recipe</div>
     return (
-        <div onClick={() => onGoToRecipe(recipe)} className="card">
+        <motion.div
+            layout
+            animate={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            onClick={() =>
+                onGoToRecipe(recipe)}
+            className="card">
             <div className="recipe">
-                {/* {image && <img alt="" className="img-responsive" src={image} />} */}
-                {/* <img src={require(`../assets/imgs/${product.srcName}`)} alt="" /> */}
                 <img src={`../assets/imgs/${recipe.srcName}`} alt="" />
                 <div className="recipe-info">
                     <div className="title-and-mini-title">
@@ -28,6 +24,6 @@ export function RecipeCard({ index, recipe, onGoToRecipe }) {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }

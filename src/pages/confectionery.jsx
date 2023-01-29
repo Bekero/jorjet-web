@@ -5,6 +5,7 @@ import { ProductCard } from "../cmps/product-card";
 import { Pagination } from "../cmps/pagination";
 import { useDispatch, useSelector } from "react-redux";
 import { loadProducts } from '../store/actions/product.action'
+import { motion, AnimatePresence } from 'framer-motion'
 
 export function Confectionery() {
 
@@ -29,6 +30,7 @@ export function Confectionery() {
 
     useEffect(() => {
         if (!products?.length) return
+        setOriginalProducts(products)
         setCurrentProducts(originalProducts?.slice(indexOfFirstProduct, indexOfLastProduct))
         setNumPages(Math.ceil(originalProducts?.length / productsPerPage))
     }, [products])
@@ -102,16 +104,20 @@ export function Confectionery() {
                     })}
                 </ul>
             </div>
-            <div className="gallery">
-                {currentProducts?.map((product, index) => {
-                    return <ProductCard
-                        key={product._id}
-                        product={product}
-                        index={index}
-                        onGoToProduct={onGoToProduct}
-                    />
-                })}
-            </div>
+            <motion.div
+                layout
+                className="gallery">
+                {/* <AnimatePresence> */}
+                    {currentProducts?.map((product, index) => {
+                        return <ProductCard
+                            key={product._id}
+                            product={product}
+                            index={index}
+                            onGoToProduct={onGoToProduct}
+                        />
+                    })}
+                {/* </AnimatePresence> */}
+            </motion.div>
             <Pagination
                 numPages={numPages}
                 currentPage={currentPage}

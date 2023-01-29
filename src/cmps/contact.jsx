@@ -6,21 +6,24 @@ import FacebookSvg from '../assets/svgs/facebook'
 import WhatsappSvg from '../assets/svgs/whatsapp'
 import LironsJLogo from '../assets/imgs/j-logo.png'
 import emailjs from 'emailjs-com';
+import { envFile } from '../env.js'
+
 import { useRef } from 'react';
 
-export function Contact({ scrollUpRef }) {
+export function Contact() {
 
     const form = useRef();
 
     const sendEmail = (e) => {
         e.preventDefault();
-
-        const emailJsServiceId = 'service_x5juzbo'
-        const emailJsTemplateId = 'template_70fypu8'
-        const emailJsUserId = 'YPP9LroCL5v68Hgv1'
+        const emailJsDetails = envFile.getEmailJsDetails()
+        console.log('emailJsDetails :', emailJsDetails)
+        // const emailJsServiceId = 'service_x5juzbo'
+        // const emailJsTemplateId = 'template_70fypu8'
+        // const emailJsUserId = 'YPP9LroCL5v68Hgv1'
 
         // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_USER_ID')
-        emailjs.sendForm(emailJsServiceId, emailJsTemplateId, form.current, emailJsUserId)
+        emailjs.sendForm(emailJsDetails.emailJsServiceId, emailJsDetails.emailJsTemplateId, form.current, emailJsDetails.emailJsUserId)
             .then((result) => {
                 console.log(result.text);
                 resetForm()

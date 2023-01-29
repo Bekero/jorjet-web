@@ -1,9 +1,15 @@
-import { useState } from "react";
+
+import { motion } from 'framer-motion'
 
 export function ProductCard({ index, product, onGoToProduct }) {
 
     return (
-        <div onClick={() => onGoToProduct(product)} className="card">
+        <motion.div
+            layout
+            animate={{ opacity: 1 }}
+            initial={{ opacity: 0.3 }}
+            exit={{ opacity: 0.3 }}
+            onClick={() => onGoToProduct(product)} className="card">
             <div className="product">
                 {/* <img src={require(`../assets/imgs/${product.srcName}`)} alt="" /> */}
                 <img src={`../assets/imgs/${product.srcName}`} alt="" />
@@ -20,7 +26,7 @@ export function ProductCard({ index, product, onGoToProduct }) {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
 
 
     )
