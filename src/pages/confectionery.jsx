@@ -45,9 +45,12 @@ export function Confectionery() {
             dispatch(loadProducts())
             return
         }
-        if (!currentPage === 1) { setCurrentPage(1) }
         filterProducts()
-    }, [wantedValue, currentPage])
+    }, [wantedValue])
+
+    useEffect(() => {
+        if (currentPage > 1) setCurrentPage(1)
+    }, [currentPage])
 
     const filterProducts = () => {
         if (wantedValue === 'all') {
@@ -108,14 +111,14 @@ export function Confectionery() {
                 layout
                 className="gallery">
                 {/* <AnimatePresence> */}
-                    {currentProducts?.map((product, index) => {
-                        return <ProductCard
-                            key={product._id}
-                            product={product}
-                            index={index}
-                            onGoToProduct={onGoToProduct}
-                        />
-                    })}
+                {currentProducts?.map((product, index) => {
+                    return <ProductCard
+                        key={product._id}
+                        product={product}
+                        index={index}
+                        onGoToProduct={onGoToProduct}
+                    />
+                })}
                 {/* </AnimatePresence> */}
             </motion.div>
             <Pagination
