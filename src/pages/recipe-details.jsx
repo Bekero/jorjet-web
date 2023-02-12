@@ -7,7 +7,6 @@ import { Modal } from "../cmps/modal"
 import { loadRecipes } from '../store/actions/recipe.action'
 import { useDispatch, useSelector } from "react-redux"
 
-
 export function RecipeDetails() {
 
     const { recipes } = useSelector(state => state.recipeModule)
@@ -16,29 +15,16 @@ export function RecipeDetails() {
     const params = useParams()
     const recipeId = params.id
     const [recipe, setRecipe] = useState(null)
-    // const [recipes, setRecipes] = useState([])
     const [modalOpen, setModalOpen] = useState(false)
 
     useEffect(() => {
-        // setRecipes(productService.getRecipes)
         dispatch(loadRecipes())
-        console.log('recipeId :', recipeId)
-        console.log('recipes :', recipes)
         setRecipe(recipes?.find(recipe => recipe._id === recipeId))
     }, [])
 
-//     useEffect(() => {
-// console.log('recipe :', recipe)
-//     }, [recipe])
-
-    // useEffect(() => {
-    // const body = document.querySelector("body");
-    // if (modalOpen) {
-    //     body.style.overflow = "hidden";
-    // } else {
-    //     body.style.overflow = "auto";
-    // }
-    // }, [modalOpen])
+    const printRecipe = () => {
+        window.print()
+    }
 
     mediumZoom('.recipe-img', {
         margin: 100,
@@ -50,21 +36,13 @@ export function RecipeDetails() {
         background: '#0000001a',
     })
 
-    // const [image, setImage] = useState("");
-
-    // (function (imageName) {
-    //     if (!recipe?.srcName) return
-    //     import(
-    //         `../assets/imgs/${imageName}`
-    //     ).then((image) => setImage(image.default)).catch(e => console.log('e :', e));
-    // })(recipe?.srcName);
-
     if (!recipe) return <div>No Recipe</div>
     return (
         <div className="recipe-details-container">
             {modalOpen && <Modal
                 recipe={recipe}
                 modalOpen={modalOpen}
+                printRecipe={printRecipe}
                 setModalOpen={setModalOpen}
             />}
             <div className="first-section">

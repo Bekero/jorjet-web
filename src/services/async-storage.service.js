@@ -1,4 +1,6 @@
-import product from '../data/designed-cakes.json'
+import product from '../data/products.json'
+import recipe from '../data/recipes.json'
+
 export const storageService = {
     query,
     get,
@@ -9,9 +11,14 @@ export const storageService = {
 }
 
 function query(entityType, delay = 0) {
-
     var entities = JSON.parse(localStorage.getItem(entityType)) || []
-    if(!entities.length) _save(entityType, product)
+    if (!entities.length) {
+        if (entityType === 'product/') {
+            _save(entityType, product)
+        } else if (entityType === 'recipe/') {
+            _save(entityType, recipe)
+        }
+    }
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(entities)
@@ -21,7 +28,12 @@ function query(entityType, delay = 0) {
 
 function get(entityType, entityId) {
     return query(entityType)
-        .then(entities => entities.find(entity => entity._id === entityId))
+        .then(entities => {
+            console.log('entities :', entities)
+            return entities
+            // return entities.find(entity => entity._id === entityId)
+        })
+    // .then(entities => entities.find(entity => entity._id === entityId))
 }
 
 function postMany(entityType, entities) {

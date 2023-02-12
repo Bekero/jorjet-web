@@ -5,7 +5,7 @@ import {
     httpService
 } from '../services/http.service'
 
-import allProducts from '../data/designed-cakes.json'
+import allProducts from '../data/products.json'
 import allRecipes from '../data/recipes.json'
 
 export const productService = {
@@ -19,18 +19,19 @@ export const productService = {
 const BASE_URL = `product/`
 
 async function query(filterBy = {}) {
-    // const products = await storageService.get(BASE_URL, {
-    //     params: filterBy
-    // })
-    const products = await httpService.get(BASE_URL, {
+    const products = await storageService.get(BASE_URL, {
         params: filterBy
     })
+    console.log('products :', products)
+    // const products = await httpService.get(BASE_URL, {
+    //     params: filterBy
+    // })
     return products
 }
 
 async function getById(productId) {
-    // const product = await storageService.get(BASE_URL + productId)
-    const product = await httpService.get(BASE_URL + productId)
+    const product = await storageService.get(BASE_URL + productId)
+    // const product = await httpService.get(BASE_URL + productId)
     return product
 }
 

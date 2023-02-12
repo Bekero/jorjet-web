@@ -1,10 +1,14 @@
+import LironsJLogo from '../assets/imgs/j-logo.png'
 
-export function Modal({ recipe, setModalOpen, modalOpen }) {
+export function Modal({ recipe, setModalOpen, modalOpen, printRecipe }) {
+
 
     if (!recipe) return <div>No Recipe</div>
     return (
         <div id="myModal" className={modalOpen ? 'modal open' : 'modal'} >
+            <img className="j-logo" src={LironsJLogo} alt="" />
             <div className="button-container">
+                {/* <button className="close" onClick={() => printRecipe()}>Print</button> */}
                 <button className="close" onClick={() => setModalOpen(false)}>סגור</button>
             </div>
             <div className="modal-content">
@@ -36,6 +40,7 @@ export function Modal({ recipe, setModalOpen, modalOpen }) {
                         )
                     })}
                 </div>
+                <button className="send-whatsapp">שלח בוואטסאפ</button>
             </div>
         </div>
     )

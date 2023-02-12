@@ -41,16 +41,18 @@ export function Confectionery() {
 
     useEffect(() => {
         if (!wantedValue) setWantedValue('all')
+        // if (currentPage > 1) setCurrentPage(1)
         if (!products?.length) {
             dispatch(loadProducts())
             return
         }
         filterProducts()
-    }, [wantedValue])
+    }, [wantedValue, currentPage])
 
     useEffect(() => {
         if (currentPage > 1) setCurrentPage(1)
-    }, [currentPage])
+    }, [wantedValue])
+
 
     const filterProducts = () => {
         if (wantedValue === 'all') {

@@ -1,0 +1,37 @@
+@media print {
+
+    // .logo-for-print {
+    //     display: block;
+    // }
+
+    // .main-header {
+    //     display: none;
+    // }
+
+    // .progress-bar {
+    //     display: none;
+    // }
+
+    // #contact {
+    //     display: none;
+    // }
+
+    body * {
+        visibility: hidden;
+    }
+
+    #myModal.modal.open,
+    #myModal.modal.open * {
+        visibility: visible;
+
+        .modal-content {
+            display: block;
+        }
+    }
+
+    // .modal.open,
+    // .modal.open * {
+    //     display: block;
+    // }
+
+}

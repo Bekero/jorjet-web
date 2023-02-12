@@ -13,9 +13,21 @@
   // background-color: rgb(174, 167, 167);
   background-color: #cccccc;
 
+  .j-logo {
+    position: absolute;
+    left: 50%;
+    top: 4%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 50px;
+  }
+
   .button-container {
+    // display: flex;
+    // justify-content: space-between;
     display: flex;
     justify-content: flex-end;
+    
 
     button.close {
 
@@ -119,6 +131,35 @@
   box-shadow: 4px 4px 9px 6px rgb(0 0 0 / 11%);
   transition: all 1s ease-in;
 }
+
+button.send-whatsapp {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3px 7px;
+  border-radius: 6px;
+  border: none;
+
+  background: #6E6D70;
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.5), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.12);
+  color: #DFDEDF;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: auto;
+
+  &:hover {
+    background: #8a888d;
+    cursor: pointer;
+  }
+
+  button.send-whatsapp:focus {
+    box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+    outline: 0;
+  }
+}
+
 
 @media screen and (max-width: 480px) {
   .modal {

@@ -42,28 +42,28 @@ export function AppHeader() {
     }
 
     return (
-        <nav>
-            <div className="logo">
-                <NavLink to="/"><img src={JorjetsLogo} alt="" /></NavLink>
-            </div>
-            <div onClick={() => onActiveHamburger()} className="hamburger">
-                <div className="bars1"></div>
-                <div className="bars2"></div>
-                <div className="bars3"></div>
-            </div>
-            <ul className="nav-links">
-                <li onClick={() => onActiveHamburger()}><NavLink>צור קשר</NavLink></li>
-                <li onClick={() => onActiveHamburger()}><NavLink to='/workshop'>סדנאות</NavLink></li>
-                <li onClick={() => onActiveHamburger()}><NavLink to='/recipe'>מתכונים</NavLink></li>
-                <li onClick={() => onActiveHamburger()}><NavLink to='/'>הסיפור שלי</NavLink></li>
-                <li onClick={() => onActiveHamburger()}><NavLink to='/confectionery'>קונדיטוריה</NavLink></li>
-            </ul>
-            <ul className="nav-social-links">
-                <li><a target="_blank" href="https://www.tiktok.com/@lirongorzat"><TiktokSvg /></a></li>
-                <li><a target="_blank" href="https://www.instagram.com/jorjet_sweets/"><InstagramSvg /></a></li>
-                <li><a target="_blank" href="https://www.facebook.com/lironscake"><FacebookSvg /></a></li>
-                <li><a target="_blank" href="https://wa.me/+972558813232"><WhatsappSvg /></a></li>
-            </ul>
-        </nav >
+            <nav className="main-header">
+                <div className="logo">
+                    <NavLink to="/"><img src={JorjetsLogo} alt="" /></NavLink>
+                </div>
+                <div onClick={() => onActiveHamburger()} className="hamburger">
+                    <div className="bars1"></div>
+                    <div className="bars2"></div>
+                    <div className="bars3"></div>
+                </div>
+                <ul className="nav-links">
+                    <li onClick={() => onActiveHamburger()}><NavLink>צור קשר</NavLink></li>
+                    <li onClick={() => onActiveHamburger()}><NavLink to='/workshop'>סדנאות</NavLink></li>
+                    <li onClick={() => onActiveHamburger()}><NavLink to='/recipe'>מתכונים</NavLink></li>
+                    <li onClick={() => onActiveHamburger()}><NavLink to='/'>הסיפור שלי</NavLink></li>
+                    <li onClick={() => onActiveHamburger()}><NavLink to='/confectionery'>קונדיטוריה</NavLink></li>
+                </ul>
+                <ul className="nav-social-links">
+                    <li><a target="_blank" href="https://www.tiktok.com/@lirongorzat"><TiktokSvg /></a></li>
+                    <li><a target="_blank" href="https://www.instagram.com/jorjet_sweets/"><InstagramSvg /></a></li>
+                    <li><a target="_blank" href="https://www.facebook.com/lironscake"><FacebookSvg /></a></li>
+                    <li><a target="_blank" href="https://wa.me/+972558813232"><WhatsappSvg /></a></li>
+                </ul>
+            </nav >
     )
 }

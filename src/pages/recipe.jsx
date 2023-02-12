@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import { Pagination } from '../cmps/pagination'
 import { RecipeCard } from '../cmps/recipe-card'
 import { loadRecipes } from '../store/actions/recipe.action'
-import { motion } from 'framer-motion'
+import { LayoutGroup, motion } from 'framer-motion'
 
 export function Recipe() {
 
@@ -34,6 +34,7 @@ export function Recipe() {
         setOriginalRecipes(recipes)
         setCurrentRecipes(originalRecipes?.slice(indexOfFirstRecipe, indexOfLastRecipe))
         setNumPages(Math.ceil(recipes?.length / recipesPerPage))
+        console.log('currentRecipes :', currentRecipes)
     }, [recipes])
 
     useEffect(() => {
@@ -51,7 +52,7 @@ export function Recipe() {
         <div className="recipe-container">
             <h1>המתכונים שלי</h1>
             <motion.div layout className="gallery">
-                {currentRecipes.map((recipe, index) => {
+                {currentRecipes && currentRecipes.map((recipe, index) => {
                     return <RecipeCard
                         key={recipe._id}
                         recipe={recipe}

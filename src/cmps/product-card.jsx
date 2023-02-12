@@ -21,9 +21,9 @@ export function ProductCard({ index, product, onGoToProduct }) {
                             <p>{product.price}</p>
                         </div>
                     </div>
-                    <div className="btns">
+                    {/* <div className="btns">
                         <button onClick={() => onGoToProduct(product)}>למוצר{index}</button>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </motion.div>
